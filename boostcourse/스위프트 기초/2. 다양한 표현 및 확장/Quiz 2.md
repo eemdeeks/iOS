@@ -130,6 +130,62 @@ class Person {
         print("Person 클래스의 인스턴스가 메모리에서 해제됩니다")
     }
 }
+```
+
+## Q5. 스위프트 옵셔널 심화 퀴즈
+
+### 아래 코드에서 eemdeeks 객체의 집(home)의 경비원(guard)의 이름(name)의 값에 접근하는 코드를 한 줄로 작성해 봅시다.
+
+```swift
+class Person {
+    var name: String
+    var home: Apartment?
+    init(name: String) {
+        self.name = name
+    }
+}
+class Apartment {
+    var buildingNumber: String
+    var roomNumber: String
+    var `guard`: Person?
+    var owner: Person?
+    init(dong: String, ho: String) {
+        buildingNumber = dong
+        roomNumber = ho
+    }
+}
+let eemdeeks: Person? = Person(name: "eemdeeks")
+```
+ let guardName: String? = _____________
+
+### 직전 문제와 연결된 코드입니다. 아래 코드 실행 후 출력 결과를 빈칸에 입력하세요.
+
+```swift
+eemdeeks?.home?.guard?.name = "슈퍼맨"
+let name = guardName ?? "경비원"
+print(name) // [출력결과]
+```
+[출력결과] : _____________
+
+
+### 아래 빈 칸을 알맞게 채워보세요
+
+```swift
+class Person {
+    var name: String = ""
+}
+class Student: Person {
+    var school: String = ""
+}
+
+var eemdeeks: Person = Person()
+
+if let casted: Student = eemdeeks______빈칸________ Student {
+    print("\(casted.name)은 Student입니다")
+}
+
+
+
 
 
 
