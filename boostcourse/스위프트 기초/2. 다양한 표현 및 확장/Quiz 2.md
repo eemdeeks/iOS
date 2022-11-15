@@ -183,15 +183,95 @@ var eemdeeks: Person = Person()
 if let casted: Student = eemdeeks______빈칸________ Student {
     print("\(casted.name)은 Student입니다")
 }
+```
 
+## Q6. 스위프트 빠른 종료 퀴즈
 
+### 다음 빈칸에 가장 알맞은 함수를 고르세요
+```swift
+func function(age: int?) {
+    [빈칸](age != nil, "age == nil")
+    [빈칸]((age! >= 0) && (age! <= 130), "나이값 입력이 잘못되었습니다")
+}
+```
+- debug
+- assert
+- dump
+- scanf
+- print
 
+### 다음 빈칸에 공통적으로 들어갈 표현을 채워보세요
+```swift
+func function(age: Int?) {
+    [빈칸] let unwrappedAge = age, 
+        unwrappedAge < 130,
+        unwrappedAge >= 0 else {
+        print("나이값 입력이 잘못되었습니다.")
+        return
+    }
+    print("당신의 나이는 \(unwrappedAge)세입니다")
+}
+var count = 1
+while true {
+    [빈칸] count < 3 else{
+        break
+    }
+    print(count)
+    count += 1
+}
 
+func someFunction(info: [String: Any]) {
+    [빈칸] let name = info["name"] as? String else {
+        return
+    }
+    [빈칸] let age = info["age"] as? Int, age >= 0 else {
+        return
+    }
+    print("\(name): \(age)")
+}
+someFunction(info: ["name": "jenny", "age": "10"])
+```
 
+## Q7. 스위프트 타입 확장 퀴즈
 
+### 아래 코드의 [빈칸]에 적절한 표현을 작성해보세요
+```swift
+[빈칸] Talkable {
+    var topic: String { get set }
+    var language: String { get }
+    func talk()
+    init(topic: String, language: String)
+}
 
+struct Person: Talkable {
+    var topic: String
+    let language: String
+    func talk() {
+        print("\(topic)에 대해 \(language)로 말합니다")
+    }
+    init(topic: String, language: String) {
+        self.topic = topic
+        self.language = language
+    }
+}
+```
 
+### 아래 코드가 정상적으로 동작하기 위해서 [빈칸]에 필요한 공통적인 표현을 채워보세요
+```swift
+[빈칸] Int {
+    var isEven: Bool {
+        return self % 2 == 0
+    }
+}
+print(1.isEven) // false
 
+[빈칸] Int {
+    func multiply(by n: Int) -> Int {
+        return self * n
+    }
+}
+print(3.multiply(by: 2))  // 6
+```
 
 
 
