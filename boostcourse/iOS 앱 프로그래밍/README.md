@@ -5,7 +5,7 @@
 
 
 ## 진행 프로젝트
-1. [[MusicPlayer]]()
+1. [[MusicPlayer]](https://github.com/eemdeeks/iOS/tree/main/boostcourse/iOS%20%EC%95%B1%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/1.%20%EC%9D%8C%EC%9B%90%20%EC%9E%AC%EC%83%9D%EA%B8%B0%20%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98)
 
     Xcode와 친숙해 지기 위하여 최대한 쉽고 간결한 프로젝트를 진행합니다. 툴과 환경을 빠르게 익히고, 앞으로 배울 개념의 절반 이상을 간략하게 확인합니다.
 
