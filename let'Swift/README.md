@@ -81,3 +81,109 @@ safari 환경설정 -> 확장프로그램에서 개발자용 탭에서 추가해
 ## Xcode extension
 #### XcodeKit에 extension이 포함되어 있다.
 - xcode에 명령을 익스텐션으로 추가합니다.
+
+
+# iOS 개발에서 알아두면 좋은 것들
+안정민님, 강민규님
+
+## iOS 개발 전체 과정
+- 프로젝트 생성
+- 코드 작성
+    - 화면 작성
+    아키텍처 설계
+    네트워크연동
+    라이브러리 추가
+    환경설정
+    ...
+- 빌드, 실행
+    - 작성한 코드 검증
+    - 로직 확인
+- 아카이브
+    - 아카이브로 애플리케이션 결과물 생성
+        - 앱스토어, 사내 등에 배포할 수 있는 결과물
+        - Xcarchive 패키지
+- 배포
+    - ITunesConnect wpcnf
+    - 앱심사
+    - 앱스토어 노출
+    - 유저의 앱 설치
+    - 이슈 트래킹
+
+## 아카이브
+- xcodeAchive
+
+- IPA
+    - execute binary
+        - IDA, machoViewer 등으로 분석 가능
+    - Framework
+        - 라이브러리 종류, 사용방법 확인 가능
+    - 리소스
+    - Bundle
+
+- executeBinary
+- Framework
+
+- storyboardc
+- nib
+
+- webp
+- lottie
+
+## AppStore에 있는 App 내려받기
+- iMazing
+- Github - majd/ipatool
+
+## IPA 살펴보기
+다른 회사의 IPA 살펴보기 가능
+
+살펴 보고 우리 프로젝트는 어떻게 활용해야할지 생각 해 볼 수 있다.
+
+## 생성, 설정
+### Target
+- 타겟이 늘어나는 이유
+    - 다양한 개발 환경
+        - 구분하지 않는다면?
+            - 환경이 바뀔때마다 서버 수정
+        - 구분한다면 
+            - 휴먼 에러 줄여준다.
+- 발생하는 문제점
+    - 동일한 코드가 프로젝트 파일에 중복되어 저장
+    - 프로젝트 인덱싱 속도 저하
+    - 새로운 파일을 추가할 때 타겟을 수동으로 체크하다 보니 실수 할 여지가 생긴다.
+
+- 타겟을 줄여보자
+    - 기존의 개발 환경 방식에 configuration 추가하기
+        - 프로젝트 info의 configuration에 추가
+        - schemes 추가하기
+        - configuration과 schemes 연결
+        
+    - XCConfig
+        - XCConfig 생성
+        - Configuration 과 XCConfig 연결
+        
+    - DEV
+        - DEV Scheme에서 실행
+        - 전처리문으로 분기 처리한 코드
+    - PROD
+        - 동일
+
+## 환경변수로 프로젝트 관리
+- Dev타겟에만 필요한 프레임 워크
+    - App Target은 개발용 프레임워크인 FLEX 제거
+    - Dev Target은 개발용 프레임워크인 FLEX 포함
+- 필요한 타겟만 프로젝트에!
+    - 개발할 때에는 DEV App 타겟만 있으면 됨
+    - 배포 할때는 App타겟만 있으면 됨
+
+- 프로젝트 관리 툴
+    - XcodeGen
+    - Tuist
+        - Project.swift에 key값을 가진 환경 변수 생성
+        - 환경 변수의 Value가 'app'인지 확인하는 Bool타입 변수 생성
+        - Project를 생성할 때 삼항 연산자로 Target 배열에 들어가는 값을 제어한다.
+        - App일 때는 DevSource, Flex 제거
+        
+### 정리
+- XCConfig와 Configuration으로 개발 환경을 만들어 타겟을 줄인다.
+- Tuist로 환경 변수를 사용해 모듈, 타겟을 제어할 수 있다.
+
