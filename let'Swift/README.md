@@ -187,3 +187,22 @@ safari 환경설정 -> 확장프로그램에서 개발자용 탭에서 추가해
 - XCConfig와 Configuration으로 개발 환경을 만들어 타겟을 줄인다.
 - Tuist로 환경 변수를 사용해 모듈, 타겟을 제어할 수 있다.
 
+# SwiftUI가 UIKit 품기 vs UIKit이 SwiftUI 품기
+김예원님과 리이오님
+
+- 뷰를 그리다 보면 겪는 상황
+    - UIKit -> chart?
+    - SwiftUI -> CalenderView?
+
+## UIKit에서 차트를 추가하고 싶다.
+- Swift Charts
+- iOS 16부터 지원하는
+- SwiftUI Framework
+
+- UIHostingController
+
+## SwiftUI에서 UICalender View
+- UICalenderView
+- iOS 16부터
+- UIKit
+
