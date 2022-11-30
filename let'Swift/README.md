@@ -46,3 +46,38 @@ QnA
 실제로는 투자자에게 서비스를 받고 투자를 받기 위해서이기에 처음에는 크로스 플랫폼 사용 후 -> 이후 네이티브 개발자를 통해 차근차근 넘어간다.
 -> 돈이 필요하다.
 
+
+## 우당탕탕! Safari Extensio에서 Xcode Extension까지
+(이다혜님/고드름님)
+### Extension!
+### 한번씩 써봤을 확장 프로그램(Extension)
+파파고, 크롬, 코드 스냅샷 익스텐션..
+애플의 앱 확장 프로그램 -> safari, xcode....
+### containg app
+
+### Safari Services
+- SFSafariView
+- Safari Extension
+    - SafariChat
+    1. Safari App Extension
+    2. Safari Web Extension
+
+이미 다른 브라우저에 돌아가는 익스텐션 프로젝트가 있다면
+-> Safari app Extension
+
+아니라면 -> Safari web Extension
+
+xcode에서 safari extension 선택해서 프로젝트 만들기
+
+만들게 되면 평소와 다른 다른 언어에 파일들이 추가 돼 있다.
+
+-> 권한 설정을 해줘야 한다. (permission)
+
+Safari web extension과 대화하기
+
+Build 전 세팅
+safari 환경설정 -> 확장프로그램에서 개발자용 탭에서 추가해 줘야 한다.
+
+## Xcode extension
+#### XcodeKit에 extension이 포함되어 있다.
+- xcode에 명령을 익스텐션으로 추가합니다.
