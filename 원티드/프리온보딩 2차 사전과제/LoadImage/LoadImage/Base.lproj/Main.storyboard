@@ -55,55 +55,73 @@
                                 <rect key="frame" x="16" y="567" width="361" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Load All Images"/>
+                                <connections>
+                                    <action selector="clickedBtnAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HBV-Wg-GsL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skd-iN-htz">
                                 <rect key="frame" x="309" y="96" width="62" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                <connections>
+                                    <action selector="clickedBtn1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6eg-fe-Q5T"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4F-4Y-awo">
                                 <rect key="frame" x="309" y="196" width="62" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                <connections>
+                                    <action selector="clickedBtn2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LS2-9F-7vD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFJ-Wb-AzP">
                                 <rect key="frame" x="309" y="297" width="62" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                <connections>
+                                    <action selector="clickedBtn3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ovi-k8-JG6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFO-2B-KbR">
                                 <rect key="frame" x="309" y="397" width="62" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                <connections>
+                                    <action selector="clickedBtn4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="svh-vt-uBr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpR-dx-56w">
                                 <rect key="frame" x="309" y="497" width="62" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                <connections>
+                                    <action selector="clickedBtn5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tr4-UR-g4m"/>
+                                </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eO3-Vh-olG">
-                                <rect key="frame" x="151" y="111" width="161" height="4"/>
+                                <rect key="frame" x="184" y="111" width="128" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mA4-cT-Mqo">
-                                <rect key="frame" x="151" y="211" width="161" height="4"/>
+                                <rect key="frame" x="184" y="211" width="128" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="btI-3W-jxN">
-                                <rect key="frame" x="151" y="312" width="161" height="4"/>
+                                <rect key="frame" x="184" y="312" width="128" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aBs-l9-uaI">
-                                <rect key="frame" x="151" y="412" width="161" height="4"/>
+                                <rect key="frame" x="184" y="412" width="128" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1hB-Pr-rON">
-                                <rect key="frame" x="151" y="512" width="161" height="4"/>
+                                <rect key="frame" x="184" y="512" width="128" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                         </subviews>
@@ -131,6 +149,7 @@
                         <outlet property="btn3" destination="gFJ-Wb-AzP" id="w7I-eX-2db"/>
                         <outlet property="btn4" destination="aFO-2B-KbR" id="zi3-pg-sJx"/>
                         <outlet property="btn5" destination="fpR-dx-56w" id="sqN-vy-A3T"/>
+                        <outlet property="btnAll" destination="i8v-lm-0me" id="FTM-q1-UsB"/>
                         <outlet property="imgView1" destination="Dcq-fg-uUp" id="BpR-HO-gUn"/>
                         <outlet property="imgView2" destination="0pI-6k-8ki" id="534-rx-yqT"/>
                         <outlet property="imgView3" destination="Ez7-rN-ZGc" id="rA9-Pk-eQz"/>
