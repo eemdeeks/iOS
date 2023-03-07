@@ -7,4 +7,10 @@
 
 import Foundation
 
-print(solution8393(n: Int(readLine()!)!))
+// MARK: - 8393
+//print(solution8393(n: Int(readLine()!)!))
+
+// MARK: - 1929
+let input = readLine()!.split(separator: " ").map { Int(String($0))!}
+
+solution1929(M: input[0], N: input[1])
