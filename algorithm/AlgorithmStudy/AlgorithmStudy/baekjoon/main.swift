@@ -16,6 +16,16 @@ import Foundation
 //solution1929(M: input[0], N: input[1])
 
 // MARK: - 1978
-solution1978(N: Int(readLine()!)!, prob: readLine()!.split(separator: " ").map{
-    Int(String($0))!
-})
+//solution1978(N: Int(readLine()!)!, prob: readLine()!.split(separator: " ").map{
+//    Int(String($0))!
+//})
+
+// MARK: - 4948
+var n : Int = 1
+while true {
+    n = Int(readLine()!)!
+    if n == 0 {
+        break
+    }
+    solution4948(n: n)
+}
