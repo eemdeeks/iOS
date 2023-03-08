@@ -21,11 +21,18 @@ import Foundation
 //})
 
 // MARK: - 4948
-var n : Int = 1
-while true {
-    n = Int(readLine()!)!
-    if n == 0 {
-        break
-    }
-    solution4948(n: n)
+//var n : Int = 1
+//while true {
+//    n = Int(readLine()!)!
+//    if n == 0 {
+//        break
+//    }
+//    solution4948(n: n)
+//}
+
+// MARK: - 2609
+let input = readLine()!.split(separator: " ").map{
+    Int(String($0))!
 }
+
+solution2609(n: input[0], m: input[1])
