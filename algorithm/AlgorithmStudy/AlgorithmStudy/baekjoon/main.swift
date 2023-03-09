@@ -31,8 +31,11 @@ import Foundation
 //}
 
 // MARK: - 2609
-let input = readLine()!.split(separator: " ").map{
-    Int(String($0))!
-}
+//let input = readLine()!.split(separator: " ").map{
+//    Int(String($0))!
+//}
+//
+//solution2609(n: input[0], m: input[1])
 
-solution2609(n: input[0], m: input[1])
+// MARK: - 10828
+solution10828(N: Int(readLine()!)!)
