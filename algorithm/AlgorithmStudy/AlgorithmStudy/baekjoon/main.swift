@@ -38,4 +38,7 @@ import Foundation
 //solution2609(n: input[0], m: input[1])
 
 // MARK: - 10828
-solution10828(N: Int(readLine()!)!)
+//solution10828(N: Int(readLine()!)!)
+
+// MARK: - 9012
+solution9012(n: Int(readLine()!)!)
