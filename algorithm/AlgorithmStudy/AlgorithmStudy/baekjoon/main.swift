@@ -44,4 +44,7 @@ import Foundation
 //solution9012(n: Int(readLine()!)!)
 
 // MARK: - 10773
-solution10773(K: Int(readLine()!)!)
+//solution10773(K: Int(readLine()!)!)
+
+// MARK: - 1935
+solution1935()
