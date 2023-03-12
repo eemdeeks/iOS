@@ -8,50 +8,42 @@
 import Foundation
 
 func solution1935(){
-    let op : [String] = ["+","-","*","/"]
-    var al : [Int] = []
-    var oper : [String] = []
-    var num : [Int] = []
+    var numArray : [Double] = [] //각 숫자값
+    var num : [Double] = [] //피연산자 스택
+    var answer : Double = 0
     
-    var answer : Int = 0
-    
-    var N = Int(readLine()!)!
-    var prob = Array(readLine()!)
+    let N = Int(readLine()!)!
+    let prob = Array(readLine()!)
     for i in 1...N{
-        num.append(Int(readLine()!)!)
+        numArray.append(Double(readLine()!)!)
     }
     for i in prob{
-        if op.contains(String(i)) {
-            oper.append(String(i))
-        }else{
-            al.append(num[Int(Unicode.Scalar(String(i))!.value)-65])
+        switch i {
+        case "+" :
+            answer = num[num.count-2] + num[num.count-1]
+            num.remove(at: num.count-1)
+            num.remove(at: num.count-1)
+            num.append((answer))
+        case "-" :
+            answer = num[num.count-2] - num[num.count-1]
+            num.remove(at: num.count-1)
+            num.remove(at: num.count-1)
+            num.append((answer))
+        case "*":
+            answer = num[num.count-2] * num[num.count-1]
+            num.remove(at: num.count-1)
+            num.remove(at: num.count-1)
+            num.append((answer))
+        case "/":
+            answer = num[num.count-2] / num[num.count-1]
+            num.remove(at: num.count-1)
+            num.remove(at: num.count-1)
+            num.append((answer))
+        default:
+            num.append(numArray[Int(i.asciiValue!)-65])
+            
         }
     }
-    
-    for i in oper{
-        if i == "+"{
-            answer = al[al.count-1] + al[al.count-2]
-            al.remove(at: al.count-1)
-            al.remove(at: al.count-1)
-            al.append(answer)
-        }else if i == "-" {
-            answer = al[al.count-1] - al[al.count-2]
-            al.remove(at: al.count-1)
-            al.remove(at: al.count-1)
-            al.append(answer)
-        }else if i == "*"{
-            answer = al[al.count-1] * al[al.count-2]
-            al.remove(at: al.count-1)
-            al.remove(at: al.count-1)
-            al.append(answer)
-        }else{ // 나누기
-            answer = al[al.count-1] / al[al.count-2]
-            al.remove(at: al.count-1)
-            al.remove(at: al.count-1)
-            al.append(answer)
-        }
-    }
-    
-    print(answer)
+    print(String(format: "%.2f",num[0]))
     
 }
