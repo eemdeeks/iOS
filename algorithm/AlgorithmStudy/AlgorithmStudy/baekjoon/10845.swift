@@ -10,9 +10,9 @@ import Foundation
 func solution10845(){
     var N : Int = Int(readLine()!)!
     var que : [Int] = []
-    var prob : [String] = []
+    
     for i in 1...N{
-        prob = Array(arrayLiteral: readLine()!)
+        var prob : [String] = readLine()!.components(separatedBy: " ")
         
         if prob[0] == "push"{
             que.append(Int(prob[1])!)
@@ -32,7 +32,17 @@ func solution10845(){
                 print("0")
             }
         }else if prob[0] == "front"{
-            
+            if que.isEmpty {
+                print("-1")
+            }else{
+                print(que[0])
+            }
+        }else {
+            if que.isEmpty {
+                print("-1")
+            }else{
+                print(que[que.count-1])
+            }
         }
     }
 }
