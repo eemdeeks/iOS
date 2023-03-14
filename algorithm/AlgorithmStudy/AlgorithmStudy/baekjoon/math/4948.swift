@@ -10,7 +10,7 @@ import Foundation
 func solution4948(n : Int){
     var so : [Bool] = []
     var answer = 0
-    for i in 0...246912{
+    for _ in 0...246912{
         so.append(true)
     }
     so[0] = false

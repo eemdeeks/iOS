@@ -10,7 +10,7 @@ import Foundation
 func solution10773(K : Int){
     var stack : [Int] = []
     var num : Int = 0
-    for i in 1...K{
+    for _ in 1...K{
         num = Int(readLine()!)!
         if num == 0{
             stack.remove(at: stack.count-1)

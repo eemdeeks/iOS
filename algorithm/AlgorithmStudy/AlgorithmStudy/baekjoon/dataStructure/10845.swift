@@ -8,11 +8,11 @@
 import Foundation
 
 func solution10845(){
-    var N : Int = Int(readLine()!)!
+    let N : Int = Int(readLine()!)!
     var que : [Int] = []
     
-    for i in 1...N{
-        var prob : [String] = readLine()!.components(separatedBy: " ")
+    for _ in 1...N{
+        let prob : [String] = readLine()!.components(separatedBy: " ")
         
         if prob[0] == "push"{
             que.append(Int(prob[1])!)

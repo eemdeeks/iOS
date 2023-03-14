@@ -8,7 +8,7 @@
 import Foundation
 
 func solution9020(){
-    var T : Int = Int(readLine()!)!
+    let T : Int = Int(readLine()!)!
     var prime : [Bool] = []
     var primeInt : [Int] = []
     for _ in 0...10000{
@@ -31,7 +31,7 @@ func solution9020(){
     for _ in 1...T{
         var answer : [(Int,Int)] = []
         var answerSub : Int = 10000
-        var n : Int = Int(readLine()!)!
+        let n : Int = Int(readLine()!)!
     
         for i in 0...primeInt.count-1{
             for j in i...primeInt.count-1{

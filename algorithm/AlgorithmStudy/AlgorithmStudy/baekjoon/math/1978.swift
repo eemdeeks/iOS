@@ -10,7 +10,7 @@ import Foundation
 func solution1978(N : Int, prob : [Int]){
     var so : [Bool] = []
     var answer = 0
-    for i in 0...1000{
+    for _ in 0...1000{
         so.append(true)
     }
     for i in 0...Int(sqrt(1000.0)){

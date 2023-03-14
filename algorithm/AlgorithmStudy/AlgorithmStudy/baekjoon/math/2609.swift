@@ -10,8 +10,8 @@ import Foundation
 func solution2609(n : Int, m : Int){
     var biggest : Int = 0
     var least : Int = 0
-    var small = min(n,m)
-    var big = max(n, m)
+    let small = min(n,m)
+    let big = max(n, m)
     for i in 1...small{
         if n%i == 0 && m%i == 0 {
             biggest = i

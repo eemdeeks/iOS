@@ -14,7 +14,7 @@ func solution1935(){
     
     let N = Int(readLine()!)!
     let prob = Array(readLine()!)
-    for i in 1...N{
+    for _ in 1...N{
         numArray.append(Double(readLine()!)!)
     }
     for i in prob{

@@ -10,7 +10,7 @@ import Foundation
 func solution10828(N : Int){
     var prob : [String] = []
     var stack : [Int] = []
-    for i in 1...N{
+    for _ in 1...N{
         prob = readLine()!.components(separatedBy: " ")
         if prob[0] == "push"{
             stack.append(Int(prob[1])!)

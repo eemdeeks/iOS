@@ -8,9 +8,9 @@
 import Foundation
 
 func solution9012(n : Int){
-    for i in 1...n{
+    for _ in 1...n{
         var stack : [Int] = []
-        var prob = Array(readLine()!)
+        let prob = Array(readLine()!)
         var flag = true
         for j in prob{
             if j == "("{

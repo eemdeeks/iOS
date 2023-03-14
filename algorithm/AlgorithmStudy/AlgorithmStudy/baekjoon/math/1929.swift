@@ -9,7 +9,7 @@ import Foundation
 
 func solution1929(M : Int, N : Int){
     var chae : [Bool] = []
-    for i in 0...N{
+    for _ in 0...N{
         chae.append(true)
     }
     for i in 0...Int(sqrt(Double(N))){
