@@ -1,8 +1,117 @@
 # iOS
-## 스위프트 문법
-- [부스트캠프_스위프트 기초](https://github.com/eemdeeks/iOS/tree/main/boostcourse/%EC%8A%A4%EC%9C%84%ED%94%84%ED%8A%B8%20%EA%B8%B0%EC%B4%88)
-## iOS 앱 프로그래밍
-- [부스트캠프_iOS 앱 프로그래밍](https://github.com/eemdeeks/iOS/tree/main/boostcourse/iOS%20%EC%95%B1%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)
+🧑‍🏫로드맵 따라 걷기
 
-## 원티드 프리온 보딩 챌린지 iOS 2
-- [사전 과제](https://github.com/eemdeeks/iOS/tree/main/%EC%9B%90%ED%8B%B0%EB%93%9C/%ED%94%84%EB%A6%AC%EC%98%A8%EB%B3%B4%EB%94%A9_2%EC%B0%A8_%EC%82%AC%EC%A0%84%EA%B3%BC%EC%A0%9C/LoadImage)
+## iOS
+### 🧑‍💻Learn the Basics
+- Xcode IDE
+    - Playground
+    
+### ⌨️Language Grammar
+- Swift
+    - Functional Programming
+
+### 🖥️Common Topics
+- Mobile Human Interface Gudeline
+- iOS Technologies
+    - App Architect
+    - App Life-cycle
+    - View-ViewController Programming
+        - AutoLayout
+    - Multi-touch Event Handling
+- Cocoa Design Pattern
+    - MVC
+    - Singleton
+    - Delegate
+    - ResponderChain
+    - Observer
+- Network Programming
+    - RESTful APIs
+    - TCP/IP SocketAPIs
+
+### 💻Getting Deeper
+- Swift Additional Topics
+    - Protocol-oriented Programming
+        - Value Semantics
+        - Generics
+    - Cancurrent Programming
+        - DispatchQueue
+        - Swift Standard
+        - Swift Foundation
+    - Advanced Design Pattern
+        - VIPER
+        - MVVM
+        - ReactorKit
+- System Framework
+    - Core Foundation
+    - Cocoa Touch
+- Reactive programming
+    - Combine
+        - SwiftUI
+    - RxSwift
+    - ReactiveCocoa
+- Data Persistance
+    - Core Data
+        - Splite
+    - Realm
+    - Serialize
+        - PList
+        - JSON
+        - Keychain
+    - KeyedArchiver
+    - Cloud
+        - iCloud
+        - Firebase
+- Project & Workspace
+    - build Config
+    - Scheme
+    - Target
+    - Package Manager
+        - Swift Package Manager
+        - CocoaPods
+        - Carthage
+- Instruments
+    - Allocations
+    - Leaks
+    - Network
+    - Activity
+    - Energy
+    - Layout
+    - System Trace
+    - Time Profile
+    - .etc
+- Testing
+    - XCTest
+        - TDD
+        - Quick/Nimble
+    - UI Test
+    - Code Coverage
+- Debugging
+    - Tool & Tips
+        - LLDB
+        - Break-Pointer
+        - Gauges
+        - Visual Debugging
+            - Sanitizer
+        - Diagnostics
+### 📱Start Building
+- Build & Deployment
+    - CI
+        - Xcode Server
+        - Fastlane
+        - bitrise
+        - Travis
+        - Jenkins
+    - Analytic Tools
+        - GA
+        - Firebase
+           - Crashlytics
+        - TestFlight
+        - UserHabit
+- 📲App Store
+    - Review Guideline
+    - iTunes Connect
+    - Lucky Reviewr
+
+### 🏁Launching App
+
+## Swift
