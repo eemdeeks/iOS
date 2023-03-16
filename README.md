@@ -1,7 +1,20 @@
 # iOS
-🧑‍🏫로드맵 따라 걷기
+🧑‍🏫iOS개발자로 가는 길
 
-## 📌iOS
+    
+## 📌Any
+### [Datastructures & Algorithms](https://github.com/eemdeeks/iOS/tree/main/algorithm)
+### Basic Terminal Usage
+### Git - Version Control
+### SSH
+### HTTP/HTTPs and APIs
+### Learn to Research
+### Character Encodings
+### [Github](https://github.com/eemdeeks)
+
+
+
+## 🍎iOS
 ### 🧑‍💻Learn the Basics
 - Xcode IDE
     - Playground
@@ -114,9 +127,13 @@
 
 ### 🏁Launching App~~
 
+
+
 ***
 
-## 📌Swift
+
+
+## 🕊️Swift
 ### ⌨️Learn the Basics
 Practice typing
 - Constaints
@@ -259,12 +276,7 @@ Practice typing
     - Bridge Header
 ### 🏁Goals
 
-## Any
-### Datastructures & Algorithms
-### Basic Terminal Usage
-### Git - Version Control
-### SSH
-### HTTP/HTTPs and APIs
-### Learn to Research
-### Character Encodings
-### [Github](github.com/eemdeeks)
+
+
+***
+### [RoadMap 출처](https://github.com/godrm/mobile-developer-roadmap)
