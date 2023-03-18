@@ -50,7 +50,7 @@ import Foundation
 //solution1935()
 
 // MARK: - 10845
-//solution10845()
+solution10845()
 
 // MARK: - 11653
 //solution11653()
@@ -71,4 +71,7 @@ import Foundation
 //solution1874()
 
 // MARK: - 17103
-solution17103()
+//solution17103()
+
+// MARK: - 18258
+//solution18258()
