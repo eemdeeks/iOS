@@ -24,7 +24,7 @@
     - Functional Programming
 
 ### 🖥️Common Topics
-- Mobile Human Interface Gudeline
+- [Mobile Human Interface Gudeline](https://github.com/eemdeeks/iOS/blob/main/iOS/Common%20Topics/Mobile%20Human%20Interface%20Guideline.md)
 - iOS Technologies
     - App Architect
     - App Life-cycle
