@@ -21,12 +21,12 @@
     
 ### ⌨️Language Grammar
 - Swift
-    - Functional Programming
+    - [Functional Programming](https://github.com/eemdeeks/iOS/blob/main/iOS/Language%20Grammer/Swift/Functional%20Programming.md)
 
 ### 🖥️Common Topics
 - [Mobile Human Interface Gudeline](https://github.com/eemdeeks/iOS/blob/main/iOS/Common%20Topics/Mobile%20Human%20Interface%20Guideline.md)
 - iOS Technologies
-    - App Architect
+    - [App Architect](https://github.com/eemdeeks/iOS/blob/main/iOS/Common%20Topics/iOS%20Technologies/App%20Architect.md)
     - App Life-cycle
     - View-ViewController Programming
         - AutoLayout
@@ -56,7 +56,7 @@
         - ReactorKit
 - System Framework
     - Core Foundation
-    - Cocoa Touch
+    - [Cocoa Touch](https://github.com/eemdeeks/iOS/blob/main/iOS/Getting%20Deeper/System%20Framework/Cocoa%20Touch.md)
 - Reactive programming
     - Combine
         - SwiftUI

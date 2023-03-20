@@ -1,6 +1,7 @@
 # App Architect
 iOS 앱의 계층은 하드웨어와 코코아 터치 계층으로 이루어져 있다.
 <img width="343" alt="image" src="https://user-images.githubusercontent.com/87136217/226355341-edc309c4-531d-4c48-8f29-e74616f60c34.png">
+
 <img width="388" alt="image" src="https://user-images.githubusercontent.com/87136217/226355172-3a9d8cc4-1b38-4e47-9e44-b6ba3119bb08.png">
 상위 계층으로 갈 수록 유저, iOS Application과 가깝고, 하위 계층일수록 하드웨어에 가깝다.
 
