@@ -3,7 +3,7 @@
 
     
 ## 📌Any
-### [Datastructures & Algorithms](https://github.com/eemdeeks/iOS/tree/main/algorithm)
+### [Datastructures & Algorithms](https://github.com/eemdeeks/iOS/tree/main/algorithm/AlgorithmStudy/AlgorithmStudy)
 ### Basic Terminal Usage
 ### Git - Version Control
 ### SSH
