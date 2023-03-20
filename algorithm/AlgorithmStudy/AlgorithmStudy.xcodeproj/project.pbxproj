@@ -42,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6F15109829C7FDD8000323FF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6F1A4F8329BB1AB000705EFD /* 10845.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10845.swift; sourceTree = "<group>"; };
 		6F24030D29B8ACC200CC236B /* 15649.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 15649.swift; sourceTree = "<group>"; };
 		6F24030F29B8B2FF00CC236B /* 2609.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2609.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		6F98A0B529B6DBE700163FE9 /* AlgorithmStudy */ = {
 			isa = PBXGroup;
 			children = (
+				6F15109829C7FDD8000323FF /* README.md */,
 				6F98A0BD29B6DC4A00163FE9 /* baekjoon */,
 			);
 			path = AlgorithmStudy;
