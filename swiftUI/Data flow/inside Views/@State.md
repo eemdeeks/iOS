@@ -38,6 +38,28 @@ struct LandmarkList: view{
     }
 }
 ```
+
+## 추가
+SwiftUI에서 View(구조체)안에 선언된 프로퍼티 값을 구조체 내에서 변경하려고 하면 오류가 난다.
+
+Swift의 구조체에서 mutating으로 선언되지 않은 프로퍼티는 구조체 내에서 그 값의 변경이 불가하다.
+
+그렇다고 연산 프로퍼티인 body를 mutating으로 선언해 주어도 안된다.
+
+-> View프로토콜의 body 프로퍼티는 {get}으로 선언되어 있으며, 이는 nonmutating으로 구현을 요구한다.
+
+그렇다면 어떻게 프로퍼티 값을 변경할 수 있을까?
+
+이 때 @State를 사용하면 프로퍼티 값을 강제로 변경할 수 있게 된다.
+
+하지만 @State를 사용한다고 해도 컴파일 에러는 피할 수 있지만 실행 화면에서는 변경이 안된 것을 확인 할 수 있다.
+
+-> @State 속성의 프로퍼티 값은 사실 재 할당하여 값을 바꿀 수 없다.
+
+@Binding을 사용해야만 변경이 가능하다.
+
+@Binding에 대해서는 해당 글에서 다루겠다.
+
 ***
 ### 공식문서
-- [애플공식문서_@State](https://developer.apple.com/documentation/swiftui/state#overview)
+- [애플공식문서_@State](https://developer.apple.com/documentation/swiftui/state)
