@@ -277,6 +277,224 @@ Practice typing
 ### 🏁Goals
 
 
-
 ***
-### [RoadMap 출처](https://github.com/godrm/mobile-developer-roadmap)
+
+
+
+## 🌠SwiftUI
+### 💻Xcode
+- Create new project
+    - SceneDelegate
+    - Window Group
+- Xcode preview
+- Canvas
+- Preview layout
+- Multi-platform support
+- Simulator
+- Support iOS version
+
+### 🖥️View
+- what is a view?
+    - Text
+    - UI controls
+    - Image
+    - Color view
+- View lifecycle
+    - OnAppear
+    - onDisappear
+- Compose views
+    - Navigation
+        - NavigationLink
+        - NavigationbarItems
+        - Split view
+        - Page View
+        - TapView
+        - TabItem
+        - Alert
+        - Sheet
+        - Action sheet
+        - Popover
+        - Modal view
+        - Context menu
+    - Container views
+        - VStack
+        - HStack
+        - ZStack
+        - Group
+        - Scrollview
+        - List
+        - Section
+        - Forms
+        - ForEach
+        - Identifiable
+        - DisclosureGroup
+        - Collection view
+        - LazyVGrid
+        - LazyHGrid
+    - Layout System
+        - Padding
+        - Divider
+        - Spacer
+        - .frame()
+        - flexible frames
+        - .inset
+        - .degesIgnoreSafeArea()
+        - GeometryReader
+        - Preferences
+        - Alignment
+        - Layout priority
+        - Offset
+        - Zindex
+        - Background
+        - Overlay
+        - Clipped
+        - ClipShape
+        - CornerRadius
+    - View modifier
+        - Custom view modifiers
+            - Font
+                - Border
+                - Shadows
+                - ButtonStyle
+                - custom font
+                - Dynamic type
+            - reusable Code
+            - PickerStyle
+        - Design System - style guide
+            - Color
+            - Gradient
+            - Accent Color
+            - Blur
+            - Opacity
+            - brightness
+            - Saturation
+            - grayscale
+            - Contrast
+            - colorMultiply
+            - **Dark mode**
+    - Images
+        - Resizable
+        - aspectRatio
+        - clippedShape
+        - mask
+        - Clipped
+    - Drawing
+        - Shape
+        - Path
+            - Rectangle
+            - Capsule
+            - Circle
+                - Stroke
+                - Fill
+                - trim
+    - Icons
+        - System icons
+        
+### 🚂Data flow
+- combine Framework
+    - Publishers
+    - Subscribers
+    - Operators
+    - Transforming values
+    - Subjects
+- [inside Views](https://github.com/eemdeeks/iOS/tree/main/swiftUI/Data%20flow/inside%20Views)
+    - [Property wrapper](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/inside%20Views/Property%20wrapper.md)
+        - [@State](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/inside%20Views/%40State.md)
+        - [@Binding](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/inside%20Views/%40Binding.md)
+        - [@ObservedObject](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/inside%20Views/%40ObservedObject.md)
+        - [@StateObject](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/inside%20Views/%40StateObject.md)
+            - ObservableObjet
+            - @published
+        - @Environment
+        - @EnvironmentObject
+        - onReceive
+        - .onChange()
+
+### 🎲Animation - When to use animations?
+- Implicit animations
+- explicit animation
+
+- Transitions
+
+- Animation timing curve
+- Repeat
+- spped
+- repeatForever
+- delay
+
+- Animatable Protocol
+
+### 📱MVVM
+- View Model
+    - ObservableObject
+    - @Published
+- Model
+    - Data persistence
+        - REST API
+        - Network calls
+        
+        - Codable Protocol
+        - CRUD
+        - JSON
+        - Archiving
+        
+        - UserDefaults
+        - File manager
+        - document-based app
+        - database
+            - on device
+                - Core data
+                - @FetchRequest
+            - on network
+                - CloudKit
+                - Realm
+                    - frozen Objects
+                - Firebase
+
+### 🧑‍💻User interaction
+- UI controls
+    - Button
+    - EditButton
+    - Slider
+    - Toggle
+    - Stepper
+    - Picker
+    - DatePicker
+    - TextField
+    - SecureField
+    - .onChange()
+    - .onEditingChanged
+    - .disabled()
+    - LabellsHidden
+    - MapView
+    - TextEditor
+    - SignInWithApple button
+
+### 📲User input
+- Gestures
+    - Gesture recognizer
+    - Tap gesture
+    - Double tap
+    - Drag gesture
+    - Magnification gesture
+    - Long press gesture
+    - Rotation gesture
+    - composing gestures
+    - Simultaneous gesture
+- Drag and drop
+    - Inside a list
+    - .onMove
+    - .onInsert
+    - .onDrop
+    - .onDrag
+    - NSItemProvider
+    - UTType
+
+## Integration with UIKit
+
+## 🏁Goal~
+        
+***
+### [RoadMap 출처(iOS, Swift)](https://github.com/godrm/mobile-developer-roadmap)
+### [RoadMap 출처(SwiftUI)](https://karinprater.medium.com/on-the-road-to-learn-swiftui-8b26b528199c)
+
