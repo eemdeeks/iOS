@@ -10,19 +10,14 @@ import SwiftUI
 struct SecondView: View {
     var body: some View {
         VStack{
-            
             Spacer()
-            NavigationView{
-                VStack{
-                    NavigationLink(destination:QuestionList()){
-                        Text("Skip")
-                    }
-                    TalkView()
+            VStack{
+                NavigationLink(destination:QuestionList()){
+                    Text("Skip")
                 }
+                TalkView()
             }
-            
         }
-        
     }
 }
 
