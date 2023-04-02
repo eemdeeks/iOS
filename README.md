@@ -16,8 +16,8 @@
 
 ## 🍎iOS
 ### 🧑‍💻Learn the Basics
-- [Xcode IDE](https://github.com/eemdeeks/iOS/blob/main/iOS/Xcode_IDE/Playground.md)
-    - [Playground](https://github.com/eemdeeks/iOS/blob/main/iOS/Xcode_IDE/Xcode_IDE.md)
+- [Xcode IDE](https://github.com/eemdeeks/iOS/blob/main/iOS/Xcode_IDE/Xcode_IDE.md)
+    - [Playground](https://github.com/eemdeeks/iOS/blob/main/iOS/Xcode_IDE/Playground.md)
     
 ### ⌨️Language Grammar
 - Swift
