@@ -403,8 +403,8 @@ Practice typing
         - [@Binding](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/inside%20Views/%40Binding.md)
         - [@ObservedObject](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/inside%20Views/%40ObservedObject.md)
         - [@StateObject](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/inside%20Views/%40StateObject.md)
-            - ObservableObjet
-            - @published
+            - [ObservableObjet](https://github.com/eemdeeks/iOS/blob/main/swiftUI/MVVM/View%20Model/ObservableObject.md)
+            - [@published](https://github.com/eemdeeks/iOS/blob/main/swiftUI/MVVM/View%20Model/%40Published.md)
         - @Environment
         - @EnvironmentObject
         - onReceive
@@ -426,8 +426,8 @@ Practice typing
 
 ### 📱MVVM
 - View Model
-    - ObservableObject
-    - @Published
+    - [ObservableObject](https://github.com/eemdeeks/iOS/blob/main/swiftUI/MVVM/View%20Model/ObservableObject.md)
+    - [@Published](https://github.com/eemdeeks/iOS/blob/main/swiftUI/MVVM/View%20Model/%40Published.md)
 - Model
     - Data persistence
         - REST API
