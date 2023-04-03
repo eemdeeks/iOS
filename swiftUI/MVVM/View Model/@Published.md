@@ -1,65 +1,74 @@
-# @State
+# @Published
 공식문서 :
-    A property wrapper type that can read and write a value managed by SwiftUI.
-
+    A type that publishes a property marked with an attribute.
 ## Declaration
 ```swift
-@frozen @propertyWrapper struct State<Value>
+@propertyWrapper struct Published<Value>
 ```
 
 ## Overview
-@State는 SwiftUI에서 해당 프로퍼티가 하고싶은 행동을 정의하는 타입이라고 한다.
+@Published 속성을 사용하면 이 유형의 퍼블리셔(publisher)가 생성된다.
 
-이해해 보자면 @State로 선언된 변수들은 값이 변경되는 경우, View를 invalidate(무효화)하고 var body:some View 를 recompute 하게 한다.
-
-@State 변수는 View 또는 View에서 호출된 메서드에서만 접근해야 한다. 한마디로 @State변수에 사용자가 직접적으로 접근하지 못하도록 쓰레드에서 변경하는 것이 안전하다.
-
-그래서 주로 @State 변수를 Private과 함께 사용하며 해당 변수를 다른 View에 전달하고자 한다면, $를 이용하여 전달한다.
+이 후 $연산자를 사용하여 변수값의 변화에 접근할 수 있다.
 
 ex)
 ```swift
-struct Landmark: view{
-    @Binding var showFavoritesOnly : Bool
-    
-    var body: some View{
-        Label("Toggle Favroite", systemImage: showFavoritesOnly ? "star.fill" : "star")
+class Weather : ObservableObject {
+    @Published var temperature: Double
+    init(temperature: Double) {
+        self.temperature = temperature
     }
-}   
+}
 
-struct LandmarkList: view{
-    @State private var showFavoritesOnly = false
-    
-    ...
-    var body: some View{
-        ...
-        Toggle(isOn: $showFavoritesOnly){
-            Text("Favorites only")
-        }
-    }
+let weather = Weather(temperature: 20)
+cancellable = weather.$temperature
+    .sink() {
+        print ("Temperature now: \($0)")
+}
+weather.temperature = 25
+
+// Prints:
+// Temperature now: 20.0
+// Temperature now: 25.0
+```
+
+위 코드 처럼 프로퍼티가 변했을 때, willSet 블록에 게시가 발생한다.
+
+이 말은, 실제로 프로퍼티가 변경(설정)되기 전에 새 값을 받는다는 말이다.
+
+Temperature now: 20.0은 클로져를 선언 했을 때 바로 출력되며, 그 이후 변한값에대한 출력이 나타나게 된다.
+
+## 추가
+@Published는 프로퍼티 래퍼로 프로퍼티가 변경이 발생할 때 자동으로 알려주는 observable object를 만들 수 있다.
+
+SiwftUI는 이러한 변경사항을 관찰하고 모니터링하는 View의 body속성을 다시 호출해 준다.
+
+한마디로 @Published를 사용하면 그 프로퍼티가 변경 될 때마다 해당 프로퍼티를 사용하는 View들을 다시 로드 시켜 준다는 말이다.
+
+예를 들어보자,
+
+```swift
+class Test: ObservableObject {
+    var testNumArray = [String]()
 }
 ```
 
-## 추가
-SwiftUI에서 View(구조체)안에 선언된 프로퍼티 값을 구조체 내에서 변경하려고 하면 오류가 난다.
+위의 예시는 관찰 가능하도록 프로토콜을 사용해 주어서 SwiftUI가 변경 사항을 감시해 주도록 했다.
 
-Swift의 구조체에서 mutating으로 선언되지 않은 프로퍼티는 구조체 내에서 그 값의 변경이 불가하다.
+하지만 프로퍼티에는 아무런 프로퍼티 래퍼가 선언 되어 있지 않기에 변경은 자유자재로 할 수 있지만, 변경 사항을 알려주거나 하지 않는다.
 
-그렇다고 연산 프로퍼티인 body를 mutating으로 선언해 주어도 안된다.
+이 때 @Published를 사용 하여 이 점을 보완할 수 있다.
 
--> View프로토콜의 body 프로퍼티는 {get}으로 선언되어 있으며, 이는 nonmutating으로 구현을 요구한다.
+```swift
+class Test: ObservableObject {
+    @Published var testNumArray = [String]()
+}
+```
 
-그렇다면 어떻게 프로퍼티 값을 변경할 수 있을까?
+위 코드로 바꿔서 작성한다면 @Published 속성 래퍼는 항목에 willSet 속성 관찰자를 추가하여 모든 변경 사항이 observer에게 자동으로 전송 된다.
 
-이 때 @State를 사용하면 프로퍼티 값을 강제로 변경할 수 있게 된다.
-
-하지만 @State를 사용한다고 해도 컴파일 에러는 피할 수 있지만 실행 화면에서는 변경이 안된 것을 확인 할 수 있다.
-
--> @State 속성의 프로퍼티 값은 사실 재 할당하여 값을 바꿀 수 없다.
-
-@Binding을 사용해야만 변경이 가능하다.
-
-@Binding에 대해서는 해당 글에서 다루겠다.
+이 말은 즉, testNummArray가 변경 되었을 경우 해당 프로퍼티를 사용하는 뷰들을 변경한 값에 대하여 자동으로 리로드 된다는 말이다.
 
 ***
 ### 공식문서
-- [애플공식문서_@State](https://developer.apple.com/documentation/swiftui/state)
+- [애플공식문서_@Published](https://developer.apple.com/documentation/combine/published)
