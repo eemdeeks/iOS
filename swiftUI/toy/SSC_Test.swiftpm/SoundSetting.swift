@@ -17,11 +17,16 @@ class SoundSetting: ObservableObject {
     
     enum SoundOption: String {
         case C
+        case CS
         case D
+        case DS
         case E
         case F
+        case FS
         case G
+        case GS
         case A
+        case AS
         case B
         case C2
         
@@ -29,16 +34,26 @@ class SoundSetting: ObservableObject {
             switch self {
             case .C:
                 return "FX_piano01"
+            case .CS:
+                return "FX_piano02"
             case .D:
                 return "FX_piano03"
+            case .DS:
+                return "FX_piano04"
             case .E:
                 return "FX_piano05"
             case .F:
                 return "FX_piano06"
+            case .FS:
+                return "FX_piano07"
             case .G:
                 return "FX_piano08"
+            case .GS:
+                return "FX_piano09"
             case .A:
                 return "FX_piano10"
+            case .AS:
+                return "FX_piano11"
             case .B:
                 return "FX_piano12"
             case .C2:
@@ -66,34 +81,7 @@ struct SoundEffectView: View {
     
     var soundSetting = SoundSetting()
     var body: some View {
-        VStack {
-            HStack{
-                Button {
-                    SoundSetting.instance.playSound(sound: .C)
-                } label: {
-                    imageViews2(imageName: "piano_black")
-                }
-                Button {
-                    SoundSetting.instance.playSound(sound: .D)
-                } label: {
-                    imageViews2(imageName: "piano_black")
-                }
-                Button {
-                    SoundSetting.instance.playSound(sound: .E)
-                } label: {
-                    imageViews2(imageName: "piano_black")
-                }
-                Button {
-                    SoundSetting.instance.playSound(sound: .F)
-                } label: {
-                    imageViews2(imageName: "piano_black")
-                }
-                Button {
-                    SoundSetting.instance.playSound(sound: .G)
-                } label: {
-                    imageViews2(imageName: "piano_black")
-                }
-            }
+        ZStack {
             HStack {
                 Button {
                     SoundSetting.instance.playSound(sound: .C)
@@ -135,7 +123,42 @@ struct SoundEffectView: View {
                 } label: {
                     imageViews(imageName: "piano_white")
                 }
+                
             }
+            HStack{
+                HStack{
+                    Button {
+                        SoundSetting.instance.playSound(sound: .CS)
+                    } label: {
+                        imageViews2(imageName: "piano_black")
+                    }
+                    Button {
+                        SoundSetting.instance.playSound(sound: .DS)
+                    } label: {
+                        imageViews2(imageName: "piano_black")
+                    }
+                
+                }
+                .offset(x: -50)
+                HStack{
+                    Button {
+                        SoundSetting.instance.playSound(sound: .FS)
+                    } label: {
+                        imageViews2(imageName: "piano_black")
+                    }
+                    Button {
+                        SoundSetting.instance.playSound(sound: .GS)
+                    } label: {
+                        imageViews2(imageName: "piano_black")
+                    }
+                    Button {
+                        SoundSetting.instance.playSound(sound: .AS)
+                    } label: {
+                        imageViews2(imageName: "piano_black")
+                    }
+                }
+            }
+            .offset(y: -70)
         }
         
     }
