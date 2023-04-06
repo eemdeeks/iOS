@@ -407,8 +407,8 @@ Practice typing
             - [@published](https://github.com/eemdeeks/iOS/blob/main/swiftUI/MVVM/View%20Model/%40Published.md)
         - @Environment
         - @EnvironmentObject
-        - onReceive
-        - .onChange()
+        - [.onReceive()](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/inside%20Views/onReceive().md)
+        - [.onChange()](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/inside%20Views/onChange().md)
 
 ### 🎲Animation - When to use animations?
 - Implicit animations
