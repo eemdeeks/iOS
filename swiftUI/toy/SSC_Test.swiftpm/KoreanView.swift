@@ -154,6 +154,28 @@ struct KoreanView: View {
                         KoreanBtnImage(imageName: "korean24")
                     }
                 }
+                HStack{
+                    Button{
+                        
+                    } label: {
+                        ZStack{
+                            Image("blank")
+                                .resizable()
+                                .frame(width: UIScreen.main.bounds.size.width/5, height: UIScreen.main.bounds.size.width/10)
+                            Text("OK")
+                        }
+                    }
+                    Button{
+                        viewModel.deleteAnswer()
+                    } label: {
+                        ZStack{
+                            Image("blank")
+                                .resizable()
+                                .frame(width: UIScreen.main.bounds.size.width/5, height: UIScreen.main.bounds.size.width/10)
+                            Text("delete")
+                        }
+                    }
+                }
             }
             .frame(width: UIScreen.main.bounds.size.width/2)
         }
@@ -168,7 +190,7 @@ struct KoreanView_Previews: PreviewProvider {
 }
 struct KoreanBtnImage: View {
     var imageName: String
-    var frameSize : CGFloat = UIScreen.main.bounds.size.width/8
+    var frameSize : CGFloat = UIScreen.main.bounds.size.width/10
     var body: some View {
         Image(imageName)
             .resizable()

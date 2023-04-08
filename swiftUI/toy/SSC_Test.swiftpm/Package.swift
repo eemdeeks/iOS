@@ -17,6 +17,7 @@ let package = Package(
             name: "SSC_Test",
             targets: ["AppModule"],
             bundleIdentifier: "eemdeeks.SSC-Test",
+            teamIdentifier: "37UUYN2CGZ",
             displayVersion: "1.0",
             bundleVersion: "1",
             appIcon: .placeholder(icon: .weights),
