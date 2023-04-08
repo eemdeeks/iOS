@@ -11,11 +11,13 @@ struct Model{
     var text: [String]
     var index : Int
     var answer : [String]
+    var imageKey : [String]
     
-    init(text: [String] = ["","","","","","","","","","","","","","","","","",""], index: Int = 0, answer: [String]) {
+    init(text: [String] = ["","","","","","","","","","","","","","","","","",""], index: Int = 0, answer: [String], imageKey : [String] = ["blank","blank","blank","blank","blank","blank"]) {
         self.text = text
         self.index = index
         self.answer = answer
+        self.imageKey = imageKey
     }
 }
 

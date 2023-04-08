@@ -16,7 +16,7 @@ struct KoreanView: View {
             VStack{
                 HStack{
                     ForEach(0..<6){ index in
-                        BlankImage(imageName: "blank",text: viewModel.myAnswer.text[index])
+                        BlankImage(imageName: viewModel.myAnswer.imageKey[index],text: viewModel.myAnswer.text[index])
                     }
                 }
             }
@@ -156,7 +156,7 @@ struct KoreanView: View {
                 }
                 HStack{
                     Button{
-                        
+                        viewModel.compareAnswer()
                     } label: {
                         ZStack{
                             Image("blank")

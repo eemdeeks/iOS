@@ -25,4 +25,20 @@ class KoreanViewModel : ObservableObject {
         }
         self.myAnswer.index = 0
     }
+    func compareAnswer(){
+        if self.myAnswer.text[self.myAnswer.answer.count-1] == ""{
+            print("답 확인 불가")
+        } else {
+            for i in 0...self.myAnswer.answer.count-1{
+                if self.myAnswer.text[i] == self.myAnswer.answer[i]{
+                    self.myAnswer.imageKey[i] = "correct"
+                }else if self.myAnswer.answer.contains(self.myAnswer.text[i]){
+                    self.myAnswer.imageKey[i] = "similar"
+                }else {
+                    self.myAnswer.imageKey[i] = "wrong"
+                }
+                
+            }
+        }
+    }
 }
