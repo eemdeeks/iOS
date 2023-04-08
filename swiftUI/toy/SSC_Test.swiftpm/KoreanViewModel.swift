@@ -13,8 +13,10 @@ class KoreanViewModel : ObservableObject {
     init(myAnswer: Model){
         self.myAnswer = myAnswer
     }
-    func inputKorean(text: String,index: Int){
-        self.myAnswer.text[index] = text
-        print("뷰모델에 들어감")
+    func inputKorean(text: String){
+        if self.myAnswer.index < self.myAnswer.answer.count {
+            self.myAnswer.text[self.myAnswer.index] = text
+            self.myAnswer.index += 1
+        }
     }
 }
