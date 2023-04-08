@@ -8,19 +8,52 @@
 import Foundation
 
 struct Model{
-    var text: [String]
+    let text: [Text]
     var index : Int
     var answer : [String]
-    var imageKey : [String]
+    let imageKey : [ImageKey]
+    var level : Int
     
-    init(text: [String] = ["","","","","","","","","","","","","","","","","",""], index: Int = 0, answer: [String], imageKey : [String] = ["blank","blank","blank","blank","blank","blank"]) {
+    init(text: [Text], index: Int = 0, answer: [String], imageKey : [ImageKey],level : Int = 0) {
         self.text = text
         self.index = index
         self.answer = answer
         self.imageKey = imageKey
+        self.level = level
     }
 }
 
 extension Model {
-    static let story = Model(answer: ["ㅇ","ㅣ","ㅇ","ㅑ","ㄱ","ㅣ"])
+    final class Text : Identifiable {
+        var text : [String]
+        init(text: [String]) {
+            self.text = text
+        }
+    }
+    final class ImageKey : Identifiable {
+        var key : [String]
+        init(key: [String]) {
+            self.key = key
+        }
+        
+    }
+    
+    static let story = Model(
+        text: [
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""])
+        ],
+        answer: ["ㅇ","ㅣ","ㅇ","ㅑ","ㄱ","ㅣ"],
+        imageKey: [
+        .init(key: ["blank","blank","blank","blank","blank","blank"]),
+        .init(key: ["blank","blank","blank","blank","blank","blank"]),
+        .init(key: ["blank","blank","blank","blank","blank","blank"]),
+        .init(key: ["blank","blank","blank","blank","blank","blank"]),
+        .init(key: ["blank","blank","blank","blank","blank","blank"])
+        ]
+        
+    )
 }

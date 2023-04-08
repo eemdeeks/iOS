@@ -16,7 +16,27 @@ struct KoreanView: View {
             VStack{
                 HStack{
                     ForEach(0..<6){ index in
-                        BlankImage(imageName: viewModel.myAnswer.imageKey[index],text: viewModel.myAnswer.text[index])
+                        BlankImage(imageName: viewModel.myAnswer.imageKey[0].key[index],text: viewModel.myAnswer.text[0].text[index])
+                    }
+                }
+                HStack{
+                    ForEach(0..<6){ index in
+                        BlankImage(imageName: viewModel.myAnswer.imageKey[1].key[index],text: viewModel.myAnswer.text[1].text[index])
+                    }
+                }
+                HStack{
+                    ForEach(0..<6){ index in
+                        BlankImage(imageName: viewModel.myAnswer.imageKey[2].key[index],text: viewModel.myAnswer.text[2].text[index])
+                    }
+                }
+                HStack{
+                    ForEach(0..<6){ index in
+                        BlankImage(imageName: viewModel.myAnswer.imageKey[3].key[index],text: viewModel.myAnswer.text[3].text[index])
+                    }
+                }
+                HStack{
+                    ForEach(0..<6){ index in
+                        BlankImage(imageName: viewModel.myAnswer.imageKey[4].key[index],text: viewModel.myAnswer.text[4].text[index])
                     }
                 }
             }
