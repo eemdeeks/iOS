@@ -2,8 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            SoundEffectView()
-        }
+        let viewModel = KoreanViewModel(myAnswer: Model())
+        return KoreanView(viewModel: viewModel)
     }
 }
