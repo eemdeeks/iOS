@@ -10,13 +10,13 @@ import Foundation
 struct Model: Identifiable{
     let text: [Text]
     var index : Int
-    var answer : [String]
+    var answer : Answer
     var problem : String
     let imageKey : [ImageKey]
     var level : Int
     var id: String { problem }
     
-    init(text: [Text], index: Int = 0, answer: [String],problem: String, imageKey : [ImageKey],level : Int = 0) {
+    init(text: [Text], index: Int = 0, answer: Answer, problem: String, imageKey : [ImageKey],level : Int = 0) {
         self.text = text
         self.index = index
         self.answer = answer
@@ -31,6 +31,15 @@ extension Model {
         var text : [String]
         init(text: [String]) {
             self.text = text
+        }
+    }
+    final class Answer : Identifiable {
+        let answerArray : [String]
+        let answerString : String
+        
+        init(answerArray: [String], answerString: String) {
+            self.answerArray = answerArray
+            self.answerString = answerString
         }
     }
     final class ImageKey : Identifiable {
@@ -52,7 +61,7 @@ extension Model {
             .init(text: ["","","","","",""]),
             .init(text: ["","","","","",""])
         ],
-        answer: ["ㅇ","ㅣ","ㅇ","ㅑ","ㄱ","ㅣ"],
+        answer: .init(answerArray: ["ㅇ","ㅣ","ㅇ","ㅑ","ㄱ","ㅣ"], answerString: "이야기"),
         problem: "Story",
         imageKey: [
         .init(key: ["blank","blank","blank","blank","blank","blank"],
@@ -74,7 +83,7 @@ extension Model {
             .init(text: ["","","","","",""]),
             .init(text: ["","","","","",""])
         ],
-        answer: ["ㅂ","ㅏ","ㄴ","ㅏ","ㄴ","ㅏ"],
+        answer: .init(answerArray: ["ㅂ","ㅏ","ㄴ","ㅏ","ㄴ","ㅏ"], answerString: "바나나"),
         problem: "Banana",
         imageKey: [
         .init(key: ["blank","blank","blank","blank","blank","blank"],
@@ -96,7 +105,7 @@ extension Model {
             .init(text: ["","","","","",""]),
             .init(text: ["","","","","",""])
         ],
-        answer: ["ㄴ","ㅗ","ㅇ","ㄷ","ㅏ","ㅁ"],
+        answer: .init(answerArray: ["ㄴ","ㅗ","ㅇ","ㄷ","ㅏ","ㅁ"], answerString: "농담"),
         problem: "Joke",
         imageKey: [
         .init(key: ["blank","blank","blank","blank","blank","blank"],
@@ -118,7 +127,7 @@ extension Model {
             .init(text: ["","","","","",""]),
             .init(text: ["","","","","",""])
         ],
-        answer: ["ㄱ","ㅏ","ㅁ","ㅈ","ㅓ","ㅇ"],
+        answer: .init(answerArray: ["ㄱ","ㅏ","ㅁ","ㅈ","ㅓ","ㅇ"], answerString: "감정"),
         problem: "Emotion",
         imageKey: [
         .init(key: ["blank","blank","blank","blank","blank","blank"],

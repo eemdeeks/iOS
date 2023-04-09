@@ -197,7 +197,7 @@ struct KoreanView: View {
                         Button("OK", role: .cancel){}
                     }
                     .alert(isPresented: $viewModel.wrongBool){
-                        Alert(title: Text("You're wrong!!"), message: Text("The Answer is \"이야기\"!!"),
+                        Alert(title: Text("You're wrong!!"), message: Text("The answer is \"\(viewModel.myAnswer.answer.answerString)\"!!"),
                               dismissButton: .default(Text("OK")))
                     }
                     

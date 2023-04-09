@@ -19,7 +19,7 @@ class KoreanViewModel : ObservableObject {
     }
     func inputKorean(text: String){
         if self.myAnswer.level < 5{
-            if self.myAnswer.index < self.myAnswer.answer.count {
+            if self.myAnswer.index < self.myAnswer.answer.answerArray.count {
                 self.myAnswer.text[self.myAnswer.level].text[self.myAnswer.index] = text
                 self.myAnswer.index += 1
             }
@@ -27,7 +27,7 @@ class KoreanViewModel : ObservableObject {
     }
     func deleteAnswer(){
         if self.myAnswer.level < 5{
-            for i in 0...self.myAnswer.answer.count-1{
+            for i in 0...self.myAnswer.answer.answerArray.count-1{
                 self.myAnswer.text[self.myAnswer.level].text[i] = ""
             }
             self.myAnswer.index = 0
@@ -36,15 +36,15 @@ class KoreanViewModel : ObservableObject {
     func compareAnswer(){
         if self.myAnswer.level < 5 {
             var count = 0
-            if self.myAnswer.text[self.myAnswer.level].text[self.myAnswer.answer.count-1] == ""{
+            if self.myAnswer.text[self.myAnswer.level].text[self.myAnswer.answer.answerArray.count-1] == ""{
                 print("답 확인 불가")
             } else {
-                for i in 0...self.myAnswer.answer.count-1{
-                    if self.myAnswer.text[self.myAnswer.level].text[i] == self.myAnswer.answer[i]{
+                for i in 0...self.myAnswer.answer.answerArray.count-1{
+                    if self.myAnswer.text[self.myAnswer.level].text[i] == self.myAnswer.answer.answerArray[i]{
                         self.myAnswer.imageKey[self.myAnswer.level].key[i] = "correct"
                         changeBtnCorrect(text: self.myAnswer.text[self.myAnswer.level].text[i])
                         count += 1
-                    }else if self.myAnswer.answer.contains(self.myAnswer.text[self.myAnswer.level].text[i]){
+                    }else if self.myAnswer.answer.answerArray.contains(self.myAnswer.text[self.myAnswer.level].text[i]){
                         self.myAnswer.imageKey[self.myAnswer.level].key[i] = "similar"
                         changeBtnSimilar(text: self.myAnswer.text[self.myAnswer.level].text[i])
                     }else {
@@ -53,8 +53,9 @@ class KoreanViewModel : ObservableObject {
                     }
                     
                 }
-                if count == self.myAnswer.answer.count {
+                if count == self.myAnswer.answer.answerArray.count {
                     self.answerBool = true
+                    self.myAnswer.level = 5
                 }else if self.myAnswer.level == 4{
                     self.wrongBool = true
                 }
