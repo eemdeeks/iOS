@@ -64,14 +64,14 @@ extension Model {
         answer: .init(answerArray: ["ㅇ","ㅣ","ㅇ","ㅑ","ㄱ","ㅣ"], answerString: "이야기"),
         problem: "Story",
         imageKey: [
-        .init(key: ["blank","blank","blank","blank","blank","blank"],
+        .init(key: ["textField","textField","textField","textField","textField","textField"],
              btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"],
+        .init(key: ["textField","textField","textField","textField","textField","textField"],
               btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
                       "blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"])
+        .init(key: ["textField","textField","textField","textField","textField","textField"]),
+        .init(key: ["textField","textField","textField","textField","textField","textField"]),
+        .init(key: ["textField","textField","textField","textField","textField","textField"])
         ]
         
     )
@@ -86,14 +86,14 @@ extension Model {
         answer: .init(answerArray: ["ㅂ","ㅏ","ㄴ","ㅏ","ㄴ","ㅏ"], answerString: "바나나"),
         problem: "Banana",
         imageKey: [
-        .init(key: ["blank","blank","blank","blank","blank","blank"],
+        .init(key: ["textField","textField","textField","textField","textField","textField"],
              btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"],
+        .init(key: ["textField","textField","textField","textField","textField","textField"],
               btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
                       "blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"])
+        .init(key: ["textField","textField","textField","textField","textField","textField"]),
+        .init(key: ["textField","textField","textField","textField","textField","textField"]),
+        .init(key: ["textField","textField","textField","textField","textField","textField"])
         ]
         
     )
@@ -108,14 +108,14 @@ extension Model {
         answer: .init(answerArray: ["ㄴ","ㅗ","ㅇ","ㄷ","ㅏ","ㅁ"], answerString: "농담"),
         problem: "Joke",
         imageKey: [
-        .init(key: ["blank","blank","blank","blank","blank","blank"],
+        .init(key: ["textField","textField","textField","textField","textField","textField"],
              btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"],
+        .init(key: ["textField","textField","textField","textField","textField","textField"],
               btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
                       "blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"])
+        .init(key: ["textField","textField","textField","textField","textField","textField"]),
+        .init(key: ["textField","textField","textField","textField","textField","textField"]),
+        .init(key: ["textField","textField","textField","textField","textField","textField"])
         ]
         
     )
@@ -130,14 +130,14 @@ extension Model {
         answer: .init(answerArray: ["ㄱ","ㅏ","ㅁ","ㅈ","ㅓ","ㅇ"], answerString: "감정"),
         problem: "Emotion",
         imageKey: [
-        .init(key: ["blank","blank","blank","blank","blank","blank"],
+        .init(key: ["textField","textField","textField","textField","textField","textField"],
              btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"],
+        .init(key: ["textField","textField","textField","textField","textField","textField"],
               btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
                       "blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"])
+        .init(key: ["textField","textField","textField","textField","textField","textField"]),
+        .init(key: ["textField","textField","textField","textField","textField","textField"]),
+        .init(key: ["textField","textField","textField","textField","textField","textField"])
         ]
         
     )
