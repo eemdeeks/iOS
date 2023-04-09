@@ -19,7 +19,7 @@ struct Model{
         self.text = text
         self.index = index
         self.answer = answer
-        self.problem = answerString
+        self.problem = problem
         self.imageKey = imageKey
         self.level = level
     }

@@ -10,6 +10,7 @@ import SwiftUI
 struct KoreanView: View {
     
     @ObservedObject var viewModel: KoreanViewModel
+
     
     var body: some View {
         HStack{
@@ -191,6 +192,15 @@ struct KoreanView: View {
                                 .frame(width: UIScreen.main.bounds.size.width/5, height: UIScreen.main.bounds.size.width/10)
                             Text("OK")
                         }
+                    }
+                    
+                    .alert(isPresented: $viewModel.answerBool) {
+                                Alert(title: Text("That's right!"), message: nil,
+                                      dismissButton: .default(Text("OK")))
+                            }
+                    .alert(isPresented: $viewModel.wrongBool){
+                        Alert(title: Text("You're wrong!!"), message: Text("The Answer is \"이야기\"!!"),
+                              dismissButton: .default(Text("OK")))
                     }
                     Button{
                         viewModel.deleteAnswer()
