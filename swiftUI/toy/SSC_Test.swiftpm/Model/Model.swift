@@ -35,8 +35,11 @@ extension Model {
     }
     final class ImageKey : Identifiable {
         var key : [String]
-        init(key: [String]) {
+        var btnKey : [String]
+        
+        init(key: [String], btnKey: [String] = []) {
             self.key = key
+            self.btnKey = btnKey
         }
         
     }
@@ -52,8 +55,11 @@ extension Model {
         answer: ["ㅇ","ㅣ","ㅇ","ㅑ","ㄱ","ㅣ"],
         problem: "Story",
         imageKey: [
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
+        .init(key: ["blank","blank","blank","blank","blank","blank"],
+             btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+        .init(key: ["blank","blank","blank","blank","blank","blank"],
+              btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
+                      "blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"])
@@ -71,8 +77,11 @@ extension Model {
         answer: ["ㅂ","ㅏ","ㄴ","ㅏ","ㄴ","ㅏ"],
         problem: "Banana",
         imageKey: [
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
+        .init(key: ["blank","blank","blank","blank","blank","blank"],
+             btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+        .init(key: ["blank","blank","blank","blank","blank","blank"],
+              btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
+                      "blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"])
@@ -90,8 +99,11 @@ extension Model {
         answer: ["ㄴ","ㅗ","ㅇ","ㄷ","ㅏ","ㅁ"],
         problem: "Joke",
         imageKey: [
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
+        .init(key: ["blank","blank","blank","blank","blank","blank"],
+             btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+        .init(key: ["blank","blank","blank","blank","blank","blank"],
+              btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
+                      "blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"])
@@ -109,8 +121,11 @@ extension Model {
         answer: ["ㄱ","ㅏ","ㅁ","ㅈ","ㅓ","ㅇ"],
         problem: "Emotion",
         imageKey: [
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
-        .init(key: ["blank","blank","blank","blank","blank","blank"]),
+        .init(key: ["blank","blank","blank","blank","blank","blank"],
+             btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+        .init(key: ["blank","blank","blank","blank","blank","blank"],
+              btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
+                      "blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"])

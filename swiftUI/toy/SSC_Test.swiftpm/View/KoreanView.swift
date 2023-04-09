@@ -54,132 +54,132 @@ struct KoreanView: View {
                     Button{
                         viewModel.inputKorean(text: "ㄱ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean1")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[0],text: "ㄱ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㄴ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean2")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[1], text: "ㄴ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㄷ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean3")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[2], text: "ㄷ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㄹ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean4")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[3], text: "ㄹ")
                     }
                 }
                 HStack{
                     Button{
                         viewModel.inputKorean(text: "ㅁ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean5")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[4],text: "ㅁ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅂ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean6")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[5],text: "ㅂ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅅ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean7")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[6],text: "ㅅ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅇ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean8")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[7],text: "ㅇ")
                     }
                 }
                 HStack{
                     Button{
                         viewModel.inputKorean(text: "ㅈ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean9")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[8],text: "ㅈ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅊ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean10")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[9],text: "ㅊ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅋ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean11")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[10],text: "ㅋ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅌ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean12")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[11],text: "ㅌ")
                     }
                 }
                 HStack{
                     Button{
                         viewModel.inputKorean(text: "ㅍ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean13")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[12],text: "ㅍ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅎ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean14")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[13],text: "ㅎ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅏ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean15")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[14],text: "ㅏ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅑ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean16")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[15],text: "ㅑ")
                     }
                 }
                 HStack{
                     Button{
                         viewModel.inputKorean(text: "ㅓ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean17")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[16],text: "ㅓ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅕ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean18")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[17],text: "ㅕ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅗ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean19")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[18],text: "ㅗ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅛ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean20")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[19],text: "ㅛ")
                     }
                 }
                 HStack{
                     Button{
                         viewModel.inputKorean(text: "ㅜ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean21")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[20],text: "ㅜ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅠ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean22")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[21],text: "ㅠ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅡ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean23")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[22],text: "ㅡ")
                     }
                     Button{
                         viewModel.inputKorean(text: "ㅣ")
                     }label: {
-                        KoreanBtnImage(imageName: "korean24")
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[23],text: "ㅣ")
                     }
                 }
                 HStack{
@@ -226,12 +226,17 @@ struct KoreanView_Previews: PreviewProvider {
 }
 struct KoreanBtnImage: View {
     var imageName: String
+    var text: String
     var frameSize : CGFloat = UIScreen.main.bounds.size.width/10
     var body: some View {
-        Image(imageName)
-            .resizable()
-            .scaledToFit()
-            .frame(width: frameSize, height: frameSize)
+        ZStack{
+            Image(imageName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: frameSize, height: frameSize)
+            Text(text)
+                .foregroundColor(.black)
+        }
     }
 }
 
