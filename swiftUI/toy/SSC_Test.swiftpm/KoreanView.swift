@@ -193,15 +193,14 @@ struct KoreanView: View {
                             Text("OK")
                         }
                     }
-                    
-                    .alert(isPresented: $viewModel.answerBool) {
-                                Alert(title: Text("That's right!"), message: nil,
-                                      dismissButton: .default(Text("OK")))
-                            }
+                    .alert("Good job!",isPresented: $viewModel.answerBool) {
+                        Button("OK", role: .cancel){}
+                    }
                     .alert(isPresented: $viewModel.wrongBool){
                         Alert(title: Text("You're wrong!!"), message: Text("The Answer is \"이야기\"!!"),
                               dismissButton: .default(Text("OK")))
                     }
+                    
                     Button{
                         viewModel.deleteAnswer()
                     } label: {
