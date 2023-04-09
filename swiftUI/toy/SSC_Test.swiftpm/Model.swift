@@ -11,13 +11,15 @@ struct Model{
     let text: [Text]
     var index : Int
     var answer : [String]
+    var problem : String
     let imageKey : [ImageKey]
     var level : Int
     
-    init(text: [Text], index: Int = 0, answer: [String], imageKey : [ImageKey],level : Int = 0) {
+    init(text: [Text], index: Int = 0, answer: [String],problem: String, imageKey : [ImageKey],level : Int = 0) {
         self.text = text
         self.index = index
         self.answer = answer
+        self.problem = answerString
         self.imageKey = imageKey
         self.level = level
     }
@@ -47,6 +49,7 @@ extension Model {
             .init(text: ["","","","","",""])
         ],
         answer: ["ㅇ","ㅣ","ㅇ","ㅑ","ㄱ","ㅣ"],
+        problem: "Story",
         imageKey: [
         .init(key: ["blank","blank","blank","blank","blank","blank"]),
         .init(key: ["blank","blank","blank","blank","blank","blank"]),

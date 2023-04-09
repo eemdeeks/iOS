@@ -20,8 +20,7 @@ class KoreanViewModel : ObservableObject {
         }
     }
     func deleteAnswer(){
-        if 
-        for i in 0...self.myAnswer.text.count-1{
+        for i in 0...self.myAnswer.answer.count-1{
             self.myAnswer.text[self.myAnswer.level].text[i] = ""
         }
         self.myAnswer.index = 0

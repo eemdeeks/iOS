@@ -14,6 +14,13 @@ struct KoreanView: View {
     var body: some View {
         HStack{
             VStack{
+                ZStack{
+                    Image("blank")
+                        .resizable()
+                        .frame(width: UIScreen.main.bounds.size.width/14*6)
+                    Text(viewModel.myAnswer.problem)
+                        .font(.system(size: 100))
+                }
                 HStack{
                     ForEach(0..<6){ index in
                         BlankImage(imageName: viewModel.myAnswer.imageKey[0].key[index],text: viewModel.myAnswer.text[0].text[index])
