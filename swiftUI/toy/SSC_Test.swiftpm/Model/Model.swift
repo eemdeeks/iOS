@@ -15,14 +15,16 @@ struct Model: Identifiable{
     let imageKey : [ImageKey]
     var level : Int
     var id: String { problem }
+    var isSolved : Bool
     
-    init(text: [Text], index: Int = 0, answer: Answer, problem: String, imageKey : [ImageKey],level : Int = 0) {
+    init(text: [Text], index: Int = 0, answer: Answer, problem: String, imageKey : [ImageKey],level : Int = 0, isSolved: Bool = false) {
         self.text = text
         self.index = index
         self.answer = answer
         self.problem = problem
         self.imageKey = imageKey
         self.level = level
+        self.isSolved = isSolved
     }
 }
 

@@ -56,6 +56,7 @@ class KoreanViewModel : ObservableObject {
                 if count == self.myAnswer.answer.answerArray.count {
                     self.answerBool = true
                     self.myAnswer.level = 5
+                    self.myAnswer.isSolved = true
                 }else if self.myAnswer.level == 4{
                     self.wrongBool = true
                 }

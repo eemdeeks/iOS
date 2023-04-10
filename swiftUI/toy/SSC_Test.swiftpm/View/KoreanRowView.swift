@@ -7,12 +7,17 @@
 
 import SwiftUI
 
-struct KoreanRowView: View {
+struct KoreanRowView: View{
     @ObservedObject var viewModel: KoreanViewModel
+    
     var body: some View {
         HStack{
+            if viewModel.answerBool {
+                Image(systemName: "star.fill")
+            }
+            
             Text(viewModel.myAnswer.problem)
-            Spacer()
+            
         }
     }
 }

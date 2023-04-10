@@ -9,10 +9,20 @@ import SwiftUI
 
 struct KoreanListView: View {
     @ObservedObject var viewModel : KoreanListViewModel
+    @State private var showUnSolvedOnly = false
+    
+    var filteredProblems: [Model] {
+        viewModel.modelList.filter { problem in
+            (!showUnSolvedOnly || problem.isSolved)
+        }
+    }
     
     var body: some View {
         NavigationView{
             List{
+                Toggle(isOn: $showUnSolvedOnly){
+                    Text("Unsolved only")
+                }
                 ForEach(viewModel.modelList){ problem in
                     NavigationLink{
                         KoreanView(viewModel: KoreanViewModel(myAnswer: problem))
