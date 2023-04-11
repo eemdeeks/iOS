@@ -12,12 +12,12 @@ struct KoreanRowView: View{
     
     var body: some View {
         HStack{
-            if viewModel.answerBool {
-                Image(systemName: "star.fill")
-            }
-            
             Text(viewModel.myAnswer.problem)
-            
+            Spacer()
+            if viewModel.myAnswer.isSolved {
+                Image(systemName: "pencil.circle")
+                    .foregroundColor(.green)
+            }
         }
     }
 }
