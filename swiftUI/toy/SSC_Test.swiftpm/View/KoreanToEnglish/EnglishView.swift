@@ -196,42 +196,28 @@ struct EnglishView: View {
                     Button {
                         viewModel.deleteText()
                     } label: {
-                        ZStack{
-                            Image(systemName: "textField")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
-                            Image(systemName: "delete.backward")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: UIScreen.main.bounds.size.width/16, height: UIScreen.main.bounds.size.width/16)
-                        }
+                        Image(systemName: "delete.backward")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.main.bounds.size.width/16, height: UIScreen.main.bounds.size.width/16)
                     }
                     Button {
                         viewModel.refreshBtn()
                     } label: {
-                        ZStack{
-                            Image(systemName: "textField")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
-                            Image(systemName: "arrow.clockwise")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: UIScreen.main.bounds.size.width/16, height: UIScreen.main.bounds.size.width/16)
-                        }
+                        Image(systemName: "arrow.clockwise")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.main.bounds.size.width/16, height: UIScreen.main.bounds.size.width/16)
                     }
                 }
                 HStack{
                     Button{
                         viewModel.compareAnswer()
                     } label: {
-                        ZStack{
-                            Image("blank")
-                                .resizable()
-                                .frame(width: UIScreen.main.bounds.size.width/5, height: UIScreen.main.bounds.size.width/10)
-                            Text("OK")
-                        }
+                        Image(systemName: "return")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.main.bounds.size.width/16, height: UIScreen.main.bounds.size.width/16)
                     }
                     .alert("Good job!",isPresented: $viewModel.answerBool) {
                         Button("OK", role: .cancel){}
@@ -244,12 +230,10 @@ struct EnglishView: View {
                     Button{
                         viewModel.cleanText()
                     } label: {
-                        ZStack{
-                            Image("blank")
-                                .resizable()
-                                .frame(width: UIScreen.main.bounds.size.width/5, height: UIScreen.main.bounds.size.width/10)
-                            Text("delete")
-                        }
+                        Image(systemName: "clear")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.main.bounds.size.width/16, height: UIScreen.main.bounds.size.width/16)
                     }
                 }
             }
@@ -274,7 +258,8 @@ struct EnglishBtnImage: View {
         ZStack{
             Image(imageName)
                 .resizable()
-                .scaledToFit()
+                //.scaledToFit()
+                .aspectRatio(contentMode: .fill)
                 .frame(width: frameSize, height: frameSize)
             Text(text)
                 .foregroundColor(.black)
