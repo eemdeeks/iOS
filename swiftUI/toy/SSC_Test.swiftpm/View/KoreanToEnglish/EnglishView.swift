@@ -194,6 +194,20 @@ struct EnglishView: View {
                     }
                     
                     Button {
+                        viewModel.deleteText()
+                    } label: {
+                        ZStack{
+                            Image(systemName: "textField")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                            Image(systemName: "delete.backward")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: UIScreen.main.bounds.size.width/16, height: UIScreen.main.bounds.size.width/16)
+                        }
+                    }
+                    Button {
                         viewModel.refreshBtn()
                     } label: {
                         ZStack{
@@ -228,7 +242,7 @@ struct EnglishView: View {
                     }
                     
                     Button{
-                        viewModel.deleteAnswer()
+                        viewModel.cleanText()
                     } label: {
                         ZStack{
                             Image("blank")
