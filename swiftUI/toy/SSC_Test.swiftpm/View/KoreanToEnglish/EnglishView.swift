@@ -194,7 +194,7 @@ struct EnglishView: View {
                     }
                     
                     Button {
-                        
+                        viewModel.refreshBtn()
                     } label: {
                         ZStack{
                             Image(systemName: "textField")

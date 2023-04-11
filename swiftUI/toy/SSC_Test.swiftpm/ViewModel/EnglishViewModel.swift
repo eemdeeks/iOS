@@ -165,18 +165,40 @@ class EnglishViewModel : ObservableObject {
     }
     
     func isCorrect(index : Int){
-        if self.myAnswer.imageKey[0].btnKey[index] != "correct"{
-            self.myAnswer.imageKey[0].btnKey[index] = "correct"
+        if self.myAnswer.imageKey[1].btnKey[index] != "correct"{
+            self.myAnswer.imageKey[1].btnKey[index] = "correct"
         }
     }
     func isSimilar(index : Int){
-        if self.myAnswer.imageKey[0].btnKey[index] != "correct" {
-            self.myAnswer.imageKey[0].btnKey[index] = "similar"
+        if self.myAnswer.imageKey[1].btnKey[index] != "correct" {
+            self.myAnswer.imageKey[1].btnKey[index] = "similar"
         }
     }
     func isWrong(index : Int) {
-        if self.myAnswer.imageKey[0].btnKey[index] == "blank" {
-            self.myAnswer.imageKey[0].btnKey[index] = "wrong"
+        if self.myAnswer.imageKey[1].btnKey[index] == "blank" {
+            self.myAnswer.imageKey[1].btnKey[index] = "wrong"
+        }
+    }
+    
+    // MARK: - 리프레쉬 버튼
+    func refreshBtn() {
+        if self.myAnswer.level < 1 {
+            self.deleteAnswer()
+        }else {
+            for i in 0...self.myAnswer.level{
+                if i == 5 { break }
+                for j in 0...self.myAnswer.text[i].text.count-1{
+                    self.myAnswer.text[i].text[j] = ""
+                    self.myAnswer.imageKey[i].key[j] = "textField"
+                }
+            }
+            for i in 0...self.myAnswer.imageKey[1].btnKey.count-1 {
+                self.myAnswer.imageKey[1].btnKey[i] = "blank"
+            }
+            
+            self.myAnswer.isSolved = false
+            self.myAnswer.level = 0
+            self.myAnswer.index = 0
         }
     }
     
