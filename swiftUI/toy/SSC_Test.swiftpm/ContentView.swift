@@ -4,6 +4,6 @@ struct ContentView: View {
     var body: some View {
         //let viewModel = KoreanViewModel(myAnswer: .story)
         //return KoreanView(viewModel: viewModel)
-        KoreanListView(viewModel: KoreanListViewModel(modelList: Model.modelList))
+        KoreanListView(viewModel: KoreanListViewModel(modelList: Model.modelList), viewModel2: EnglishListViewModel(modelList: Model.modelList2))
     }
 }

@@ -192,6 +192,21 @@ struct EnglishView: View {
                     }label: {
                         EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[25], text: "z")
                     }
+                    
+                    Button {
+                        
+                    } label: {
+                        ZStack{
+                            Image(systemName: "textField")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                            Image(systemName: "arrow.clockwise")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: UIScreen.main.bounds.size.width/16, height: UIScreen.main.bounds.size.width/16)
+                        }
+                    }
                 }
                 HStack{
                     Button{
