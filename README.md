@@ -294,8 +294,8 @@ Practice typing
 - Support iOS version
 
 ### 🖥️View
-- what is a view?
-    - Text
+- What is a view?
+    - [Text](https://github.com/eemdeeks/iOS/blob/main/swiftUI/What%20is%20a%20view/Text.md)
     - UI controls
     - Image
     - Color view
