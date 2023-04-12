@@ -55,6 +55,74 @@ extension Model {
         
     }
     // MARK: - 영어를 한글로 (문제)
+    static let cliff = Model(
+        text: [
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""])
+        ],
+        answer: .init(answerArray: ["ㅈ","ㅓ","ㄹ","ㅂ","ㅕ","ㄱ"], answerString: "절벽"),
+        problem: "Cliff",
+        imageKey: [
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
+                           "blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"])
+        ]
+        
+    )
+    
+    static let decoration = Model(
+        text: [
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""])
+        ],
+        answer: .init(answerArray: ["ㅈ","ㅏ","ㅇ","ㅅ","ㅣ","ㄱ"], answerString: "장식"),
+        problem: "Decoration",
+        imageKey: [
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
+                           "blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"])
+        ]
+        
+    )
+    
+    static let basket = Model(
+        text: [
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""])
+        ],
+        answer: .init(answerArray: ["ㅂ","ㅏ","ㄱ","ㅜ","ㄴ","ㅣ"], answerString: "바구니"),
+        problem: "basket",
+        imageKey: [
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
+                           "blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"])
+        ]
+        
+    )
     static let story = Model(
         text: [
             .init(text: ["","","","","",""]),
@@ -143,7 +211,77 @@ extension Model {
         ]
         
     )
-    static let modelList : [Model] = [.story,.banana,.joke,.emotion]
+    
+    static let blank = Model(
+        text: [
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""])
+        ],
+        answer: .init(answerArray: ["ㅂ","ㅣ","ㄴ","ㅋ","ㅏ","ㄴ"], answerString: "빈칸"),
+        problem: "Blank",
+        imageKey: [
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
+                           "blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"])
+        ]
+        
+    )
+    
+    static let pig = Model(
+        text: [
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""])
+        ],
+        answer: .init(answerArray: ["ㄷ","ㅗ","ㅏ","ㅣ","ㅈ","ㅣ"], answerString: "돼지"),
+        problem: "Pig",
+        imageKey: [
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
+                           "blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"])
+        ]
+        
+    )
+    
+    static let exercise = Model(
+        text: [
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""])
+        ],
+        answer: .init(answerArray: ["ㅇ","ㅜ","ㄴ","ㄷ","ㅗ","ㅇ"], answerString: "운동"),
+        problem: "Exercise",
+        imageKey: [
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
+                           "blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"])
+        ]
+        
+    )
+
+    static let modelList : [Model] = [.cliff,.blank,.decoration,.basket,.story,.banana,.joke,.emotion,.exercise, .pig]
     
     
     // MARK: - 한글을 영어로 (문제)
@@ -331,5 +469,51 @@ extension Model {
         
     )
     
-    static let modelList2 : [Model] = [.office,.season,.spring,.summer,.winter,.rabbit,.change,.invite]
+    static let dinner = Model(
+        text: [
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""])
+        ],
+        answer: .init(answerArray: ["d","i","n","n","e","r"], answerString: "dinner"),
+        problem: "저녁식사",
+        imageKey: [
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
+                           "blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"])
+        ]
+        
+    )
+    
+    static let shadow = Model(
+        text: [
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""]),
+            .init(text: ["","","","","",""])
+        ],
+        answer: .init(answerArray: ["s","h","a","d","o","w"], answerString: "shadow"),
+        problem: "그림자",
+        imageKey: [
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"],
+                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
+                           "blank","blank"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"]),
+            .init(key: ["textField","textField","textField","textField","textField","textField"])
+        ]
+        
+    )
+    
+    static let modelList2 : [Model] = [.office,.season,.spring,.summer,.winter,.rabbit,.change,.shadow,.invite, .dinner]
 }
