@@ -8,8 +8,11 @@
 import Foundation
 class EnglishListViewModel : ObservableObject {
     @Published var modelList : [Model]
+    @Published var showUnSolvedOnly : Bool
     
-    init(modelList : [Model]) {
+    
+    init(modelList : [Model], showUnSolbedOnly : Bool = false) {
         self.modelList = modelList
+        self.showUnSolvedOnly = showUnSolbedOnly
     }
 }

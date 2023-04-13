@@ -14,6 +14,8 @@ struct EnglishRowView: View {
         HStack{
             Text(viewModel.myAnswer.problem)
             Spacer()
+            
+            // 문제를 풀었을 경우 이미지 표시
             if viewModel.myAnswer.isSolved {
                 Image(systemName: "pencil.circle")
                     .foregroundColor(.green)

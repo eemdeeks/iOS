@@ -11,10 +11,12 @@ struct EnglishView: View {
     
     @ObservedObject var viewModel: EnglishViewModel
 
+    let alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     
     var body: some View {
         HStack{
             VStack{
+                // MARK: - 문제 나오는 뷰
                 ZStack{
                     Image("blank")
                         .resizable()
@@ -22,169 +24,30 @@ struct EnglishView: View {
                     Text(viewModel.myAnswer.problem)
                         .font(.system(size: 100))
                 }
-                HStack{
-                    ForEach(0..<6){ index in
-                        BlankImage(imageName: viewModel.myAnswer.imageKey[0].key[index],text: viewModel.myAnswer.text[0].text[index])
-                    }
-                }
-                HStack{
-                    ForEach(0..<6){ index in
-                        BlankImage(imageName: viewModel.myAnswer.imageKey[1].key[index],text: viewModel.myAnswer.text[1].text[index])
-                    }
-                }
-                HStack{
-                    ForEach(0..<6){ index in
-                        BlankImage(imageName: viewModel.myAnswer.imageKey[2].key[index],text: viewModel.myAnswer.text[2].text[index])
-                    }
-                }
-                HStack{
-                    ForEach(0..<6){ index in
-                        BlankImage(imageName: viewModel.myAnswer.imageKey[3].key[index],text: viewModel.myAnswer.text[3].text[index])
-                    }
-                }
-                HStack{
-                    ForEach(0..<6){ index in
-                        BlankImage(imageName: viewModel.myAnswer.imageKey[4].key[index],text: viewModel.myAnswer.text[4].text[index])
+                
+                // MARK: - 입력한 답이 나오는 뷰
+                ForEach(0..<5) { level in
+                    HStack{
+                        ForEach(0..<6){ index in
+                            BlankImage(imageName: viewModel.myAnswer.imageKey[level].key[index],text: viewModel.myAnswer.text[level].text[index])
+                        }
                     }
                 }
             }
             .frame(width: UIScreen.main.bounds.size.width/2)
+            // MARK: - 답을 입력할 수 있는 버튼
             VStack{
-                HStack{
-                    Button{
-                        viewModel.inputEnglish(text: "a")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[0],text: "a")
+                ForEach(1..<6) { level in
+                    let num = level * 5
+                    HStack{
+                        ForEach(num-5..<num, id: \.self) { index in
+                            Button{
+                                viewModel.inputEnglish(text: alpha[index])
+                            }label: {
+                                EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[index],text: alpha[index])
+                            }
+                        }
                     }
-                    Button{
-                        viewModel.inputEnglish(text: "b")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[1], text: "b")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "c")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[2], text: "c")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "d")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[3], text: "d")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "e")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[4], text: "e")
-                    }
-                }
-                HStack{
-                    Button{
-                        viewModel.inputEnglish(text: "f")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[5],text: "f")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "g")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[6], text: "g")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "h")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[7], text: "h")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "i")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[8], text: "i")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "j")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[9], text: "j")
-                    }
-                }
-                HStack{
-                    Button{
-                        viewModel.inputEnglish(text: "k")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[10],text: "k")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "l")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[11], text: "l")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "m")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[12], text: "m")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "n")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[13], text: "n")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "o")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[14], text: "o")
-                    }
-                }
-                HStack{
-                    Button{
-                        viewModel.inputEnglish(text: "p")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[15],text: "p")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "q")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[16], text: "q")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "r")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[17], text: "r")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "s")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[18], text: "s")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "t")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[19], text: "t")
-                    }
-                }
-                HStack{
-                    Button{
-                        viewModel.inputEnglish(text: "u")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[20],text: "u")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "v")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[21], text: "v")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "w")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[2], text: "w")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "x")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[23], text: "x")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "y")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[24], text: "y")
-                    }
-                    
                 }
                 HStack{
                     Button{
@@ -193,6 +56,7 @@ struct EnglishView: View {
                         EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[25], text: "z")
                     }
                     
+                    // MARK: - 입력한 답 하나 지우기 (backspacebar)
                     Button {
                         viewModel.deleteText()
                     } label: {
@@ -201,6 +65,7 @@ struct EnglishView: View {
                             .scaledToFit()
                             .frame(width: UIScreen.main.bounds.size.width/16, height: UIScreen.main.bounds.size.width/16)
                     }
+                    // MARK: - 모두 초기화 (refresh)
                     Button {
                         viewModel.refreshBtn()
                     } label: {
@@ -211,6 +76,7 @@ struct EnglishView: View {
                     }
                 }
                 HStack{
+                    // MARK: - 확인 버튼 (return)
                     Button{
                         viewModel.compareAnswer()
                     } label: {
@@ -227,6 +93,7 @@ struct EnglishView: View {
                               dismissButton: .default(Text("OK")))
                     }
                     
+                    // MARK: - 입력한 답 모두 지우기 (clear)
                     Button{
                         viewModel.cleanText()
                     } label: {

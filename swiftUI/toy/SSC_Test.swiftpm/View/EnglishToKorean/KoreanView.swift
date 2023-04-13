@@ -11,10 +11,12 @@ struct KoreanView: View {
     
     @ObservedObject var viewModel: KoreanViewModel
 
+    let hangle = ["ㄱ","ㄴ","ㄷ","ㄹ","ㅁ","ㅂ","ㅅ","ㅇ","ㅈ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ","ㅏ","ㅑ","ㅓ","ㅕ","ㅗ","ㅛ","ㅜ","ㅠ","ㅡ","ㅣ"]
     
     var body: some View {
         HStack{
             VStack{
+                // MARK: - 문제 나오는 뷰
                 ZStack{
                     Image("blank")
                         .resizable()
@@ -22,167 +24,33 @@ struct KoreanView: View {
                     Text(viewModel.myAnswer.problem)
                         .font(.system(size: 100))
                 }
-                HStack{
-                    ForEach(0..<6){ index in
-                        BlankImage(imageName: viewModel.myAnswer.imageKey[0].key[index],text: viewModel.myAnswer.text[0].text[index])
-                    }
-                }
-                HStack{
-                    ForEach(0..<6){ index in
-                        BlankImage(imageName: viewModel.myAnswer.imageKey[1].key[index],text: viewModel.myAnswer.text[1].text[index])
-                    }
-                }
-                HStack{
-                    ForEach(0..<6){ index in
-                        BlankImage(imageName: viewModel.myAnswer.imageKey[2].key[index],text: viewModel.myAnswer.text[2].text[index])
-                    }
-                }
-                HStack{
-                    ForEach(0..<6){ index in
-                        BlankImage(imageName: viewModel.myAnswer.imageKey[3].key[index],text: viewModel.myAnswer.text[3].text[index])
-                    }
-                }
-                HStack{
-                    ForEach(0..<6){ index in
-                        BlankImage(imageName: viewModel.myAnswer.imageKey[4].key[index],text: viewModel.myAnswer.text[4].text[index])
+                // MARK: - 입력한 답이 나오는 뷰
+                ForEach(0..<5) { level in
+                    HStack{
+                        ForEach(0..<6){ index in
+                            BlankImage(imageName: viewModel.myAnswer.imageKey[level].key[index],text: viewModel.myAnswer.text[level].text[index])
+                        }
                     }
                 }
             }
             .frame(width: UIScreen.main.bounds.size.width/2)
+            // MARK: - 답을 입력할 수 있는 버튼
             VStack{
-                HStack{
-                    Button{
-                        viewModel.inputKorean(text: "ㄱ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[0],text: "ㄱ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㄴ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[1], text: "ㄴ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㄷ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[2], text: "ㄷ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㄹ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[3], text: "ㄹ")
+                ForEach(1..<7) { level in
+                    let num = level * 4
+                    HStack{
+                        ForEach(num-4..<num, id: \.self) { index in
+                            Button{
+                                viewModel.inputKorean(text: hangle[index])
+                            }label: {
+                                KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[index],text: hangle[index])
+                            }
+                        }
                     }
                 }
+                
                 HStack{
-                    Button{
-                        viewModel.inputKorean(text: "ㅁ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[4],text: "ㅁ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅂ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[5],text: "ㅂ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅅ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[6],text: "ㅅ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅇ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[7],text: "ㅇ")
-                    }
-                }
-                HStack{
-                    Button{
-                        viewModel.inputKorean(text: "ㅈ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[8],text: "ㅈ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅊ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[9],text: "ㅊ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅋ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[10],text: "ㅋ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅌ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[11],text: "ㅌ")
-                    }
-                }
-                HStack{
-                    Button{
-                        viewModel.inputKorean(text: "ㅍ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[12],text: "ㅍ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅎ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[13],text: "ㅎ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅏ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[14],text: "ㅏ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅑ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[15],text: "ㅑ")
-                    }
-                }
-                HStack{
-                    Button{
-                        viewModel.inputKorean(text: "ㅓ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[16],text: "ㅓ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅕ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[17],text: "ㅕ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅗ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[18],text: "ㅗ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅛ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[19],text: "ㅛ")
-                    }
-                }
-                HStack{
-                    Button{
-                        viewModel.inputKorean(text: "ㅜ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[20],text: "ㅜ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅠ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[21],text: "ㅠ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅡ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[22],text: "ㅡ")
-                    }
-                    Button{
-                        viewModel.inputKorean(text: "ㅣ")
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[23],text: "ㅣ")
-                    }
-                }
-                HStack{
+                    // MARK: - 확인 버튼
                     Button{
                         viewModel.compareAnswer()
                     } label: {
@@ -200,7 +68,7 @@ struct KoreanView: View {
                         Alert(title: Text("You're wrong!!"), message: Text("The answer is \"\(viewModel.myAnswer.answer.answerString)\"!!"),
                               dismissButton: .default(Text("OK")))
                     }
-                    
+                    // MARK: - 삭제 버튼
                     Button{
                         viewModel.deleteAnswer()
                     } label: {
