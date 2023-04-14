@@ -193,23 +193,19 @@ class EnglishViewModel : ObservableObject {
     
     // MARK: - 리프레쉬 버튼
     func refreshBtn() {
-        if self.myAnswer.level < 1 {
-            self.cleanText()
-        }else {
-            for i in 0...self.myAnswer.level{
-                if i == 5 { break }
-                for j in 0...self.myAnswer.text[i].text.count-1{
-                    self.myAnswer.text[i].text[j] = ""
-                    self.myAnswer.imageKey[i].key[j] = "textField"
-                }
+        for i in 0...self.myAnswer.level{
+            if i == 5 { break }
+            for j in 0...self.myAnswer.text[i].text.count-1{
+                self.myAnswer.text[i].text[j] = ""
+                self.myAnswer.imageKey[i].key[j] = "textField"
             }
-            for i in 0...self.myAnswer.imageKey[1].btnKey.count-1 {
-                self.myAnswer.imageKey[1].btnKey[i] = "blank"
-            }
-            
-            self.myAnswer.isSolved = false
-            self.myAnswer.level = 0
-            self.myAnswer.index = 0
         }
+        for i in 0...self.myAnswer.imageKey[1].btnKey.count-1 {
+            self.myAnswer.imageKey[1].btnKey[i] = "blank"
+        }
+        
+        self.myAnswer.isSolved = false
+        self.myAnswer.level = 0
+        self.myAnswer.index = 0
     }
 }

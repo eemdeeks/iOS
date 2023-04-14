@@ -25,12 +25,20 @@ class KoreanViewModel : ObservableObject {
             }
         }
     }
-    func deleteAnswer(){
+    // MARK: - 텍스트 clean (쓰고 있는 인덱스 모두 지우기)
+    func cleanText(){
         if self.myAnswer.level < 5{
             for i in 0...self.myAnswer.answer.answerArray.count-1{
                 self.myAnswer.text[self.myAnswer.level].text[i] = ""
             }
             self.myAnswer.index = 0
+        }
+    }
+    // MARK: - 텍스트 delete (한글자만 지우기)
+    func deleteText(){
+        if self.myAnswer.level < 5 && self.myAnswer.index > 0{
+            self.myAnswer.text[self.myAnswer.level].text[self.myAnswer.index-1] = ""
+            self.myAnswer.index -= 1
         }
     }
     func compareAnswer(){
@@ -172,6 +180,23 @@ class KoreanViewModel : ObservableObject {
         if self.myAnswer.imageKey[0].btnKey[index] == "blank" {
             self.myAnswer.imageKey[0].btnKey[index] = "wrong"
         }
+    }
+    
+    func refreshBtn() {
+        for i in 0...self.myAnswer.level{
+            if i == 5 { break }
+            for j in 0...self.myAnswer.text[i].text.count-1{
+                self.myAnswer.text[i].text[j] = ""
+                self.myAnswer.imageKey[i].key[j] = "textField"
+            }
+        }
+        for i in 0...self.myAnswer.imageKey[0].btnKey.count-1 {
+            self.myAnswer.imageKey[0].btnKey[i] = "blank"
+        }
+        
+        self.myAnswer.isSolved = false
+        self.myAnswer.level = 0
+        self.myAnswer.index = 0
     }
     
 }

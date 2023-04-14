@@ -55,10 +55,10 @@ struct KoreanView: View {
                         viewModel.compareAnswer()
                     } label: {
                         ZStack{
-                            Image("blank")
+                            Image(systemName: "return")
                                 .resizable()
-                                .frame(width: UIScreen.main.bounds.size.width/5, height: UIScreen.main.bounds.size.width/10)
-                            Text("OK")
+                                .scaledToFit()
+                                .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
                         }
                     }
                     .alert("Good job!",isPresented: $viewModel.answerBool) {
@@ -68,16 +68,34 @@ struct KoreanView: View {
                         Alert(title: Text("You're wrong!!"), message: Text("The answer is \"\(viewModel.myAnswer.answer.answerString)\"!!"),
                               dismissButton: .default(Text("OK")))
                     }
-                    // MARK: - 삭제 버튼
+                    // MARK: - 입력한 답 하나 지우기 (backspacebar)
+                    Button {
+                        viewModel.deleteText()
+                    } label: {
+                        Image(systemName: "delete.backward")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                    }
+                    // MARK: - 입력한 답 모두 지우기 (clear)
                     Button{
-                        viewModel.deleteAnswer()
+                        viewModel.cleanText()
                     } label: {
                         ZStack{
-                            Image("blank")
+                            Image(systemName: "clear")
                                 .resizable()
-                                .frame(width: UIScreen.main.bounds.size.width/5, height: UIScreen.main.bounds.size.width/10)
-                            Text("delete")
+                                .scaledToFit()
+                                .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
                         }
+                    }
+                    // MARK: - 모두 초기화 (refresh)
+                    Button {
+                        viewModel.refreshBtn()
+                    } label: {
+                        Image(systemName: "arrow.clockwise")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
                     }
                 }
             }
@@ -95,7 +113,7 @@ struct KoreanView_Previews: PreviewProvider {
 struct KoreanBtnImage: View {
     var imageName: String
     var text: String
-    var frameSize : CGFloat = UIScreen.main.bounds.size.width/10
+    var frameSize : CGFloat = UIScreen.main.bounds.size.width/12
     var body: some View {
         ZStack{
             Image(imageName)
@@ -104,6 +122,7 @@ struct KoreanBtnImage: View {
                 .frame(width: frameSize, height: frameSize)
             Text(text)
                 .foregroundColor(.black)
+                .font(.system(size: 40))
         }
     }
 }
@@ -119,6 +138,7 @@ struct BlankImage: View {
                 .scaledToFit()
                 .frame(width: frameSize, height: frameSize)
             Text(text)
+                .font(.system(size: 40))
         }
     }
 }
