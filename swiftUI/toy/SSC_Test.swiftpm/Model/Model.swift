@@ -110,7 +110,7 @@ extension Model {
             .init(text: ["","","","","",""])
         ],
         answer: .init(answerArray: ["ㅂ","ㅏ","ㄱ","ㅜ","ㄴ","ㅣ"], answerString: "바구니"),
-        problem: "basket",
+        problem: "Basket",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
                   btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),

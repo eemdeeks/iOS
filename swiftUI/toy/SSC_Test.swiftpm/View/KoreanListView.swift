@@ -11,19 +11,10 @@ struct KoreanListView: View {
     @ObservedObject var viewModel : KoreanListViewModel
     @ObservedObject var viewModel2 : EnglishListViewModel
     
-    //var filteredProblems: [Model] {
-    //    viewModel.modelList.filter { problem in
-    //        (!viewModel.showUnSolvedOnly || problem.isSolved)
-    //    }
-    //}
-    
     var body: some View {
         NavigationView{
             List{
                 Section(header: Text("Korean to English")) {
-                    //Toggle(isOn: $viewModel2.showUnSolvedOnly){
-                    //    Text("Unsolved only")
-                    //}
                     ForEach(viewModel2.modelList){ problem in
                         let problems = EnglishViewModel(myAnswer: problem)
                         NavigationLink{
@@ -31,21 +22,16 @@ struct KoreanListView: View {
                         } label: {
                             EnglishRowView(viewModel: problems)
                         }
-                        
                     }
                 }
                 Section(header: Text("English to Korean")) {
-                    //Toggle(isOn: $viewModel.showUnSolvedOnly){
-                    //    Text("Unsolved only")
-                    //}
                     ForEach(viewModel.modelList){ problem in
+                        let problems = KoreanViewModel(myAnswer: problem)
                         NavigationLink{
-                            
-                            KoreanView(viewModel: KoreanViewModel(myAnswer: problem))
+                            KoreanView(viewModel: problems)
                         } label: {
-                            KoreanRowView(viewModel: KoreanViewModel(myAnswer: problem))
-                        }
-                        
+                            KoreanRowView(viewModel: problems)
+                        }             
                     }
                 }
             }

@@ -7,12 +7,9 @@
 
 import Foundation
 class KoreanListViewModel : ObservableObject{
-    @Published var modelList: [Model]
-    @Published var showUnSolvedOnly : Bool
+    @Published var modelList : [Model]
     
-    init(modelList: [Model], showUnSolvedOnly : Bool = false) {
+    init(modelList: [Model]) {
         self.modelList = modelList
-        self.showUnSolvedOnly = showUnSolvedOnly
     }
-    
 }
