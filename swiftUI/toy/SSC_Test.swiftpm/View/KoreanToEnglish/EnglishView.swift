@@ -50,6 +50,15 @@ struct EnglishView: View {
                     }
                 }
                 HStack{
+                    // MARK: - 입력한 답 모두 지우기 (clear)
+                    Button{
+                        viewModel.cleanText()
+                    } label: {
+                        Image(systemName: "clear")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                    }
                     Button{
                         viewModel.inputEnglish(text: "u")
                     }label: {
@@ -74,19 +83,17 @@ struct EnglishView: View {
                             .scaledToFit()
                             .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
                     }
-                    
-                    // MARK: - 입력한 답 모두 지우기 (clear)
-                    Button{
-                        viewModel.cleanText()
+                }
+                HStack{
+                    // MARK: - 모두 초기화 (refresh)
+                    Button {
+                        viewModel.refreshBtn()
                     } label: {
-                        Image(systemName: "clear")
+                        Image(systemName: "arrow.clockwise")
                             .resizable()
                             .scaledToFit()
                             .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
                     }
-                    
-                }
-                HStack{
                     Button{
                         viewModel.inputEnglish(text: "x")
                     }label: {
@@ -117,16 +124,6 @@ struct EnglishView: View {
                     .alert(isPresented: $viewModel.wrongBool){
                         Alert(title: Text("You're wrong!!"), message: Text("The answer is \"\(viewModel.myAnswer.answer.answerString)\"!!"),
                               dismissButton: .default(Text("OK")))
-                    }
-                    
-                    // MARK: - 모두 초기화 (refresh)
-                    Button {
-                        viewModel.refreshBtn()
-                    } label: {
-                        Image(systemName: "arrow.clockwise")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
                     }
                 }
             }

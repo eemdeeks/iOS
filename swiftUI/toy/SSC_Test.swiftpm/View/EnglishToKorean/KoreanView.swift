@@ -36,10 +36,10 @@ struct KoreanView: View {
             .frame(width: UIScreen.main.bounds.size.width/2)
             // MARK: - 답을 입력할 수 있는 버튼
             VStack{
-                ForEach(1..<7) { level in
-                    let num = level * 4
+                ForEach(1..<5) { level in
+                    let num = level * 5
                     HStack{
-                        ForEach(num-4..<num, id: \.self) { index in
+                        ForEach(num-5..<num, id: \.self) { index in
                             Button{
                                 viewModel.inputKorean(text: hangle[index])
                             }label: {
@@ -50,6 +50,57 @@ struct KoreanView: View {
                 }
                 
                 HStack{
+                    // MARK: - 입력한 답 모두 지우기 (clear)
+                    Button{
+                        viewModel.cleanText()
+                    } label: {
+                        ZStack{
+                            Image(systemName: "clear")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                        }
+                    }
+                    Button{
+                        viewModel.inputKorean(text: hangle[20])
+                    }label: {
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[20],text: hangle[20])
+                    }
+                    Button{
+                        viewModel.inputKorean(text: hangle[21])
+                    }label: {
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[21],text: hangle[21])
+                    }
+                    // MARK: - 입력한 답 하나 지우기 (backspacebar)
+                    Button {
+                        viewModel.deleteText()
+                    } label: {
+                        Image(systemName: "delete.backward")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                    }
+                }
+                HStack{
+                    // MARK: - 모두 초기화 (refresh)
+                    Button {
+                        viewModel.refreshBtn()
+                    } label: {
+                        Image(systemName: "arrow.clockwise")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                    }
+                    Button{
+                        viewModel.inputKorean(text: hangle[22])
+                    }label: {
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[22],text: hangle[22])
+                    }
+                    Button{
+                        viewModel.inputKorean(text: hangle[23])
+                    }label: {
+                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[23],text: hangle[23])
+                    }
                     // MARK: - 확인 버튼
                     Button{
                         viewModel.compareAnswer()
@@ -67,35 +118,6 @@ struct KoreanView: View {
                     .alert(isPresented: $viewModel.wrongBool){
                         Alert(title: Text("You're wrong!!"), message: Text("The answer is \"\(viewModel.myAnswer.answer.answerString)\"!!"),
                               dismissButton: .default(Text("OK")))
-                    }
-                    // MARK: - 입력한 답 하나 지우기 (backspacebar)
-                    Button {
-                        viewModel.deleteText()
-                    } label: {
-                        Image(systemName: "delete.backward")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
-                    }
-                    // MARK: - 입력한 답 모두 지우기 (clear)
-                    Button{
-                        viewModel.cleanText()
-                    } label: {
-                        ZStack{
-                            Image(systemName: "clear")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
-                        }
-                    }
-                    // MARK: - 모두 초기화 (refresh)
-                    Button {
-                        viewModel.refreshBtn()
-                    } label: {
-                        Image(systemName: "arrow.clockwise")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
                     }
                 }
             }
