@@ -83,4 +83,7 @@ import Foundation
 //solution10866()
 
 // MARK: - 10870
-solution10870()
+//solution10870()
+
+// MARK: - 17478
+solution17478()
