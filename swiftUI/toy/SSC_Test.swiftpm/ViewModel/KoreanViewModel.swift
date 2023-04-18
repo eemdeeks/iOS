@@ -167,18 +167,18 @@ class KoreanViewModel : ObservableObject {
     }
     
     func isCorrect(index : Int){
-        if self.myAnswer.imageKey[0].btnKey[index] != "correct"{
-            self.myAnswer.imageKey[0].btnKey[index] = "correct"
+        if self.myAnswer.imageKey[0].btnKey[index] != "correctBoard"{
+            self.myAnswer.imageKey[0].btnKey[index] = "correctBoard"
         }
     }
     func isSimilar(index : Int){
-        if self.myAnswer.imageKey[0].btnKey[index] != "correct" {
-            self.myAnswer.imageKey[0].btnKey[index] = "similar"
+        if self.myAnswer.imageKey[0].btnKey[index] != "correctBoard" {
+            self.myAnswer.imageKey[0].btnKey[index] = "similarBoard"
         }
     }
     func isWrong(index : Int) {
-        if self.myAnswer.imageKey[0].btnKey[index] == "blank" {
-            self.myAnswer.imageKey[0].btnKey[index] = "wrong"
+        if self.myAnswer.imageKey[0].btnKey[index] == "keyboard" {
+            self.myAnswer.imageKey[0].btnKey[index] = "wrongBoard"
         }
     }
     
@@ -191,7 +191,7 @@ class KoreanViewModel : ObservableObject {
             }
         }
         for i in 0...self.myAnswer.imageKey[0].btnKey.count-1 {
-            self.myAnswer.imageKey[0].btnKey[i] = "blank"
+            self.myAnswer.imageKey[0].btnKey[i] = "keyboard"
         }
         
         self.myAnswer.isSolved = false

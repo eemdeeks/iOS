@@ -67,10 +67,10 @@ extension Model {
         problem: "Cliff",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -90,10 +90,10 @@ extension Model {
         problem: "Decoration",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -113,10 +113,10 @@ extension Model {
         problem: "Basket",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -135,10 +135,10 @@ extension Model {
         problem: "Story",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -157,10 +157,10 @@ extension Model {
         problem: "Banana",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -179,10 +179,10 @@ extension Model {
         problem: "Joke",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -201,10 +201,10 @@ extension Model {
         problem: "Emotion",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -224,10 +224,10 @@ extension Model {
         problem: "Blank",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -247,10 +247,10 @@ extension Model {
         problem: "Pig",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -270,10 +270,10 @@ extension Model {
         problem: "Exercise",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -298,10 +298,10 @@ extension Model {
         problem: "사무실",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -321,10 +321,10 @@ extension Model {
         problem: "계절",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -344,10 +344,10 @@ extension Model {
         problem: "봄",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -367,10 +367,10 @@ extension Model {
         problem: "여름",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -389,10 +389,10 @@ extension Model {
         problem: "겨울",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -412,10 +412,10 @@ extension Model {
         problem: "토끼",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -435,10 +435,10 @@ extension Model {
         problem: "변하다, 바꾸다",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -458,10 +458,10 @@ extension Model {
         problem: "초대하다",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -481,10 +481,10 @@ extension Model {
         problem: "저녁식사",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])
@@ -504,10 +504,10 @@ extension Model {
         problem: "그림자",
         imageKey: [
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"],
-                  btnKey: ["blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank","blank",
-                           "blank","blank"]),
+                  btnKey: ["keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard","keyboard",
+                           "keyboard","keyboard"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"]),
             .init(key: ["textField","textField","textField","textField","textField","textField"])

@@ -10,20 +10,21 @@ import SwiftUI
 struct KoreanView: View {
     
     @ObservedObject var viewModel: KoreanViewModel
-
-    let hangle = ["ㄱ","ㄴ","ㄷ","ㄹ","ㅁ","ㅂ","ㅅ","ㅇ","ㅈ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ","ㅏ","ㅑ","ㅓ","ㅕ","ㅗ","ㅛ","ㅜ","ㅠ","ㅡ","ㅣ"]
+    
+    let hangle1 = ["ㅂ","ㅈ","ㄷ","ㄱ","ㅅ","ㅛ","ㅕ","ㅑ"]
+    let hangle2 = ["ㅁ","ㄴ","ㅇ","ㄹ","ㅎ","ㅗ","ㅓ","ㅏ","ㅣ"]
+    let hangle3 = ["ㅋ","ㅌ","ㅊ","ㅍ","ㅠ","ㅜ","ㅡ"]
     
     var body: some View {
-        HStack{
+        ZStack{
+            Image("line")
+                .resizable()
+                .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+                .offset(y:-130)
+            // MARK: - 문제 나오는 뷰
             VStack{
-                // MARK: - 문제 나오는 뷰
-                ZStack{
-                    Image("blank")
-                        .resizable()
-                        .frame(width: UIScreen.main.bounds.size.width/14*6)
-                    Text(viewModel.myAnswer.problem)
-                        .font(.system(size: 100))
-                }
+                Text(viewModel.myAnswer.problem)
+                    .font(.system(size: 100))
                 // MARK: - 입력한 답이 나오는 뷰
                 ForEach(0..<5) { level in
                     HStack{
@@ -32,84 +33,56 @@ struct KoreanView: View {
                         }
                     }
                 }
+                Spacer()
             }
-            .frame(width: UIScreen.main.bounds.size.width/2)
-            // MARK: - 답을 입력할 수 있는 버튼
             VStack{
-                ForEach(1..<5) { level in
-                    let num = level * 5
-                    HStack{
-                        ForEach(num-5..<num, id: \.self) { index in
-                            Button{
-                                viewModel.inputKorean(text: hangle[index])
-                            }label: {
-                                KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[index],text: hangle[index])
-                            }
-                        }
-                    }
-                }
-                
+                Spacer()
+                // MARK: - 답을 입력할 수 있는 키보드
                 HStack{
-                    // MARK: - 입력한 답 모두 지우기 (clear)
-                    Button{
-                        viewModel.cleanText()
-                    } label: {
-                        ZStack{
-                            Image(systemName: "clear")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                    ForEach(0..<hangle1.count, id: \.self) { index in
+                        Button{
+                            viewModel.inputKorean(text: hangle1[index])
+                        }label: {
+                            KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[index],text: hangle1[index])
                         }
-                    }
-                    Button{
-                        viewModel.inputKorean(text: hangle[20])
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[20],text: hangle[20])
-                    }
-                    Button{
-                        viewModel.inputKorean(text: hangle[21])
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[21],text: hangle[21])
                     }
                     // MARK: - 입력한 답 하나 지우기 (backspacebar)
                     Button {
                         viewModel.deleteText()
                     } label: {
-                        Image(systemName: "delete.backward")
+                        Image("delete")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                            .frame(height: UIScreen.main.bounds.size.width/12)
                     }
                 }
                 HStack{
-                    // MARK: - 모두 초기화 (refresh)
-                    Button {
-                        viewModel.refreshBtn()
-                    } label: {
-                        Image(systemName: "arrow.clockwise")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                    ForEach(0..<hangle2.count, id: \.self) { index in
+                        Button{
+                            viewModel.inputKorean(text: hangle2[index])
+                        }label: {
+                            KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[index+hangle1.count],text: hangle2[index])
+                        }
                     }
-                    Button{
-                        viewModel.inputKorean(text: hangle[22])
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[22],text: hangle[22])
-                    }
-                    Button{
-                        viewModel.inputKorean(text: hangle[23])
-                    }label: {
-                        KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[23],text: hangle[23])
+                }
+                HStack{
+                    ForEach(0..<hangle3.count, id: \.self) { index in
+                        Button{
+                            viewModel.inputKorean(text: hangle3[index])
+                        }label: {
+                            KoreanBtnImage(imageName: viewModel.myAnswer.imageKey[0].btnKey[index+hangle2.count+hangle1.count],text: hangle3[index])
+                        }
                     }
                     // MARK: - 확인 버튼
                     Button{
                         viewModel.compareAnswer()
                     } label: {
                         ZStack{
-                            Image(systemName: "return")
+                            Image("enter")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                                .frame(height: UIScreen.main.bounds.size.width/12)
+                            Text("Enter")
                         }
                     }
                     .alert("Good job!",isPresented: $viewModel.answerBool) {
@@ -120,8 +93,31 @@ struct KoreanView: View {
                               dismissButton: .default(Text("OK")))
                     }
                 }
+                HStack{
+                    // MARK: - 모두 초기화 (refresh)
+                    Button {
+                        viewModel.refreshBtn()
+                    } label: {
+                        Image("refresh")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: UIScreen.main.bounds.size.width/15)
+                    }
+                    // MARK: - 입력한 답 모두 지우기 (clear)
+                    Button{
+                        viewModel.cleanText()
+                    } label: {
+                        ZStack{
+                            Image("deleteAll")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: UIScreen.main.bounds.size.width/15)
+                            Text("Delete All")
+                        }
+                    }
+                }
             }
-            .frame(width: UIScreen.main.bounds.size.width/2)
+            .offset(y:-100)
         }
     }
 }
@@ -145,6 +141,7 @@ struct KoreanBtnImage: View {
             Text(text)
                 .foregroundColor(.black)
                 .font(.system(size: 40))
+                
         }
     }
 }
@@ -152,7 +149,7 @@ struct KoreanBtnImage: View {
 struct BlankImage: View {
     var imageName: String
     var text: String
-    var frameSize : CGFloat = UIScreen.main.bounds.size.width/14
+    var frameSize : CGFloat = UIScreen.main.bounds.size.width/10
     var body: some View {
         ZStack{
             Image(imageName)
@@ -161,6 +158,7 @@ struct BlankImage: View {
                 .frame(width: frameSize, height: frameSize)
             Text(text)
                 .font(.system(size: 40))
+                .offset(x:-8,y:-8)
         }
     }
 }
