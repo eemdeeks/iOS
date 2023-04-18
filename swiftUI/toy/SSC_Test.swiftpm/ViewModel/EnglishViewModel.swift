@@ -80,114 +80,114 @@ class EnglishViewModel : ObservableObject {
     
     func changeBtnCorrect(text : String) {
         switch text {
-        case "a" : isCorrect(index: 0)
-        case "b" : isCorrect(index: 1)
-        case "c" : isCorrect(index: 2)
-        case "d" : isCorrect(index: 3)
-        case "e" : isCorrect(index: 4)
-        case "f" : isCorrect(index: 5)
-        case "g" : isCorrect(index: 6)
-        case "h" : isCorrect(index: 7)
-        case "i" : isCorrect(index: 8)
-        case "j" : isCorrect(index: 9)
-        case "k" : isCorrect(index: 10)
-        case "l" : isCorrect(index: 11)
-        case "m" : isCorrect(index: 12)
-        case "n" : isCorrect(index: 13)
-        case "o" : isCorrect(index: 14)
-        case "p" : isCorrect(index: 15)
-        case "q" : isCorrect(index: 16)
-        case "r" : isCorrect(index: 17)
-        case "s" : isCorrect(index: 18)
-        case "t" : isCorrect(index: 19)
-        case "u" : isCorrect(index: 20)
-        case "v" : isCorrect(index: 21)
-        case "w" : isCorrect(index: 22)
-        case "x" : isCorrect(index: 23)
-        case "y" : isCorrect(index: 24)
-        case "z" : isCorrect(index: 25)
+        case "a" : isCorrect(index: 10)
+        case "b" : isCorrect(index: 23)
+        case "c" : isCorrect(index: 21)
+        case "d" : isCorrect(index: 12)
+        case "e" : isCorrect(index: 2)
+        case "f" : isCorrect(index: 13)
+        case "g" : isCorrect(index: 14)
+        case "h" : isCorrect(index: 15)
+        case "i" : isCorrect(index: 7)
+        case "j" : isCorrect(index: 16)
+        case "k" : isCorrect(index: 17)
+        case "l" : isCorrect(index: 18)
+        case "m" : isCorrect(index: 25)
+        case "n" : isCorrect(index: 24)
+        case "o" : isCorrect(index: 8)
+        case "p" : isCorrect(index: 9)
+        case "q" : isCorrect(index: 0)
+        case "r" : isCorrect(index: 3)
+        case "s" : isCorrect(index: 11)
+        case "t" : isCorrect(index: 4)
+        case "u" : isCorrect(index: 6)
+        case "v" : isCorrect(index: 22)
+        case "w" : isCorrect(index: 1)
+        case "x" : isCorrect(index: 20)
+        case "y" : isCorrect(index: 5)
+        case "z" : isCorrect(index: 19)
         default:
             print("문제있음")
         }
     }
     func changeBtnSimilar(text : String) {
         switch text {
-        case "a" : isSimilar(index: 0)
-        case "b" : isSimilar(index: 1)
-        case "c" : isSimilar(index: 2)
-        case "d" : isSimilar(index: 3)
-        case "e" : isSimilar(index: 4)
-        case "f" : isSimilar(index: 5)
-        case "g" : isSimilar(index: 6)
-        case "h" : isSimilar(index: 7)
-        case "i" : isSimilar(index: 8)
-        case "j" : isSimilar(index: 9)
-        case "k" : isSimilar(index: 10)
-        case "l" : isSimilar(index: 11)
-        case "m" : isSimilar(index: 12)
-        case "n" : isSimilar(index: 13)
-        case "o" : isSimilar(index: 14)
-        case "p" : isSimilar(index: 15)
-        case "q" : isSimilar(index: 16)
-        case "r" : isSimilar(index: 17)
-        case "s" : isSimilar(index: 18)
-        case "t" : isSimilar(index: 19)
-        case "u" : isSimilar(index: 20)
-        case "v" : isSimilar(index: 21)
-        case "w" : isSimilar(index: 22)
-        case "x" : isSimilar(index: 23)
-        case "y" : isSimilar(index: 24)
-        case "z" : isSimilar(index: 25)
+        case "a" : isSimilar(index: 10)
+        case "b" : isSimilar(index: 23)
+        case "c" : isSimilar(index: 21)
+        case "d" : isSimilar(index: 12)
+        case "e" : isSimilar(index: 2)
+        case "f" : isSimilar(index: 13)
+        case "g" : isSimilar(index: 14)
+        case "h" : isSimilar(index: 15)
+        case "i" : isSimilar(index: 7)
+        case "j" : isSimilar(index: 16)
+        case "k" : isSimilar(index: 17)
+        case "l" : isSimilar(index: 18)
+        case "m" : isSimilar(index: 25)
+        case "n" : isSimilar(index: 24)
+        case "o" : isSimilar(index: 8)
+        case "p" : isSimilar(index: 9)
+        case "q" : isSimilar(index: 0)
+        case "r" : isSimilar(index: 3)
+        case "s" : isSimilar(index: 11)
+        case "t" : isSimilar(index: 4)
+        case "u" : isSimilar(index: 6)
+        case "v" : isSimilar(index: 22)
+        case "w" : isSimilar(index: 1)
+        case "x" : isSimilar(index: 20)
+        case "y" : isSimilar(index: 5)
+        case "z" : isSimilar(index: 19)
         default:
             print("문제있음")
         }
     }
     func changeBtnWrong(text : String) {
         switch text {
-        case "a" : isWrong(index: 0)
-        case "b" : isWrong(index: 1)
-        case "c" : isWrong(index: 2)
-        case "d" : isWrong(index: 3)
-        case "e" : isWrong(index: 4)
-        case "f" : isWrong(index: 5)
-        case "g" : isWrong(index: 6)
-        case "h" : isWrong(index: 7)
-        case "i" : isWrong(index: 8)
-        case "j" : isWrong(index: 9)
-        case "k" : isWrong(index: 10)
-        case "l" : isWrong(index: 11)
-        case "m" : isWrong(index: 12)
-        case "n" : isWrong(index: 13)
-        case "o" : isWrong(index: 14)
-        case "p" : isWrong(index: 15)
-        case "q" : isWrong(index: 16)
-        case "r" : isWrong(index: 17)
-        case "s" : isWrong(index: 18)
-        case "t" : isWrong(index: 19)
-        case "u" : isWrong(index: 20)
-        case "v" : isWrong(index: 21)
-        case "w" : isWrong(index: 22)
-        case "x" : isWrong(index: 23)
-        case "y" : isWrong(index: 24)
-        case "z" : isWrong(index: 25)
+        case "a" : isWrong(index: 10)
+        case "b" : isWrong(index: 23)
+        case "c" : isWrong(index: 21)
+        case "d" : isWrong(index: 12)
+        case "e" : isWrong(index: 2)
+        case "f" : isWrong(index: 13)
+        case "g" : isWrong(index: 14)
+        case "h" : isWrong(index: 15)
+        case "i" : isWrong(index: 7)
+        case "j" : isWrong(index: 16)
+        case "k" : isWrong(index: 17)
+        case "l" : isWrong(index: 18)
+        case "m" : isWrong(index: 25)
+        case "n" : isWrong(index: 24)
+        case "o" : isWrong(index: 8)
+        case "p" : isWrong(index: 9)
+        case "q" : isWrong(index: 0)
+        case "r" : isWrong(index: 3)
+        case "s" : isWrong(index: 11)
+        case "t" : isWrong(index: 4)
+        case "u" : isWrong(index: 6)
+        case "v" : isWrong(index: 22)
+        case "w" : isWrong(index: 1)
+        case "x" : isWrong(index: 20)
+        case "y" : isWrong(index: 5)
+        case "z" : isWrong(index: 19)
         default:
             print("문제있음")
         }
     }
     
     func isCorrect(index : Int){
-        if self.myAnswer.imageKey[1].btnKey[index] != "correct"{
-            self.myAnswer.imageKey[1].btnKey[index] = "correct"
+        if self.myAnswer.imageKey[1].btnKey[index] != "correctBoard"{
+            self.myAnswer.imageKey[1].btnKey[index] = "correctBoard"
         }
     }
     func isSimilar(index : Int){
-        if self.myAnswer.imageKey[1].btnKey[index] != "correct" {
-            self.myAnswer.imageKey[1].btnKey[index] = "similar"
+        if self.myAnswer.imageKey[1].btnKey[index] != "correctBoard" {
+            self.myAnswer.imageKey[1].btnKey[index] = "similarBoard"
         }
     }
     func isWrong(index : Int) {
-        if self.myAnswer.imageKey[1].btnKey[index] == "blank" {
-            self.myAnswer.imageKey[1].btnKey[index] = "wrong"
+        if self.myAnswer.imageKey[1].btnKey[index] == "keyboard" {
+            self.myAnswer.imageKey[1].btnKey[index] = "wrongBoard"
         }
     }
     
@@ -201,7 +201,7 @@ class EnglishViewModel : ObservableObject {
             }
         }
         for i in 0...self.myAnswer.imageKey[1].btnKey.count-1 {
-            self.myAnswer.imageKey[1].btnKey[i] = "blank"
+            self.myAnswer.imageKey[1].btnKey[i] = "keyboard"
         }
         
         self.myAnswer.isSolved = false

@@ -11,20 +11,20 @@ struct EnglishView: View {
     
     @ObservedObject var viewModel: EnglishViewModel
 
-    let alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    let alpha1 = ["q","w","e","r","t","y","u","i","o","p"]
+    let alpha2 = ["a","s","d","f","g","h","j","k","l"]
+    let alpha3 = ["z","x","c","v","b","n","m"]
     
     var body: some View {
-        HStack{
+        ZStack{
+            Image("line")
+                .resizable()
+                .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+                .offset(y:-130)
+            // MARK: - 문제 나오는 뷰
             VStack{
-                // MARK: - 문제 나오는 뷰
-                ZStack{
-                    Image("blank")
-                        .resizable()
-                        .frame(width: UIScreen.main.bounds.size.width/14*6)
-                    Text(viewModel.myAnswer.problem)
-                        .font(.system(size: 100))
-                }
-                
+                Text(viewModel.myAnswer.problem)
+                    .font(.system(size: 100))
                 // MARK: - 입력한 답이 나오는 뷰
                 ForEach(0..<5) { level in
                     HStack{
@@ -33,90 +33,57 @@ struct EnglishView: View {
                         }
                     }
                 }
+                Spacer()
             }
-            .frame(width: UIScreen.main.bounds.size.width/2)
-            // MARK: - 답을 입력할 수 있는 버튼
             VStack{
-                ForEach(1..<5) { level in
-                    let num = level * 5
-                    HStack{
-                        ForEach(num-5..<num, id: \.self) { index in
-                            Button{
-                                viewModel.inputEnglish(text: alpha[index])
-                            }label: {
-                                EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[index],text: alpha[index])
-                            }
+                Spacer()
+                // MARK: - 답을 입력할 수 있는 키보드
+                HStack{
+                    ForEach(0..<alpha1.count, id: \.self) { index in
+                        Button{
+                            viewModel.inputEnglish(text: alpha1[index])
+                        }label: {
+                            EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[index],text: alpha1[index])
                         }
                     }
                 }
                 HStack{
-                    // MARK: - 입력한 답 모두 지우기 (clear)
-                    Button{
-                        viewModel.cleanText()
-                    } label: {
-                        Image(systemName: "clear")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "u")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[20], text: "u")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "v")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[21], text: "v")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "w")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[22], text: "w")
+                    ForEach(0..<alpha2.count, id: \.self) { index in
+                        Button{
+                            viewModel.inputEnglish(text: alpha2[index])
+                        }label: {
+                            EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[index+alpha1.count],text: alpha2[index])
+                        }
                     }
                     // MARK: - 입력한 답 하나 지우기 (backspacebar)
                     Button {
                         viewModel.deleteText()
                     } label: {
-                        Image(systemName: "delete.backward")
+                        Image("delete")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                            .frame(height: UIScreen.main.bounds.size.width/12)
                     }
                 }
                 HStack{
-                    // MARK: - 모두 초기화 (refresh)
-                    Button {
-                        viewModel.refreshBtn()
-                    } label: {
-                        Image(systemName: "arrow.clockwise")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                    ForEach(0..<alpha3.count, id: \.self) { index in
+                        Button{
+                            viewModel.inputEnglish(text: alpha3[index])
+                        }label: {
+                            EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[index+alpha2.count+alpha1.count],text: alpha3[index])
+                        }
                     }
-                    Button{
-                        viewModel.inputEnglish(text: "x")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[23], text: "x")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "y")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[24], text: "y")
-                    }
-                    Button{
-                        viewModel.inputEnglish(text: "z")
-                    }label: {
-                        EnglishBtnImage(imageName: viewModel.myAnswer.imageKey[1].btnKey[25], text: "z")
-                    }
-                    // MARK: - 확인 버튼 (return)
+                    // MARK: - 확인 버튼
                     Button{
                         viewModel.compareAnswer()
                     } label: {
-                        Image(systemName: "return")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: UIScreen.main.bounds.size.width/12, height: UIScreen.main.bounds.size.width/12)
+                        ZStack{
+                            Image("enter")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: UIScreen.main.bounds.size.width/12)
+                            Text("Enter")
+                        }
                     }
                     .alert("Good job!",isPresented: $viewModel.answerBool) {
                         Button("OK", role: .cancel){}
@@ -126,11 +93,33 @@ struct EnglishView: View {
                               dismissButton: .default(Text("OK")))
                     }
                 }
+                HStack{
+                    // MARK: - 모두 초기화 (refresh)
+                    Button {
+                        viewModel.refreshBtn()
+                    } label: {
+                        Image("refresh")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: UIScreen.main.bounds.size.width/15)
+                    }
+                    // MARK: - 입력한 답 모두 지우기 (clear)
+                    Button{
+                        viewModel.cleanText()
+                    } label: {
+                        ZStack{
+                            Image("deleteAll")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: UIScreen.main.bounds.size.width/15)
+                            Text("Delete All")
+                        }
+                    }
+                }
             }
-            .frame(width: UIScreen.main.bounds.size.width/2)
+            .offset(y:-100)
         }
     }
-
 }
 
 struct EnglishView_Previews: PreviewProvider {
