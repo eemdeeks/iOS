@@ -15,7 +15,6 @@ struct EnglishRowView: View {
             Text(viewModel.myAnswer.problem)
                 .font(.custom(.dovemayo, size: 20))
             Spacer()
-            
             // 문제를 풀었을 경우 이미지 표시
             if viewModel.myAnswer.isSolved {
                 Image(systemName: "pencil.circle")

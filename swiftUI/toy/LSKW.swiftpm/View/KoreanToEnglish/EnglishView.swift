@@ -134,7 +134,6 @@ struct EnglishBtnImage: View {
     var imageName: String
     var text: String
     var frameSize : CGFloat
-    //= UIScreen.main.bounds.size.width/12
     var body: some View {
         ZStack{
             Image(imageName)

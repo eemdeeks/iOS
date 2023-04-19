@@ -169,7 +169,6 @@ struct HelperImage: View {
     var imageName: String
     var text: String
     var frameSize : CGFloat
-    //= UIScreen.main.bounds.size.width/20
     var body: some View {
         ZStack{
             Image(imageName)
