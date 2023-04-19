@@ -12,9 +12,10 @@ struct KoreanListView: View {
     @ObservedObject var viewModel2 : EnglishListViewModel
     
     var body: some View {
+        
         NavigationView{
             List{
-                Text("Let 's Study Korean").font(.custom(.dovemayo, size: 60)).foregroundColor(.purple)
+                Section(header: Text("Let 's Study Korean Words").font(.custom(.dovemayo, size: 60)).foregroundColor(.purple)) {}
                 Section(header: Text("Korean to English").font(.custom(.dovemayo, size: 15))) {
                     ForEach(viewModel2.modelList){ problem in
                         let problems = EnglishViewModel(myAnswer: problem)
@@ -35,11 +36,18 @@ struct KoreanListView: View {
                         }             
                     }
                 }
-                
-            }
-            List{
-                Section(header: Text("Let 's Study Korean").font(.custom(.dovemayo, size: 60)).foregroundColor(.purple)){}
-            }
+                Section(header: Text("Helper").font(.custom(.dovemayo, size: 15))) {
+                    NavigationLink{
+                        HelperView()
+                    } label: {
+                        HStack{
+                            Text("Help")
+                                .font(.custom(.dovemayo, size: 20))
+                        }
+                    }
+                }
+            }.listStyle(.insetGrouped)
+            HelperView()
         }
     }
 }
