@@ -8,13 +8,13 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "SSC_Test",
+    name: "LSKW",
     platforms: [
         .iOS("15.2")
     ],
     products: [
         .iOSApplication(
-            name: "SSC_Test",
+            name: "LSKW",
             targets: ["AppModule"],
             bundleIdentifier: "eemdeeks.SSC-Test",
             teamIdentifier: "37UUYN2CGZ",
