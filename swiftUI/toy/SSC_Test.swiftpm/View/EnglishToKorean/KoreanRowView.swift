@@ -13,6 +13,7 @@ struct KoreanRowView: View{
     var body: some View {
         HStack{
             Text(viewModel.myAnswer.problem)
+                .font(.custom(.dovemayo, size: 20))
             Spacer()
             //문제 풀었을 경우 이미지 표시
             if viewModel.myAnswer.isSolved {

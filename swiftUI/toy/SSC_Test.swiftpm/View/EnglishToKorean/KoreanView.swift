@@ -17,6 +17,9 @@ struct KoreanView: View {
     
     var body: some View {
         ZStack{
+            Image("background1")
+                .resizable()
+                .ignoresSafeArea()
             Image("line")
                 .resizable()
                 .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
@@ -24,7 +27,7 @@ struct KoreanView: View {
             // MARK: - 문제 나오는 뷰
             VStack{
                 Text(viewModel.myAnswer.problem)
-                    .font(.system(size: 100))
+                    .font(.custom(.dovemayo, size: 100))
                 // MARK: - 입력한 답이 나오는 뷰
                 ForEach(0..<5) { level in
                     HStack{
@@ -83,6 +86,9 @@ struct KoreanView: View {
                                 .scaledToFit()
                                 .frame(height: UIScreen.main.bounds.size.width/12)
                             Text("Enter")
+                                .font(.custom(.dovemayo, size: 40))
+                                .foregroundColor(.black)
+                                
                         }
                     }
                     .alert("Good job!",isPresented: $viewModel.answerBool) {
@@ -113,6 +119,8 @@ struct KoreanView: View {
                                 .scaledToFit()
                                 .frame(height: UIScreen.main.bounds.size.width/15)
                             Text("Delete All")
+                                .font(.custom(.dovemayo, size: 40))
+                                .foregroundColor(.black)
                         }
                     }
                 }
@@ -140,7 +148,7 @@ struct KoreanBtnImage: View {
                 .frame(width: frameSize, height: frameSize)
             Text(text)
                 .foregroundColor(.black)
-                .font(.system(size: 40))
+                .font(.custom(.dovemayo, size: 40))
                 
         }
     }
@@ -157,7 +165,7 @@ struct BlankImage: View {
                 .scaledToFit()
                 .frame(width: frameSize, height: frameSize)
             Text(text)
-                .font(.system(size: 40))
+                .font(.custom(.dovemayo, size: 40))
                 .offset(x:-8,y:-8)
         }
     }

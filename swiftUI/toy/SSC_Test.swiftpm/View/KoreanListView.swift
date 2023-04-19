@@ -14,7 +14,8 @@ struct KoreanListView: View {
     var body: some View {
         NavigationView{
             List{
-                Section(header: Text("Korean to English")) {
+                Text("Let 's Study Korean").font(.custom(.dovemayo, size: 60)).foregroundColor(.purple)
+                Section(header: Text("Korean to English").font(.custom(.dovemayo, size: 15))) {
                     ForEach(viewModel2.modelList){ problem in
                         let problems = EnglishViewModel(myAnswer: problem)
                         NavigationLink{
@@ -24,7 +25,7 @@ struct KoreanListView: View {
                         }
                     }
                 }
-                Section(header: Text("English to Korean")) {
+                Section(header: Text("English to Korean").font(.custom(.dovemayo, size: 15))) {
                     ForEach(viewModel.modelList){ problem in
                         let problems = KoreanViewModel(myAnswer: problem)
                         NavigationLink{
@@ -34,8 +35,11 @@ struct KoreanListView: View {
                         }             
                     }
                 }
+                
             }
-            .navigationTitle("Let's learn Korean")
+            List{
+                Section(header: Text("Let 's Study Korean").font(.custom(.dovemayo, size: 60)).foregroundColor(.purple)){}
+            }
         }
     }
 }
