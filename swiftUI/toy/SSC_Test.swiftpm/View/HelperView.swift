@@ -46,7 +46,13 @@ struct HelperView: View {
                 ZStack{
                     Image("grayField")
                         .resizable()
-                        .frame(width: UIScreen.main.bounds.size.width*2/3,height: UIScreen.main.bounds.size.width/4)
+                        .frame(width: geo.size.width*2/3,height: geo.size.width/4)
+                    HStack{
+                        Spacer()
+                        Text("Scroll up!!")
+                            .font(.custom(.dovemayo, size: 18))
+                            .padding()
+                    }
                     VStack{
                         HStack{
                             HelperImage(imageName: "wrong", text: "u",frameSize: geo.size.width/20)
@@ -99,6 +105,54 @@ struct HelperView: View {
                     }
                     Text("You are right!")
                         .font(.custom(.dovemayo, size: 30))
+                    
+                    Divider()
+                }
+                Group{
+                    Text("About the Button")
+                        .font(.custom(.dovemayo, size: 50))
+                    ZStack{
+                        Image("enter")
+                        Text("Enter")
+                            .font(.custom(.dovemayo, size: 40))
+                            .foregroundColor(.black)
+                    }
+                    Text("Use this button to enter answers.")
+                        .font(.custom(.dovemayo, size: 25))
+                    Text("If there is a space in the answer, it cannot be used.")
+                        .font(.custom(.dovemayo, size: 25))
+                    
+                    Image("delete")
+                    Text("This button is backspace.")
+                        .font(.custom(.dovemayo, size: 25))
+                    Text("You can use this button if you want to erase only one word.")
+                        .font(.custom(.dovemayo, size: 25))
+                }
+                Group{
+                    ZStack{
+                        Image("deleteAll")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: geo.size.width/15)
+                        Text("Delete All")
+                            .font(.custom(.dovemayo, size: 40))
+                            .foregroundColor(.black)
+                    }
+                    Text("Use this button to clear answers.")
+                        .font(.custom(.dovemayo, size: 25))
+                    Text("Press this button to erase the answers you are writing.")
+                        .font(.custom(.dovemayo, size: 25))
+                    Image("refresh")
+                    Text("This button is a refresh button.")
+                        .font(.custom(.dovemayo, size: 25))
+                    Text("Please press this button if you want to solve the problem again.")
+                        .font(.custom(.dovemayo, size: 25))
+                    Divider()
+                    Text("Let's go solve the problem!")
+                        .font(.custom(.dovemayo, size: 50))
+                    Text("Please press the menu button at the top left.")
+                        .font(.custom(.dovemayo, size: 30))
+                         
                 }
             }
             .padding()
@@ -125,6 +179,7 @@ struct HelperImage: View {
             Text(text)
                 .font(.custom(.dovemayo, size: 20))
                 .offset(x:-4,y:-4)
+                .foregroundColor(.black)
         }
     }
 }

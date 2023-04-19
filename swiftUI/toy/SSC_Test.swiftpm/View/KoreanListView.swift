@@ -15,7 +15,7 @@ struct KoreanListView: View {
         
         NavigationView{
             List{
-                Section(header: Text("Let 's Study Korean Words").font(.custom(.dovemayo, size: 60)).foregroundColor(.purple)) {}
+                Section(header: Text("Let 's Study Korean Words").font(.custom(.dovemayo, size: 40)).foregroundColor(.purple)) {}
                 Section(header: Text("Korean to English").font(.custom(.dovemayo, size: 15))) {
                     ForEach(viewModel2.modelList){ problem in
                         let problems = EnglishViewModel(myAnswer: problem)

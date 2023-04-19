@@ -163,6 +163,7 @@ struct BlankImage: View {
             Text(text)
                 .font(.custom(.dovemayo, size: 40))
                 .offset(x:-8,y:-8)
+                .foregroundColor(.black)
         }
     }
 }
