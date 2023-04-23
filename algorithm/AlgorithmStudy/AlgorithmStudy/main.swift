@@ -95,4 +95,7 @@ import Foundation
 //print(solution("()()"))
 
 // MARK: - 10799
-solution10799()
+//solution10799()
+
+// MARK: - 2493
+solution2493()
