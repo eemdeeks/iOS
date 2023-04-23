@@ -89,4 +89,7 @@ import Foundation
 //solution17478()
 
 // MARK: - 1914
-solution1914()
+//solution1914()
+
+// MARK: - 올바른괄호
+//print(solution("()()"))
