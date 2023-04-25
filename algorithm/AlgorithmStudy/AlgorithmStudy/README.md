@@ -103,3 +103,21 @@ print(result)
 백준에서 swift에 대한 시간초과 시간을 늘려줄 때까지 기다리던지..
 
 아마 위 코드를 당분간 공부할 것 같다.
+
+
+
+## 출력에 관하여
+```Swift
+for i in answer.reversed(){
+    print(i, terminator: " ")
+}
+
+print(answer.reversed().map{String($0)}.joined(separator: " "))
+```
+
+위에 두 코드의 시간 차이가 얼마나 난다고 생각하는가..
+
+나는 별 차이가 안난다고 생각했는데, 위 코드를 아래 코드로 바꾸니 시간초과가 해결됐다...
+정말 알 수 없다..
+
+이거 때문에 맞는 풀이로 2시간동안 시름 했다..
