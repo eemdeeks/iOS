@@ -31,8 +31,6 @@ func solution17298() {
         }
                 
     }
-    for i in answer.reversed() {
-        print(i,terminator: " ")
-    }
+    print(answer.reversed().map{String($0)}.joined(separator: " "))
     
 }
