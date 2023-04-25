@@ -7,12 +7,13 @@
 
 import Foundation
 
-func solution15649(N : Int, M : Int){
-    var soo : [Int] = []
-    for i in 1...N{
-        soo.append(i)
-    }
-    for j in 0...M-1{
-        
-    }
-}
+//func solution15649(N : Int, M : Int){
+//    var soo : [Int] = []
+//    for i in 1...N{
+//        soo.append(i)
+//    }
+//    for j in 0...M-1{
+//
+//    }
+//}
+//

@@ -14,7 +14,7 @@ func solution1874(){
     var num : Int = 1
     var flag : Bool = true
     for _ in 1...n{
-        var prob : Int = Int(readLine()!)!
+        let prob : Int = Int(readLine()!)!
         while true{
             if prob >= num {
                 stack.append(num)

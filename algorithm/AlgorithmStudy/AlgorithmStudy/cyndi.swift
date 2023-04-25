@@ -17,9 +17,9 @@ func stack() {
 
 
 func hateSameNum(arr: [Int]) -> [Int] {
-    var answer : [Int] = []
+    let answer : [Int] = []
     
     return answer
 }
 
-hateSameNum(arr: [1,1,3,3,0,1,1])
+//hateSameNum(arr: [1,1,3,3,0,1,1])
