@@ -1,4 +1,4 @@
-#  Dynamic Programming
+# Dynamic Programming
 Dynamic Programming이란 상향식 접근 방법으로, 가장 작은 부분의 해답을 구한 후 그 값을 저장하고, 그 값을 이용해서 상위의 문제를 푸는 방식이다.
 
 여기서 중요한 부분은 '저장'을 통해 상위 문제를 해결한다는 점이다.
