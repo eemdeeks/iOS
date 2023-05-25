@@ -3,6 +3,9 @@
 
     
 ## 📌Any
+<details>
+    <summary>같이 공부하면 좋을 것들</summary>
+    
 ### [Datastructures & Algorithms](https://github.com/eemdeeks/iOS/tree/main/algorithm/AlgorithmStudy/AlgorithmStudy)
 ### Basic Terminal Usage
 ### Git - Version Control
@@ -11,19 +14,32 @@
 ### Learn to Research
 ### Character Encodings
 ### [Github](https://github.com/eemdeeks)
-
+</details>
 
 
 ## 🍎iOS
+        
 ### 🧑‍💻Learn the Basics
+<details>
+    <summary></summary>
+    
 - [Xcode IDE](https://github.com/eemdeeks/iOS/blob/main/iOS/Xcode_IDE/Xcode_IDE.md)
     - [Playground](https://github.com/eemdeeks/iOS/blob/main/iOS/Xcode_IDE/Playground.md)
+    </details>
     
 ### ⌨️Language Grammar
+<details>
+    <summary></summary>
+    
 - Swift
     - [Functional Programming](https://github.com/eemdeeks/iOS/blob/main/iOS/Language%20Grammer/Swift/Functional%20Programming.md)
+    
+</details>
 
 ### 🖥️Common Topics
+<details>
+    <summary></summary>
+    
 - [Mobile Human Interface Gudeline](https://github.com/eemdeeks/iOS/blob/main/iOS/Common%20Topics/Mobile%20Human%20Interface%20Guideline.md)
 - iOS Technologies
     - [App Architect](https://github.com/eemdeeks/iOS/blob/main/iOS/Common%20Topics/iOS%20Technologies/App%20Architect.md)
@@ -40,8 +56,12 @@
 - Network Programming
     - RESTful APIs
     - TCP/IP SocketAPIs
+</details>
 
 ### 💻Getting Deeper
+<details>
+    <summary></summary>
+    
 - Swift Additional Topics
     - Protocol-oriented Programming
         - Value Semantics
@@ -106,7 +126,12 @@
         - Visual Debugging
             - Sanitizer
         - Diagnostics
+</details>
+
 ### 📱Start Building
+<details>
+    <summary></summary>
+    
 - Build & Deployment
     - CI
         - Xcode Server
@@ -125,6 +150,8 @@
     - iTunes Connect
     - Lucky Reviewr
 
+</details>
+
 ### 🏁Launching App~~
 
 
@@ -135,11 +162,20 @@
 
 ## 🕊️Swift
 ### ⌨️Learn the Basics
+<details>
+    <summary></summary>
+    
 Practice typing
 - Constaints
 - Variables
 - Comments
+    
+</details>
+   
 ### 👩‍💻Data Presentaion
+<details>
+    <summary></summary>
+    
 - Primitive Types
     - Integer
     - Float and Double
@@ -185,7 +221,13 @@ Practice typing
         - inheritence (Protocol-Oriented Programming_Multiple)
             - Subclassing
             - Overriding
+    
+</details>
+
 ### 🧑‍💻Prodecural presentation
+<details>
+    <summary></summary>
+    
 - Basic Operator
     - ternary
     - binary
@@ -274,6 +316,9 @@ Practice typing
     - Import from/to
     - Interoperability
     - Bridge Header
+    
+</details>
+
 ### 🏁Goals
 
 
@@ -282,7 +327,11 @@ Practice typing
 
 
 ## 🌠SwiftUI
+
 ### 💻Xcode
+<details>
+    <summary></summary>
+    
 - Create new project
     - SceneDelegate
     - Window Group
@@ -292,8 +341,12 @@ Practice typing
 - Multi-platform support
 - Simulator
 - Support iOS version
+</details>
 
 ### 🖥️View
+<details>
+    <summary></summary>
+    
 - What is a view?
     - [Text](https://github.com/eemdeeks/iOS/blob/main/swiftUI/what%20is%20a%20view/Text.md)
     - UI controls
@@ -390,7 +443,12 @@ Practice typing
     - Icons
         - System icons
         
+</details>
+    
 ### 🚂Data flow
+<details>
+    <summary></summary>
+    
 - combine Framework
     - Publishers
     - Subscribers
@@ -410,7 +468,12 @@ Practice typing
         - [.onReceive()](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/inside%20Views/onReceive().md)
         - [.onChange()](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/inside%20Views/onChange().md)
 
+</details>
+
 ### 🎲Animation - When to use animations?
+<details>
+    <summary></summary>
+    
 - Implicit animations
 - explicit animation
 
@@ -424,7 +487,12 @@ Practice typing
 
 - Animatable Protocol
 
+</details>
+
 ### 📱MVVM
+<details>
+    <summary></summary>
+    
 - View Model
     - [ObservableObject](https://github.com/eemdeeks/iOS/blob/main/swiftUI/MVVM/View%20Model/ObservableObject.md)
     - [@Published](https://github.com/eemdeeks/iOS/blob/main/swiftUI/MVVM/View%20Model/%40Published.md)
@@ -450,8 +518,12 @@ Practice typing
                 - Realm
                     - frozen Objects
                 - Firebase
+</details>
 
 ### 🧑‍💻User interaction
+<details>
+    <summary></summary>
+    
 - UI controls
     - Button
     - EditButton
@@ -469,8 +541,12 @@ Practice typing
     - MapView
     - TextEditor
     - SignInWithApple button
+</details>
 
 ### 📲User input
+<details>
+    <summary></summary>
+    
 - Gestures
     - Gesture recognizer
     - Tap gesture
@@ -489,6 +565,7 @@ Practice typing
     - .onDrag
     - NSItemProvider
     - UTType
+</details>
 
 ## Integration with UIKit
 
