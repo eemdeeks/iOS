@@ -79,6 +79,7 @@
 		6F1A4F8329BB1AB000705EFD /* 10845.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10845.swift; sourceTree = "<group>"; };
 		6F1A62D22A1A39D00088C749 /* 1913.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1913.swift; sourceTree = "<group>"; };
 		6F1A62D42A1A47130088C749 /* 9461.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9461.swift; sourceTree = "<group>"; };
+		6F1B21E72A275DFB007A268D /* Sorting.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Sorting.md; sourceTree = "<group>"; };
 		6F24030D29B8ACC200CC236B /* 15649.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 15649.swift; sourceTree = "<group>"; };
 		6F24030F29B8B2FF00CC236B /* 2609.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2609.swift; sourceTree = "<group>"; };
 		6F2B660229BEB7B600D89CE2 /* 11653.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11653.swift; sourceTree = "<group>"; };
@@ -200,6 +201,7 @@
 				6F2F7E1F29FE31F0007FF00B /* 2947.swift */,
 				6F8B302F2A0694DA0086B4D6 /* 2750.swift */,
 				6F8B30312A0696500086B4D6 /* 10989.swift */,
+				6F1B21E72A275DFB007A268D /* Sorting.md */,
 			);
 			path = recursive_sorting;
 			sourceTree = "<group>";
