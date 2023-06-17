@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct ButtonModel: Hashable {
-    let name: String
+    var name: String
     let backgroundColor: Color
     let foregroundColor: Color
     init(name: String, backgroundColor: Color, foregroundColor: Color) {

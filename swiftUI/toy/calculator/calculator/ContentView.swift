@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var outPut: Int = 0
-    let buttonModel: [[ButtonModel]] = [
+    @State var outPut: String = "0"
+    @State var outPutSize : CGFloat = 90
+    @State var buttonModel: [[ButtonModel]] = [
         [.ac,.plusMinus,.percent,.divide],
         [.seven,.eight,.nine,.multiply],
         [.four,.five,.six,.minus],
@@ -23,17 +24,15 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     Text(String(outPut))
-                        .font(.system(size: 80))
+                        .font(.system(size: outPutSize))
                         .padding()
                 }
                 ForEach(buttonModel, id: \.self){ models in
                     HStack{
                         ForEach(models, id: \.self){ label in
-                            Button{
-                                
-                            } label: {
-                                SymbolButtonLabel(name: label.name, backColor: label.backgroundColor, foregroundColor: label.foregroundColor, geo: geo)
-                            }
+                            
+                            SymbolButtonLabel(outPut: $outPut, outPutSize: $outPutSize, name: label.name, backColor: label.backgroundColor, foregroundColor: label.foregroundColor, geo: geo)
+                            
                             
                         }
                     }
