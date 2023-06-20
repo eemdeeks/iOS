@@ -165,4 +165,9 @@ import Foundation
 //solution1463()
 
 // MARK: - 2193
-solution2193()
+//solution2193()
+
+// MARK: - binarySearch
+//print(binarySearchRecursive([1,2,6,7,8,10,30,50,56], num: 5))
+
+print(binarySearch([1,2,6,7,8,10,30,50,56], num: 5))
