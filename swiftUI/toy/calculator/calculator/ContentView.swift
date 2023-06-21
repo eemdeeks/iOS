@@ -27,11 +27,11 @@ struct ContentView: View {
                         .font(.system(size: outPutSize))
                         .padding()
                 }
-                ForEach(buttonModel, id: \.self){ models in
+                ForEach($buttonModel, id: \.self){ models in
                     HStack{
                         ForEach(models, id: \.self){ label in
                             
-                            SymbolButtonLabel(outPut: $outPut, outPutSize: $outPutSize, name: label.name, backColor: label.backgroundColor, foregroundColor: label.foregroundColor, geo: geo)
+                            SymbolButtonLabel(outPut: $outPut, outPutSize: $outPutSize, item: label, geo: geo)
                             
                             
                         }

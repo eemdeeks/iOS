@@ -12,10 +12,13 @@ struct ButtonModel: Hashable {
     var name: String
     let backgroundColor: Color
     let foregroundColor: Color
-    init(name: String, backgroundColor: Color, foregroundColor: Color) {
+    var isClicked: Bool?
+    
+    init(name: String, backgroundColor: Color, foregroundColor: Color, isClicked: Bool? = nil) {
         self.name = name
         self.backgroundColor = backgroundColor
         self.foregroundColor = foregroundColor
+        self.isClicked = isClicked
     }
 }
 
@@ -23,10 +26,10 @@ extension ButtonModel {
     static let ac = ButtonModel(name: "AC", backgroundColor: .gray, foregroundColor: .black)
     static let plusMinus = ButtonModel(name: "plus.forwardslash.minus", backgroundColor: .gray, foregroundColor: .black)
     static let percent = ButtonModel(name: "percent", backgroundColor: .gray, foregroundColor: .black)
-    static let divide = ButtonModel(name: "divide", backgroundColor: .orange, foregroundColor: .white)
-    static let multiply = ButtonModel(name: "multiply", backgroundColor: .orange, foregroundColor: .white)
-    static let minus = ButtonModel(name: "minus", backgroundColor: .orange, foregroundColor: .white)
-    static let plus = ButtonModel(name: "plus", backgroundColor: .orange, foregroundColor: .white)
+    static let divide = ButtonModel(name: "divide", backgroundColor: .orange, foregroundColor: .white, isClicked: false)
+    static let multiply = ButtonModel(name: "multiply", backgroundColor: .orange, foregroundColor: .white, isClicked: false)
+    static let minus = ButtonModel(name: "minus", backgroundColor: .orange, foregroundColor: .white, isClicked: false)
+    static let plus = ButtonModel(name: "plus", backgroundColor: .orange, foregroundColor: .white, isClicked: false)
     static let equal = ButtonModel(name: "equal", backgroundColor: .orange, foregroundColor: .white)
     static let zero = ButtonModel(name: "0", backgroundColor: Color("Darkgray"), foregroundColor: .white)
     static let one = ButtonModel(name: "1", backgroundColor: Color("Darkgray"), foregroundColor: .white)

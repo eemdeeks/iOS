@@ -121,6 +121,7 @@ struct Suin2hi: View {
                 ForEach(buttonName, id: \.self) { i in
                     HStack {
                         ForEach(i, id: \.self) { item in
+                            
                             Button {
                                 if item == .clear {
                                     calculateNumber = "0"

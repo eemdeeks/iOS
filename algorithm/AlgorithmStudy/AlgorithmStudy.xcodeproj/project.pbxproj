@@ -38,6 +38,7 @@
 		6F54DF3129EC1760002EC070 /* 10866.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F54DF3029EC1760002EC070 /* 10866.swift */; };
 		6F62685E29C0982E00595458 /* 1406.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F62685D29C0982E00595458 /* 1406.swift */; };
 		6F7E33522A41BCC300A6AB59 /* binary search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E33512A41BCC300A6AB59 /* binary search.swift */; };
+		6F7E33542A41D31B00A6AB59 /* 10815.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E33532A41D31B00A6AB59 /* 10815.swift */; };
 		6F8565BE2A12592500FD0A58 /* 1966.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8565BD2A12592500FD0A58 /* 1966.swift */; };
 		6F8565C02A125F9D00FD0A58 /* 11866.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8565BF2A125F9D00FD0A58 /* 11866.swift */; };
 		6F8749822A189D4700F9E745 /* 1003.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8749812A189D4700F9E745 /* 1003.swift */; };
@@ -108,6 +109,7 @@
 		6F62685D29C0982E00595458 /* 1406.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1406.swift; sourceTree = "<group>"; };
 		6F7E33502A41B6D300A6AB59 /* Binary Search.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Binary Search.md"; sourceTree = "<group>"; };
 		6F7E33512A41BCC300A6AB59 /* binary search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "binary search.swift"; sourceTree = "<group>"; };
+		6F7E33532A41D31B00A6AB59 /* 10815.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10815.swift; sourceTree = "<group>"; };
 		6F8565BD2A12592500FD0A58 /* 1966.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1966.swift; sourceTree = "<group>"; };
 		6F8565BF2A125F9D00FD0A58 /* 11866.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11866.swift; sourceTree = "<group>"; };
 		6F8749802A18905B00F9E745 /* Dynamic Programming.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Dynamic Programming.md"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			children = (
 				6F7E33502A41B6D300A6AB59 /* Binary Search.md */,
 				6F7E33512A41BCC300A6AB59 /* binary search.swift */,
+				6F7E33532A41D31B00A6AB59 /* 10815.swift */,
 			);
 			path = "Binary Search";
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				6F4355C529F4E11C00F66672 /* 올바른괄호.swift in Sources */,
 				6F38B1B929BA05DA0092B94A /* 10828.swift in Sources */,
 				6F8C37D029C2B6570041BD40 /* 18258.swift in Sources */,
+				6F7E33542A41D31B00A6AB59 /* 10815.swift in Sources */,
 				6F434A0529F5759600C29485 /* cyndi.swift in Sources */,
 				6FE6DD0629C00BF400731621 /* 6588.swift in Sources */,
 				6F54DF3129EC1760002EC070 /* 10866.swift in Sources */,
