@@ -17,6 +17,7 @@ func solution10815() {
     }
     var compArray: [Int] = readLine()!.components(separatedBy: " ").map{ Int(String($0))!}
     
+    var answer: [String] = []
     probArray.sort()
     
     for index in compArray {
@@ -35,10 +36,11 @@ func solution10815() {
             }
         }
         if flag {
-            print(1,terminator: " ")
+            answer.append("1")
         } else {
-            print(0,terminator: " ")
+            answer.append("0")
         }
     }
+    print(answer.joined(separator: " "))
 }
 
