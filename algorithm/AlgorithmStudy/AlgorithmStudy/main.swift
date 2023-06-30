@@ -182,4 +182,7 @@ import Foundation
 //solution1260()
 
 // MARK: - 2606
-solution2606()
+//solution2606()
+
+// MARK: - 1325
+solution1325()
