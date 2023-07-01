@@ -3,9 +3,8 @@
 
     
 ## 📌Any
-<details>
-    <summary>같이 공부하면 좋을 것들</summary>
-    
+
+### [Resources](https://github.com/eemdeeks/iOS/tree/main/Resources)  
 ### [Datastructures & Algorithms](https://github.com/eemdeeks/iOS/tree/main/algorithm/AlgorithmStudy/AlgorithmStudy)
 ### Basic Terminal Usage
 ### Git - Version Control
@@ -14,7 +13,7 @@
 ### Learn to Research
 ### Character Encodings
 ### [Github](https://github.com/eemdeeks)
-</details>
+
 
 
 ## 🍎iOS
