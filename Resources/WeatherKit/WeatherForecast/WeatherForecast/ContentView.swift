@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreLocation
 import WeatherKit
+import Charts
 
 // MARK: - 현재위치 설정하기
 class LocationManager: NSObject, ObservableObject {
@@ -121,6 +122,23 @@ struct TenDayForecastView: View {
     }
 }
 
+// MARK: - 시간대별 온도 그래프 뷰
+struct HourlyForecastChartView: View {
+    
+    let hourlyWeatherData: [HourWeather]
+    
+    var body: some View {
+        Chart {
+            ForEach(hourlyWeatherData.prefix(10),id: \.date) { hourlyWeather in
+                PointMark(x: .value("Hour", hourlyWeather.date.formatAsAbbreviatedTime()), y: .value("Temperature", hourlyWeather.temperature.converted(to: .fahrenheit).value))    // 점 그래프
+//                BarMark(x: .value("Hour", hourlyWeather.date.formatAsAbbreviatedTime()), y: .value("Temperature", hourlyWeather.temperature.converted(to: .fahrenheit).value))  // 막대 그래프
+                
+//                LineMark(x: .value("Hour", hourlyWeather.date.formatAsAbbreviatedTime()), y: .value("Temperature", hourlyWeather.temperature.converted(to: .fahrenheit).value))   // 선 그래프
+            }
+        }
+    }
+}
+
 // MARK: - ContentView 바디
 struct ContentView: View {
     
@@ -155,6 +173,9 @@ struct ContentView: View {
                 
                 //Spacer()
                 
+                // 시간대별 온도 차트로 보는 뷰
+                HourlyForecastChartView(hourlyWeatherData: hourlyWeatherData)
+                
                 // 10일후까지의 예보 뷰
                 TenDayForecastView(dayWeatherList: weather.dailyForecast.forecast)
             }
@@ -167,6 +188,7 @@ struct ContentView: View {
                                                                         //현재 위치를 사용하기 위해서는 이 코드를 사용하면 돼요.
                     let location = CLLocation(latitude: 36.01409, longitude: 129.32596) //포항공대 c5 위치
                     self.weather = try await weatherService.weather(for: location) // weatherService.weather(for:) 함수는 비동기 함수이기 때문에 try await을 이용해 줍니다.
+                    print(weather)
                 //}
             } catch {
                 print(error)
