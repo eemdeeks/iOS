@@ -52,7 +52,7 @@ struct ContentView: View {
         }.task(id: locationManager.currentLocation) { //현재 위치가 변할 경우 다시 실행해 줄 수 있도록..
             do {
                 if let location = locationManager.currentLocation { //currentLocation이 옵셔널이기 때문에 언랩핑해줘야 해요.
-                    let weather = try await weatherService.weather(for: location) // weatherService.weather(for:) 함수는 비동기 함수이기 때문에 try await을 이요해 줍니다.
+                    let weather = try await weatherService.weather(for: location) // weatherService.weather(for:) 함수는 비동기 함수이기 때문에 try await을 이용해 줍니다.
                 }
             } catch {
                 print(error)
