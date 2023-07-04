@@ -36,6 +36,7 @@
 		6F4355C529F4E11C00F66672 /* 올바른괄호.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4355C429F4E11C00F66672 /* 올바른괄호.swift */; };
 		6F50322A2A263CBB009E6ABB /* 2193.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5032292A263CBB009E6ABB /* 2193.swift */; };
 		6F54DF3129EC1760002EC070 /* 10866.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F54DF3029EC1760002EC070 /* 10866.swift */; };
+		6F6170112A543FB0000A4596 /* 2872.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6170102A543FB0000A4596 /* 2872.swift */; };
 		6F62685E29C0982E00595458 /* 1406.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F62685D29C0982E00595458 /* 1406.swift */; };
 		6F78E2DE2A52E0BA00A2CFD3 /* 1092.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F78E2DD2A52E0BA00A2CFD3 /* 1092.swift */; };
 		6F78E2E02A52EE2200A2CFD3 /* 11501.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F78E2DF2A52EE2200A2CFD3 /* 11501.swift */; };
@@ -112,6 +113,7 @@
 		6F4355C429F4E11C00F66672 /* 올바른괄호.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "올바른괄호.swift"; sourceTree = "<group>"; };
 		6F5032292A263CBB009E6ABB /* 2193.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2193.swift; sourceTree = "<group>"; };
 		6F54DF3029EC1760002EC070 /* 10866.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10866.swift; sourceTree = "<group>"; };
+		6F6170102A543FB0000A4596 /* 2872.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2872.swift; sourceTree = "<group>"; };
 		6F62685D29C0982E00595458 /* 1406.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1406.swift; sourceTree = "<group>"; };
 		6F78E2DB2A52797B00A2CFD3 /* Greedy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Greedy.md; sourceTree = "<group>"; };
 		6F78E2DD2A52E0BA00A2CFD3 /* 1092.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1092.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				6F78E2DB2A52797B00A2CFD3 /* Greedy.md */,
 				6F78E2DD2A52E0BA00A2CFD3 /* 1092.swift */,
 				6F78E2DF2A52EE2200A2CFD3 /* 11501.swift */,
+				6F6170102A543FB0000A4596 /* 2872.swift */,
 			);
 			path = Greedy;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				6F1A62D32A1A39D00088C749 /* 1913.swift in Sources */,
 				6F434A0329F570E300C29485 /* 1427.swift in Sources */,
 				6FC983AF2A1BA003006BB62D /* 11726.swift in Sources */,
+				6F6170112A543FB0000A4596 /* 2872.swift in Sources */,
 				6F98A0C129B6DF7A00163FE9 /* 1929.swift in Sources */,
 				6F38B1BD29BA15400092B94A /* 10773.swift in Sources */,
 				6F0DB5242A20A2D0007F3AE0 /* 9095.swift in Sources */,
