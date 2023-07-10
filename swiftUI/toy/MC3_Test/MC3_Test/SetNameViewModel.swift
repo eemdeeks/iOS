@@ -49,7 +49,7 @@ class SetNameViewModel: ObservableObject {
                 queryOperation.queryResultBlock = { [weak self] returnedResult in
                     print("Returned result: \(returnedResult)")
                     DispatchQueue.main.async {
-                        self?.haveName()
+                        
                     }
                     
                 }

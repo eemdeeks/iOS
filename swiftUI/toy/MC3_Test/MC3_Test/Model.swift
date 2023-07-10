@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import CloudKit
 
 struct Profile: Hashable {
     let UID: String
     let name: String
+    let record: CKRecord?
 }
