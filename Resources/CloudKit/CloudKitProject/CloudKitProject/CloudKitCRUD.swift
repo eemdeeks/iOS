@@ -8,10 +8,15 @@
 import SwiftUI
 import CloudKit
 
+struct FruitModel: Hashable {
+    let name: String
+    let record: CKRecord
+}
+
 class CloudKitCRUDViewModel: ObservableObject {
     
     @Published var text: String = ""
-    @Published var fruits: [String] = []
+    @Published var fruits: [FruitModel] = []
     
     init() {
         fetchItem()
@@ -38,6 +43,8 @@ class CloudKitCRUDViewModel: ObservableObject {
             
             DispatchQueue.main.async {
                 self?.text = ""     // add 후에는 텍스트필드 비워주는 코드에요
+                
+                self?.fetchItem()   // refetch해서 update 후 뷰에 새로 바뀐 데이터베이스 보여주기
             }
         }
     }
@@ -58,7 +65,7 @@ class CloudKitCRUDViewModel: ObservableObject {
 //        queryOperation.resultsLimit = 2 //쿼리를 최대 2개만 가져오게 하는 방법이에요!
         // 설정하지 않는다면 기본 100개의 쿼리만 반환 돼요!
         
-        var returnedItems: [String] = []
+        var returnedItems: [FruitModel] = []
         
         
         // iOS 버전 15미만일 경우 구현방법이에요
@@ -86,7 +93,7 @@ class CloudKitCRUDViewModel: ObservableObject {
             switch returnedResult {
             case .success(let record):
                 guard let name = record["name"] as? String else { return }
-                returnedItems.append(name)
+                returnedItems.append(FruitModel(name: name, record: record))
                 
             case .failure(let error):
                 print("Error recordMatchedBlock: \(error)")
@@ -121,6 +128,27 @@ class CloudKitCRUDViewModel: ObservableObject {
     func addOperations(operation: CKDatabaseOperation) {
         CKContainer.default().publicCloudDatabase.add(operation)
     }
+    
+    
+    // MARK: - Update
+    func updateItem(fruit: FruitModel) {
+        let record = fruit.record
+        record["name"] = "NEW NAME!!!!"
+        saveItem(record: record)
+    }
+    
+    // MARK: - Delete
+    func deleteItem(indexSet: IndexSet) {
+        guard let index = indexSet.first else { return }
+        let fruit = fruits[index]
+        let record = fruit.record
+        
+        CKContainer.default().publicCloudDatabase.delete(withRecordID: record.recordID) { [weak self] returnedRecordID, returnedError in
+            DispatchQueue.main.async {
+                self?.fruits.remove(at: index)
+            }
+        }
+    }
 }
 struct CloudKitCRUD: View {
     
@@ -133,9 +161,13 @@ struct CloudKitCRUD: View {
                 textField
                 addButton
                 List{
-                    ForEach(vm.fruits, id:\.self) {
-                        Text($0)
+                    ForEach(vm.fruits, id:\.self) { fruit in
+                        Text(fruit.name)
+                            .onTapGesture {
+                                vm.updateItem(fruit: fruit)
+                            }
                     }
+                    .onDelete(perform: vm.deleteItem)
                 }
                 .listStyle(PlainListStyle())
             }
