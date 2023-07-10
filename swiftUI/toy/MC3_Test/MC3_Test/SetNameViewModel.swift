@@ -17,10 +17,47 @@ class SetNameViewModel: ObservableObject {
     @Published var error: String = ""
     @Published var userName: String = ""
     
+    @Published var goToSetImgaeView: Bool = false
+    
     init() {
         getiCloudStatus()
         requestPermission()
         fetchiCloudUserRecordID()
+        
+        fetchUID()
+    }
+    
+    
+    
+    func fetchUID() {
+        CKContainer.default().fetchUserRecordID { [weak self] returnedID, returnedError in
+            if let id = returnedID {
+                let predicate = NSPredicate(format: "uid = %@", argumentArray: ["\(id.recordName)"])
+                let query = CKQuery(recordType: "Profile", predicate: predicate)
+                let queryOperation = CKQueryOperation(query: query)
+                
+                queryOperation.recordMatchedBlock = {  (returnedRecordID, returnedResult) in
+                    switch returnedResult {
+                    case .success(let record):
+                        guard let name = record["uid"] as? String else { return }
+                        self?.haveName()
+                    case .failure(let error):
+                        print("Error recordMatchedBlock: \(error)")
+                    }
+                }
+                
+                queryOperation.queryResultBlock = { [weak self] returnedResult in
+                    print("Returned result: \(returnedResult)")
+                    DispatchQueue.main.async {
+                        self?.haveName()
+                    }
+                    
+                }
+                
+                CKContainer.default().publicCloudDatabase.add(queryOperation)
+            }
+        }
+        
     }
     
     
@@ -91,7 +128,7 @@ class SetNameViewModel: ObservableObject {
     private func addName(name: String) {
         CKContainer.default().fetchUserRecordID { [weak self]returnedID, returnedError in
             if let id = returnedID {
-                let profile = CKRecord(recordType: "Pofile")
+                let profile = CKRecord(recordType: "Profile")
                 
                 profile["name"] = name
                 profile["uid"] = id.recordName
@@ -116,6 +153,14 @@ class SetNameViewModel: ObservableObject {
     func nextButtonPressed() {
         guard !name.isEmpty else { return }
         addName(name: name)
+        haveName()
+    }
+    
+    func haveName() {
+        DispatchQueue.main.async {
+            self.goToSetImgaeView = true
+        }
+        
     }
     
 }

@@ -12,13 +12,23 @@ struct SetNameView: View {
     @StateObject private var viewModel = SetNameViewModel()
     
     var body: some View {
-        VStack {
-            header
-            textField
-            Spacer()
-            setButton
+        NavigationView {
+            VStack{
+                header
+                textField
+                Spacer()
+                setButton
+                    
+            }
+            .padding()
+            .background(
+                NavigationLink(destination: SetImageView(),isActive: $viewModel.goToSetImgaeView){
+                
+            })
+
+        }.onAppear{
+            viewModel.fetchUID()
         }
-        .padding()
     }
 }
 

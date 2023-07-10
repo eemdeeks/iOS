@@ -13,6 +13,8 @@
 		6F7F3A982A5BE71B0093AB6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F7F3A972A5BE71B0093AB6D /* Preview Assets.xcassets */; };
 		6F7F3AA02A5BEB810093AB6D /* SetNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F3A9F2A5BEB810093AB6D /* SetNameView.swift */; };
 		6F7F3AA22A5BEC5C0093AB6D /* SetNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F3AA12A5BEC5C0093AB6D /* SetNameViewModel.swift */; };
+		6F7F3AA42A5BFBF80093AB6D /* SetImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F3AA32A5BFBF80093AB6D /* SetImageView.swift */; };
+		6F7F3AA62A5C1A0F0093AB6D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F3AA52A5C1A0F0093AB6D /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		6F7F3A9E2A5BE7DA0093AB6D /* MC3_Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MC3_Test.entitlements; sourceTree = "<group>"; };
 		6F7F3A9F2A5BEB810093AB6D /* SetNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNameView.swift; sourceTree = "<group>"; };
 		6F7F3AA12A5BEC5C0093AB6D /* SetNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNameViewModel.swift; sourceTree = "<group>"; };
+		6F7F3AA32A5BFBF80093AB6D /* SetImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageView.swift; sourceTree = "<group>"; };
+		6F7F3AA52A5C1A0F0093AB6D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,9 @@
 				6F7F3A942A5BE71B0093AB6D /* Assets.xcassets */,
 				6F7F3A962A5BE71B0093AB6D /* Preview Content */,
 				6F7F3A9F2A5BEB810093AB6D /* SetNameView.swift */,
+				6F7F3AA32A5BFBF80093AB6D /* SetImageView.swift */,
 				6F7F3AA12A5BEC5C0093AB6D /* SetNameViewModel.swift */,
+				6F7F3AA52A5C1A0F0093AB6D /* Model.swift */,
 			);
 			path = MC3_Test;
 			sourceTree = "<group>";
@@ -146,7 +152,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F7F3AA02A5BEB810093AB6D /* SetNameView.swift in Sources */,
+				6F7F3AA42A5BFBF80093AB6D /* SetImageView.swift in Sources */,
 				6F7F3A932A5BE71A0093AB6D /* ContentView.swift in Sources */,
+				6F7F3AA62A5C1A0F0093AB6D /* Model.swift in Sources */,
 				6F7F3AA22A5BEC5C0093AB6D /* SetNameViewModel.swift in Sources */,
 				6F7F3A912A5BE71A0093AB6D /* MC3_TestApp.swift in Sources */,
 			);

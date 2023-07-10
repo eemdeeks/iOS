@@ -52,8 +52,8 @@ class CloudKitCRUDViewModel: ObservableObject {
     // 아이템 리스트 가져오는 함수에요
     func fetchItem() {
         
-        let predicate = NSPredicate(value: true)
-        //let predicate = NSPredicate(format: "name = %@", argumentArray: ["Coconut"])    // name에 Coconut인 것들만 필터링 해줄 수 있습니다.
+        //let predicate = NSPredicate(value: true)
+        let predicate = NSPredicate(format: "name = %@", argumentArray: ["Coconut"])    // name에 Coconut인 것들만 필터링 해줄 수 있습니다.
         let query = CKQuery(recordType: "Fruit", predicate: predicate)
         query.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]    // 쿼리 받아올때 정렬해주는 방법, 쿼리 자체를 정렬해줘요!
         
@@ -94,7 +94,7 @@ class CloudKitCRUDViewModel: ObservableObject {
             case .success(let record):
                 guard let name = record["name"] as? String else { return }
                 returnedItems.append(FruitModel(name: name, record: record))
-                
+                print("아이템")
             case .failure(let error):
                 print("Error recordMatchedBlock: \(error)")
             }
