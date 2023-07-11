@@ -1,30 +1,49 @@
 //
-//  SetImageViewModel.swift
+//  UpdateProfileViewModel.swift
 //  MC3_Test
 //
-//  Created by 박승찬 on 2023/07/10.
+//  Created by 박승찬 on 2023/07/11.
 //
 
 import Foundation
 import CloudKit
 
-class SetImageViewModel: ObservableObject {
+protocol UpdateProfileViewModelDelegate {
+    func setProfile(profile: Profile)
+}
+
+class UpdateProfileViewModel: ObservableObject {
     
-    @Published var profile: Profile = Profile(UID: "", name: "", record: nil)
-    init() {
+    @Published var profileImage: String = ""
+    @Published var profileName: String = ""
+    
+    var delegate: UpdateProfileViewModelDelegate?
+    
+    var profile: Profile
+    
+    init(profile: Profile) {
+        self.profile = profile
+        self.profileName = profile.name
+        self.profileImage = profile.imageKey ?? ""
         fetchUID()
+        
     }
     
     // MARK: - Update
-    func updateItem(profile: Profile) {
+    private func updateItem(profile: Profile) {
         fetchUID()
         if let record = profile.record{
-            record["ImageKey"] = "Cat"
+            self.profile.imageKey = self.profileImage
+            self.profile.name = self.profileName
+            
+            record["name"] = self.profileName
+            record["ImageKey"] = self.profileImage
             saveItem(record: record)
             print("업데이트")
+            
         }
     }
-
+    
     private func saveItem(record: CKRecord) {
         CKContainer.default().publicCloudDatabase.save(record) { returnedRecord, returnedError in
             print("Record: \(returnedRecord)")
@@ -40,21 +59,28 @@ class SetImageViewModel: ObservableObject {
                 let query = CKQuery(recordType: "Profile", predicate: predicate)
                 let queryOperation = CKQueryOperation(query: query)
                 
+                
                 queryOperation.recordMatchedBlock = {  (returnedRecordID, returnedResult) in
                     switch returnedResult {
                     case .success(let record):
                         guard let name = record["name"] as? String else { return }
-                        
+                        print("이름 가져오기 성공")
+                        guard let image = record["ImageKey"] as? String else { return }
+                        print("image가져오기 성공")
                         DispatchQueue.main.async {
-                            self?.profile = Profile(UID: id.recordName, name: name, record: record)
+                            self?.profile = Profile(UID: id.recordName, name: name, imageKey: image, record: record)
                         }
                     case .failure(let error):
                         print("Error recordMatchedBlock: \(error)")
                     }
                 }
                 
-                queryOperation.queryResultBlock = { returnedResult in
+                queryOperation.queryResultBlock = { [weak self] returnedResult in
                     print("Returned result: \(returnedResult)")
+                    DispatchQueue.main.async {
+                        self?.profileName = self?.profile.name ?? ""
+                        self?.profileImage = self?.profile.imageKey ?? ""
+                    }
                     
                     
                 }
@@ -63,5 +89,12 @@ class SetImageViewModel: ObservableObject {
             }
         }
         
+    }
+    
+    func clickedSaveButton() {
+        guard !profileName.isEmpty else { return }
+        updateItem(profile: profile)
+        
+        delegate?.setProfile(profile: profile)
     }
 }

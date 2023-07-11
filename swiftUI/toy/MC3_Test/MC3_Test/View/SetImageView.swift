@@ -15,16 +15,18 @@ struct SetImageView: View {
     @StateObject private var viewModel = SetImageViewModel()
     
     var body: some View {
-        GeometryReader { geo in
-            VStack{
-                header
-                catsBtn
-                Spacer()
-                completeButton
-            }
-            .navigationBarBackButtonHidden(true)
-            .padding()
+        VStack{
+            header
+            catsBtn
+            Spacer()
+            completeButton
         }
+        .navigationBarBackButtonHidden(true)
+        .padding()
+        .background(
+            NavigationLink(destination: MainView(viewModel: MainViewModel(profile: viewModel.profile)),isActive: $viewModel.goToMainView){
+            
+        })
     }
 }
 
@@ -45,11 +47,14 @@ extension SetImageView {
         ForEach(self.cats, id: \.self){ catsRaw in
             HStack{
                 ForEach(catsRaw, id: \.self){ cat in
-                    Image(cat)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: .infinity/5)
-                        .padding()
+                    Button {
+                        viewModel.clickedCatBtn(cat)
+                    } label: {
+                        Image(cat)
+                            .resizable()
+                            .scaledToFit()
+                            .padding()
+                    }
                 }
             }
         }
@@ -57,7 +62,7 @@ extension SetImageView {
     
     private var completeButton: some View {
         Button {
-            viewModel.updateItem(profile: viewModel.profile)
+            viewModel.completeButtonPressed()
         } label: {
             Text("완료")
                 .font(.headline)
