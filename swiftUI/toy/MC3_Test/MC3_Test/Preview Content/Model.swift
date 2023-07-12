@@ -15,7 +15,7 @@ struct Profile {
     let record: CKRecord?
 }
 
-struct Room {
+struct Room: Hashable {
     let name: String
     let UIDs: [String]
     let record: CKRecord?

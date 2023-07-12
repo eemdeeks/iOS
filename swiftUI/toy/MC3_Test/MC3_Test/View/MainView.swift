@@ -27,10 +27,32 @@ struct MainView: View {
                     if viewModel.rooms.isEmpty {
                         roomsListEmptyItem
                     }else {
-                        Text(viewModel.profile.name)
+                        ForEach(viewModel.rooms, id: \.self) { room in
+                            Button {
+                                
+                            } label: {
+                                VStack{
+                                    Text("방 이름: \(room.name)")
+                                        .font(.headline)
+                                        .foregroundColor(.gray)
+                                    Text("방 인원: \(room.UIDs.map{String($0)}.joined(separator: ","))")
+                                        .font(.headline)
+                                        .foregroundColor(.gray)
+                                }
+                                .frame(height: 110)
+                                .frame(maxWidth: .infinity)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.gray, lineWidth: 4)
+                                )
+                                
+                            }
+                            .listRowSeparator(.hidden)
+                        }
                     }
                     
-                }.listRowSeparator(.hidden)
+                }
+                .listStyle(PlainListStyle())
                 VStack{
                     Spacer()
                     createRoomButton
@@ -84,36 +106,26 @@ extension MainView {
         }
     }
     
-    private var roomsListItem: some View {
-        Button {
-            
-        } label: {
-            HStack{
-                Spacer()
-                Image(systemName: "plus.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxHeight: 30)
-                    .padding()
-                    .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 2)
-            }
-        }
-        
-    }
     private var roomsListEmptyItem: some View {
         Button {
             
         } label: {
-            HStack{
-                Spacer()
-                Image(systemName: "plus.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxHeight: 30)
-                    .padding()
-                    .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 2)
+            VStack{
+                Text("아직 방이 없어요.\n방을 만들어 주세요 !")
+                    .font(.headline)
+                    .foregroundColor(.gray)
             }
+            .frame(height: 110)
+            .frame(maxWidth: .infinity)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.gray, lineWidth: 4)
+            )
+            
         }
+        .listRowSeparator(.hidden)
         
     }
 }
+
+
