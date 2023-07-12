@@ -12,16 +12,23 @@ import Foundation
 class MainViewModel: UpdateProfileViewModelDelegate, ObservableObject {
     
     @Published var goToUpdateProfileView: Bool = false
+    @Published var goToCreateRoomView: Bool = false
     
+    @Published var profile: Profile
     
-    var profile: Profile
+    @Published var rooms: [Room] = []
     
     init(profile: Profile) {
         self.profile = profile
         
     }
+    
     func clickedUpdateProfileButton() {
         goToUpdateProfileView = true
+    }
+    
+    func clickedCreateRoomButton() {
+        goToCreateRoomView = true
     }
 
 }

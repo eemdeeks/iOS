@@ -8,15 +8,15 @@
 import Foundation
 import CloudKit
 
-class Profile {
+struct Profile {
     let UID: String
     var name: String
     var imageKey: String?
     let record: CKRecord?
-    init(UID: String, name: String, imageKey: String? = nil, record: CKRecord?) {
-        self.UID = UID
-        self.name = name
-        self.imageKey = imageKey
-        self.record = record
-    }
+}
+
+struct Room {
+    let name: String
+    let UIDs: [String]
+    let record: CKRecord?
 }

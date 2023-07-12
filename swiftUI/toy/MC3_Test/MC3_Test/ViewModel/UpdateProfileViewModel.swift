@@ -8,7 +8,7 @@
 import Foundation
 import CloudKit
 
-protocol UpdateProfileViewModelDelegate {
+protocol UpdateProfileViewModelDelegate: AnyObject {
     func setProfile(profile: Profile)
 }
 
@@ -17,14 +17,15 @@ class UpdateProfileViewModel: ObservableObject {
     @Published var profileImage: String = ""
     @Published var profileName: String = ""
     
-    var delegate: UpdateProfileViewModelDelegate?
+    weak var delegate: UpdateProfileViewModelDelegate?
     
-    var profile: Profile
+    @Published var profile: Profile
     
-    init(profile: Profile) {
+    init(profile: Profile, delegate: UpdateProfileViewModelDelegate) {
         self.profile = profile
         self.profileName = profile.name
         self.profileImage = profile.imageKey ?? ""
+        self.delegate = delegate
         fetchUID()
         
     }
@@ -38,6 +39,8 @@ class UpdateProfileViewModel: ObservableObject {
             
             record["name"] = self.profileName
             record["ImageKey"] = self.profileImage
+            
+            
             saveItem(record: record)
             print("업데이트")
             
@@ -96,5 +99,6 @@ class UpdateProfileViewModel: ObservableObject {
         updateItem(profile: profile)
         
         delegate?.setProfile(profile: profile)
+    
     }
 }
