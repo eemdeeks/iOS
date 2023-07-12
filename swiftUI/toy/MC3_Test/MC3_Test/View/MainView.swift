@@ -53,6 +53,9 @@ struct MainView: View {
                     
                 }
                 .listStyle(PlainListStyle())
+                .refreshable {
+                    viewModel.fetchItem()
+                }
                 VStack{
                     Spacer()
                     createRoomButton
@@ -68,6 +71,9 @@ struct MainView: View {
             
         }
         .navigationBarBackButtonHidden()
+        .task {
+            viewModel.fetchItem()
+        }
     }
 }
 

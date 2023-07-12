@@ -22,8 +22,8 @@ class SetImageViewModel: ObservableObject {
     // MARK: - Update
     private func updateItem(profile: Profile) {
         fetchUID()
+        self.profile.imageKey = catName
         if let record = profile.record{
-            self.profile.imageKey = catName
             record["ImageKey"] = catName
             saveItem(record: record)
             print("업데이트")
