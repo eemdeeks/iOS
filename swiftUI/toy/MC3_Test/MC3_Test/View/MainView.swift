@@ -29,7 +29,7 @@ struct MainView: View {
                     }else {
                         ForEach(viewModel.rooms, id: \.self) { room in
                             NavigationLink{
-                                RoomView(viewModel: RoomViewModel(users: [viewModel.profile], roomInfo: room))
+                                RoomView(viewModel: RoomViewModel(allUsers: viewModel.allUsers, users: [viewModel.profile], roomInfo: room))
                             } label: {
                                 VStack{
                                     Text("방 이름: \(room.name)")
