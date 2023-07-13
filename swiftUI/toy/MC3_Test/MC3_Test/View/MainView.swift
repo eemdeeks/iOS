@@ -28,8 +28,8 @@ struct MainView: View {
                         roomsListEmptyItem
                     }else {
                         ForEach(viewModel.rooms, id: \.self) { room in
-                            Button {
-                                
+                            NavigationLink{
+                                RoomView(viewModel: RoomViewModel(users: [viewModel.profile], roomInfo: room))
                             } label: {
                                 VStack{
                                     Text("방 이름: \(room.name)")
@@ -46,8 +46,8 @@ struct MainView: View {
                                         .stroke(Color.gray, lineWidth: 4)
                                 )
                                 
-                            }
-                            .listRowSeparator(.hidden)
+                            }.listRowSeparator(.hidden)
+
                         }
                     }
                     

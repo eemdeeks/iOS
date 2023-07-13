@@ -8,7 +8,7 @@
 import Foundation
 import CloudKit
 
-struct Profile {
+struct Profile: Hashable {
     let UID: String
     var name: String
     var imageKey: String?

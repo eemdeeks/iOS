@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F1B33E92A5FC4F200D669DA /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B33E82A5FC4F200D669DA /* RoomView.swift */; };
+		6F1B33EB2A5FC5B400D669DA /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B33EA2A5FC5B400D669DA /* RoomViewModel.swift */; };
 		6F7F3A912A5BE71A0093AB6D /* MC3_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F3A902A5BE71A0093AB6D /* MC3_TestApp.swift */; };
 		6F7F3A932A5BE71A0093AB6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F3A922A5BE71A0093AB6D /* ContentView.swift */; };
 		6F7F3A952A5BE71B0093AB6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F7F3A942A5BE71B0093AB6D /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F1B33E82A5FC4F200D669DA /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
+		6F1B33EA2A5FC5B400D669DA /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
 		6F7F3A8D2A5BE71A0093AB6D /* MC3_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F7F3A902A5BE71A0093AB6D /* MC3_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_TestApp.swift; sourceTree = "<group>"; };
 		6F7F3A922A5BE71A0093AB6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 				6F7F3AA92A5D32C50093AB6D /* MainView.swift */,
 				6F7F3AAD2A5D390F0093AB6D /* UpdateProfileView.swift */,
 				6F7F3AB32A5E9BF70093AB6D /* CreateRoomView.swift */,
+				6F1B33E82A5FC4F200D669DA /* RoomView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 				6F7F3AAB2A5D350B0093AB6D /* MainViewModel.swift */,
 				6F7F3AAF2A5D3AE30093AB6D /* UpdateProfileViewModel.swift */,
 				6F7F3AB52A5E9D610093AB6D /* CreateRoomViewModel.swift */,
+				6F1B33EA2A5FC5B400D669DA /* RoomViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -191,12 +197,14 @@
 				6F7F3AA02A5BEB810093AB6D /* SetNameView.swift in Sources */,
 				6F7F3AAE2A5D390F0093AB6D /* UpdateProfileView.swift in Sources */,
 				6F7F3AAA2A5D32C50093AB6D /* MainView.swift in Sources */,
+				6F1B33E92A5FC4F200D669DA /* RoomView.swift in Sources */,
 				6F7F3AA82A5C34D70093AB6D /* SetImageViewModel.swift in Sources */,
 				6F7F3AA42A5BFBF80093AB6D /* SetImageView.swift in Sources */,
 				6F7F3AB62A5E9D610093AB6D /* CreateRoomViewModel.swift in Sources */,
 				6F7F3A932A5BE71A0093AB6D /* ContentView.swift in Sources */,
 				6F7F3AA62A5C1A0F0093AB6D /* Model.swift in Sources */,
 				6F7F3AB02A5D3AE30093AB6D /* UpdateProfileViewModel.swift in Sources */,
+				6F1B33EB2A5FC5B400D669DA /* RoomViewModel.swift in Sources */,
 				6F7F3AA22A5BEC5C0093AB6D /* SetNameViewModel.swift in Sources */,
 				6F7F3AB42A5E9BF70093AB6D /* CreateRoomView.swift in Sources */,
 				6F7F3A912A5BE71A0093AB6D /* MC3_TestApp.swift in Sources */,
