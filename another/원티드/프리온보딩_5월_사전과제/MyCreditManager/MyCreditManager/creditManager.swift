@@ -14,16 +14,16 @@ class CreditManager {
     }
 }
 
-extension CreditManager {
-    final class Student {
-        var name : String
-        var score : Dictionary<String, String>
-        init(name: String, score: Dictionary<String, String> = Dictionary<String,String>()) {
-            self.name = name
-            self.score = score
-        }
+
+final class Student {
+    var name : String
+    var score : Dictionary<String, String>
+    init(name: String, score: Dictionary<String, String> = Dictionary<String,String>()) {
+        self.name = name
+        self.score = score
     }
 }
+
 
 // MARK: - 기능 함수
 extension CreditManager {
@@ -138,8 +138,6 @@ extension CreditManager {
                     case "D+" :
                         grade += 1.5
                     case "D" :
-                        grade += 1
-                    case "F" :
                         grade += 1
                     default:
                         grade += 0
