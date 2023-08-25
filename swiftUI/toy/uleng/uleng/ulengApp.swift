@@ -12,7 +12,8 @@ struct ulengApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            testView()
+//            testView()
+            WaveView()
         }
     }
 }

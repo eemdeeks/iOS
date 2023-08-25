@@ -13,6 +13,7 @@ struct testView: View {
     var scene: SKScene {
         let scene = GameScene()
         scene.size = CGSize(width: 300, height: 400)
+        scene.physicsWorld.gravity = CGVector(dx: -1.0, dy: 0.0)
         scene.scaleMode = .fill
         scene.backgroundColor = .white
         return scene
