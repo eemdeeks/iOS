@@ -14,7 +14,27 @@ class GameScene: SKScene, ObservableObject{
     @Published var gravityX: Double = 0
     @Published var gravityY: Double = 0
     
+    func createPlatform() {
+        let platform = SKSpriteNode(imageNamed: "lunchScreen")
+        
+        platform.physicsBody = SKPhysicsBody(rectangleOf: platform.size)
+        platform.position = CGPoint(x: 100, y: 0)
+        
+        platform.physicsBody?.isDynamic = false
+        platform.physicsBody?.affectedByGravity = false
+        
+        self.addChild(platform)
+        
+    }
     
+    func backgroundView() {
+        let background = SKSpriteNode(imageNamed: "background")
+        background.size = CGSize(width: frame.width, height: frame.height)
+        background.position = CGPoint(x: frame.midX, y: frame.midY)
+        background.alpha = 0.2
+        background.zPosition = -1
+        addChild(background)
+    }
     override func update(_ currentTime: TimeInterval) {
         self.physicsWorld.gravity = CGVector(dx: self.gravityX * 10, dy: self.gravityY * 10)
         print("중력 : \(gravityX)")
@@ -23,7 +43,9 @@ class GameScene: SKScene, ObservableObject{
 //        self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -1.0)
         self.size = CGSize(width: 300, height: 400)
         self.scaleMode = .fill
-        self.backgroundColor = .white
+        
+        backgroundView()
+//        createPlatform()
 //        let water = SKSpriteNode(imageNamed: "water")
 //        water.size = CGSize(width: 10, height: 10)
 //        water.color = .blue
@@ -73,7 +95,7 @@ class GameScene: SKScene, ObservableObject{
             //let square = SKSpriteNode()
             let square = SKSpriteNode(imageNamed: "water")
             let squareRadius = square.frame.width / 2.0
-            square.size = CGSize(width: 100, height: 100)
+            square.size = CGSize(width: 10, height: 10 )
             square.position = touch.location(in: self)
             square.color = .blue
             
