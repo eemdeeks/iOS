@@ -15,6 +15,7 @@
 		6F97A2852A8F578600E206E3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F97A2842A8F578600E206E3 /* GameScene.swift */; };
 		6F9D79952A9708A5007027A8 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D79942A9708A5007027A8 /* testView.swift */; };
 		6F9D79972A972927007027A8 /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D79962A972927007027A8 /* WaveView.swift */; };
+		6FC4CB3A2A9DDA8D00CBDE10 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC4CB392A9DDA8D00CBDE10 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		6F97A2842A8F578600E206E3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		6F9D79942A9708A5007027A8 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		6F9D79962A972927007027A8 /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
+		6FC4CB392A9DDA8D00CBDE10 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		6FC4CB3B2A9DDCBD00CBDE10 /* uleng.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = uleng.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 		6F7C5E932A8B1849005D4C67 /* uleng */ = {
 			isa = PBXGroup;
 			children = (
+				6FC4CB3B2A9DDCBD00CBDE10 /* uleng.entitlements */,
 				6F7C5EA22A8CDA32005D4C67 /* View */,
 				6F7C5E942A8B1849005D4C67 /* ulengApp.swift */,
 				6F7C5E962A8B1849005D4C67 /* ContentView.swift */,
@@ -83,6 +87,7 @@
 				6F97A2842A8F578600E206E3 /* GameScene.swift */,
 				6F9D79942A9708A5007027A8 /* testView.swift */,
 				6F9D79962A972927007027A8 /* WaveView.swift */,
+				6FC4CB392A9DDA8D00CBDE10 /* LocationManager.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				6F7C5EA42A8CDA40005D4C67 /* Wave.swift in Sources */,
 				6F9D79972A972927007027A8 /* WaveView.swift in Sources */,
 				6F9D79952A9708A5007027A8 /* testView.swift in Sources */,
+				6FC4CB3A2A9DDA8D00CBDE10 /* LocationManager.swift in Sources */,
 				6F7C5E972A8B1849005D4C67 /* ContentView.swift in Sources */,
 				6F97A2852A8F578600E206E3 /* GameScene.swift in Sources */,
 				6F7C5E952A8B1849005D4C67 /* ulengApp.swift in Sources */,
@@ -288,12 +294,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = uleng/uleng.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"uleng/Preview Content\"";
 				DEVELOPMENT_TEAM = 37UUYN2CGZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치정보를 받아오겠습니다";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치정보를 받아오겠습니다";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,12 +326,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = uleng/uleng.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"uleng/Preview Content\"";
 				DEVELOPMENT_TEAM = 37UUYN2CGZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치정보를 받아오겠습니다";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치정보를 받아오겠습니다";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
