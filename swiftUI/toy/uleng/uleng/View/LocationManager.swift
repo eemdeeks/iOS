@@ -33,6 +33,7 @@ extension LocationManager: CLLocationManagerDelegate {
         
         DispatchQueue.main.async {
             self.currentLocation = location
+            print("LocationManager_location: \(location)")
         }
     }
 }

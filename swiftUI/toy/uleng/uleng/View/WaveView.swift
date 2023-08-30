@@ -128,12 +128,15 @@ struct WaveView: View {
             }
             VStack {
                 HStack{
-                    Image(systemName: "location.fill")
+                    Image(systemName: "location.fill").onAppear{
+                        print("지역 이름: \(locationManager.currentLocation)")
+                    }
                     
                     Text("\(locationName)")
                         .font(.headline)
                 }
                 if let weather {
+                    
                     HStack{
                         
                         Text("\(weather.dailyForecast[0].lowTemperature.formatted())")
@@ -165,6 +168,28 @@ struct WaveView: View {
                         Text("날씨를 알려드릴게요!🌈")
                     }
                 }
+            }
+        }
+        .task(id: locationManager.currentLocation) {
+            do {
+                if let location = locationManager.currentLocation {
+                    
+                    // MARK: - 현재위치 위도경도 이용해서 지역 명 가져오기
+                    let geocoder = CLGeocoder()
+                    let locale = Locale(identifier: "Ko-kr")
+                    geocoder.reverseGeocodeLocation(location, preferredLocale: locale) { (placemarks, error) in
+                        if let address: [CLPlacemark] = placemarks {
+                            if let subLocality: String = address.last?.subLocality, let locality: String = address.last?.locality {
+                                self.locationName = "\(locality) \(subLocality)"
+                            }
+                        }
+                        
+                    }
+                    
+                    self.weather = try await weatherService.weather(for: location)
+                }
+            } catch {
+                print(error)
             }
         }
         
