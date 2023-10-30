@@ -110,7 +110,10 @@ struct ContentView: View {
         guard let result = try? await URLSession.shared.data(for: request) else { return }
         let data = result.0
         let uiImage = UIImage(data: data)
+        image = uiImage
         let thumb = await uiImage?.byPreparingThumbnail(ofSize: CGSize(width: 100, height: 100))
+        thumbnail = thumb
+        
             
         // dataTask(with:completionHandler:)로 데이터를 가져와서
         // UIImage(data:)로 이미지를 만들고
