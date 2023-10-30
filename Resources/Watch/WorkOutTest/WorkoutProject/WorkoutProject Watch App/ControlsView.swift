@@ -9,7 +9,28 @@ import SwiftUI
 
 struct ControlsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack {
+                Button {
+
+                } label: {
+                    Image(systemName: "xmark")
+                }
+                .tint(Color.red)
+                .font(.title2)
+                Text("End")
+            }
+            VStack {
+                Button {
+
+                } label: {
+                    Image(systemName: "pause")
+                }
+                .tint(Color.yellow)
+                .font(.title2)
+                Text("Pause")
+            }
+        }
     }
 }
 
