@@ -9,6 +9,7 @@ import SwiftUI
 import WatchKit
 
 struct SessionPagingView: View {
+    @EnvironmentObject var workoutManager: WorkoutManager
     @State private var selection: Tab = .metrics
 
     enum Tab {
@@ -21,9 +22,21 @@ struct SessionPagingView: View {
             MetricsView().tag(Tab.metrics)
             NowPlayingView().tag(Tab.nowPlaying)
         })
+        .navigationTitle(workoutManager.selectedWorkout?.name ?? "")
+        .navigationBarBackButtonHidden(true)
+        .toolbar(selection == .nowPlaying ?  .hidden : .automatic)
+        .onChange(of: workoutManager.running) { oldValue, newValue in
+            displayMetricsView()
+        }
+    }
+
+    private func displayMetricsView() {
+        withAnimation {
+            selection = .metrics
+        }
     }
 }
 
 #Preview {
-    SessionPagingView()
+    SessionPagingView().environmentObject(WorkoutManager())
 }

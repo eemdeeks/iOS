@@ -9,19 +9,25 @@ import SwiftUI
 import HealthKit
 
 struct StartView: View {
+    @EnvironmentObject var workoutManager: WorkoutManager
     var workoutTypes: [HKWorkoutActivityType] = [.running, .soccer]
 
     var body: some View {
         List(workoutTypes) { workoutType in
             NavigationLink(
-                workoutType.name
-                , destination: SessionPagingView()
+                workoutType.name,
+                destination: SessionPagingView(),
+                tag: workoutType,
+                selection: $workoutManager.selectedWorkout
             ).padding(
                 EdgeInsets(top: 15, leading: 5, bottom: 15, trailing: 5)
             )
         }
         .listStyle(.carousel)
         .navigationTitle("Workouts")
+        .onAppear {
+            workoutManager.requestAuthorization()
+        }
     }
 }
 
