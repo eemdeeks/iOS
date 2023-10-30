@@ -9,17 +9,18 @@ import Foundation
 import HealthKit
 
 class WorkoutManager: NSObject, ObservableObject {
-    var selectedWorkout: HKWorkoutActivityType? {
+    @Published var selectedWorkout: HKWorkoutActivityType? {
         didSet {
             guard let selectedWorkout = selectedWorkout else { return }
             startWorkout(workoutType: selectedWorkout)
+            print("됐는데..?")
         }
     }
 
     @Published var showingSummaryView: Bool = false {
         didSet {
             if showingSummaryView == false {
-                selectedWorkout = nil
+                resetWorkout()
             }
         }
     }
@@ -137,6 +138,17 @@ class WorkoutManager: NSObject, ObservableObject {
             }
         }
     }
+
+    func resetWorkout() {
+        selectedWorkout = nil
+        builder = nil
+        workout = nil
+        session = nil
+        activeEnergy = 0
+        averageHeartRate = 0
+        heartRate = 0
+        distance = 0
+    }
 }
 
 // MARK: - HKWorkoutSessionDelegate
@@ -151,9 +163,9 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
         if toState == .ended {
             builder?.endCollection(withEnd: date) { (success, error) in
                 self.builder?.finishWorkout { (workout, error) in
-//                    DispatchQueue.main.async {
-//                        self.workout = workout
-//                    }
+                    DispatchQueue.main.async {
+                        self.workout = workout
+                    }
                 }
             }
         }

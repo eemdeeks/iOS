@@ -9,6 +9,7 @@ import SwiftUI
 import HealthKit
 
 struct SummaryView: View {
+    @EnvironmentObject var workoutManager: WorkoutManager
     @Environment(\.dismiss) var dismiss
     @State private var durationFormatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
@@ -17,29 +18,44 @@ struct SummaryView: View {
         return formatter
     }()
     var body: some View {
-        ScrollView(.vertical) {
-            VStack(alignment: .leading) {
-                SummaryMetricView(title: "Total Time", value: durationFormatter.string(from: 30 * 60 + 15) ?? "")
-                    .accentColor(.yellow)   //나중에 없어져서 바꿔줘야함
-                SummaryMetricView(title: "Total Distance", value: Measurement(value: 1625, unit: UnitLength.meters).formatted(.measurement(width: .abbreviated,usage: .road)))
-                    .accentColor(.green)
-                SummaryMetricView(title: "Total Energy", value: Measurement(value: 96, unit: UnitEnergy.kilocalories).formatted(.measurement(width: .abbreviated,usage: .workout)))
-                    .accentColor(.pink)
-                SummaryMetricView(title: "Avg. Heart Rate", value: 143.formatted(.number.precision(.fractionLength(0))))
-                    .accentColor(.red)
-
-                Text("Activity Rings")
-                ActivityRingsView(healthStore: HKHealthStore()).frame(width: 50, height: 50)
-                
-                Button("Done"){
-                    dismiss()
+        if workoutManager.workout == nil {
+            ProgressView("Saving Workout")
+                .navigationBarHidden(true)
+        } else {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    SummaryMetricView(title: "Total Time",
+                                      value: durationFormatter.string(from: workoutManager.workout?.duration ?? 0.0) ?? "")
+                        .foregroundStyle(.yellow)
+                    SummaryMetricView(title: "Total Distance",
+                                      value: Measurement(value: workoutManager.workout?.totalDistance?.doubleValue(for: .meter()) ?? 0,
+                                                         unit: UnitLength.meters)
+                                        .formatted(.measurement(width: .abbreviated,
+                                                                usage: .road,
+                                                                numberFormatStyle: .number.precision(.fractionLength(2)))))
+                        .foregroundStyle(.green)
+                    SummaryMetricView(title: "Total Energy",
+                                      value: Measurement(value: workoutManager.workout?.totalEnergyBurned?.doubleValue(for: .kilocalorie()) ?? 0,
+                                                         unit: UnitEnergy.kilocalories)
+                                        .formatted(.measurement(width: .abbreviated,
+                                                                usage: .workout,
+                                                                numberFormatStyle: .number.precision(.fractionLength(0)))))
+                        .foregroundStyle(.pink)
+                    SummaryMetricView(title: "Avg. Heart Rate",
+                                      value: workoutManager.averageHeartRate.formatted(.number.precision(.fractionLength(0))) + " bpm")
+                        .foregroundStyle(.red)
+                    Text("Activity Rings")
+                    ActivityRingsView(healthStore: workoutManager.healthStore)
+                        .frame(width: 50, height: 50)
+                    Button("Done") {
+                        dismiss()
+                    }
                 }
-
+                .scenePadding()
             }
-            .scenePadding()
+            .navigationTitle("Summary")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle("Summary")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
