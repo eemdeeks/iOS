@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct WorkoutProjectApp: App {
+    private let workoutManager = WorkoutManager.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                PlayListView().environmentObject(workoutManager)
+            } else {
+                Text("빈화면")
+            }
         }
     }
 }

@@ -23,6 +23,9 @@ struct SessionPagingView: View {
             MetricsView().tag(Tab.metrics)
             NowPlayingView().tag(Tab.nowPlaying)
         })
+        .onAppear {
+            workoutManager.startWorkout(workoutType: .soccer)
+        }
         .navigationTitle(workoutManager.selectedWorkout?.name ?? "")
         .navigationBarBackButtonHidden(true)
         .toolbar(selection == .nowPlaying ?  .hidden : .automatic)

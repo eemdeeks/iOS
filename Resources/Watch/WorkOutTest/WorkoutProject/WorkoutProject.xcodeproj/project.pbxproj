@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F24997F2AEFD34A0057E4F5 /* WorkoutProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F24997E2AEFD34A0057E4F5 /* WorkoutProjectApp.swift */; };
-		6F2499812AEFD34A0057E4F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2499802AEFD34A0057E4F5 /* ContentView.swift */; };
+		6F2499812AEFD34A0057E4F5 /* PlayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2499802AEFD34A0057E4F5 /* PlayListView.swift */; };
 		6F2499832AEFD34B0057E4F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F2499822AEFD34B0057E4F5 /* Assets.xcassets */; };
 		6F2499862AEFD34B0057E4F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F2499852AEFD34B0057E4F5 /* Preview Assets.xcassets */; };
 		6F24998C2AEFD34B0057E4F5 /* WorkoutProject Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6F24998B2AEFD34B0057E4F5 /* WorkoutProject Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -23,6 +23,9 @@
 		6F2499AB2AF002900057E4F5 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2499AA2AF002900057E4F5 /* SummaryView.swift */; };
 		6F2499AD2AF009040057E4F5 /* ActivityRingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2499AC2AF009040057E4F5 /* ActivityRingsView.swift */; };
 		6F2499AF2AF00BB40057E4F5 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2499AE2AF00BB40057E4F5 /* WorkoutManager.swift */; };
+		6F329E862AF0DD340084285B /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F329E852AF0DD340084285B /* WorkoutManager.swift */; };
+		6F329E882AF0DEF00084285B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F329E872AF0DEF00084285B /* Logger.swift */; };
+		6F948D392AF0E1870074DBCF /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F948D382AF0E1870074DBCF /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +55,7 @@
 /* Begin PBXFileReference section */
 		6F24997B2AEFD34A0057E4F5 /* WorkoutProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F24997E2AEFD34A0057E4F5 /* WorkoutProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutProjectApp.swift; sourceTree = "<group>"; };
-		6F2499802AEFD34A0057E4F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6F2499802AEFD34A0057E4F5 /* PlayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListView.swift; sourceTree = "<group>"; };
 		6F2499822AEFD34B0057E4F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F2499852AEFD34B0057E4F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6F24998B2AEFD34B0057E4F5 /* WorkoutProject Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorkoutProject Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +72,10 @@
 		6F2499AE2AF00BB40057E4F5 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		6F2499B02AF0117A0057E4F5 /* WorkoutProject Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WorkoutProject Watch App.entitlements"; sourceTree = "<group>"; };
 		6F2499B12AF011930057E4F5 /* WorkoutProject-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WorkoutProject-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		6F329E842AF0DC520084285B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6F329E852AF0DD340084285B /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		6F329E872AF0DEF00084285B /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		6F948D382AF0E1870074DBCF /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,10 +117,14 @@
 		6F24997D2AEFD34A0057E4F5 /* WorkoutProject */ = {
 			isa = PBXGroup;
 			children = (
+				6F329E842AF0DC520084285B /* Info.plist */,
 				6F24997E2AEFD34A0057E4F5 /* WorkoutProjectApp.swift */,
-				6F2499802AEFD34A0057E4F5 /* ContentView.swift */,
+				6F2499802AEFD34A0057E4F5 /* PlayListView.swift */,
 				6F2499822AEFD34B0057E4F5 /* Assets.xcassets */,
 				6F2499842AEFD34B0057E4F5 /* Preview Content */,
+				6F329E852AF0DD340084285B /* WorkoutManager.swift */,
+				6F329E872AF0DEF00084285B /* Logger.swift */,
+				6F948D382AF0E1870074DBCF /* ChartView.swift */,
 			);
 			path = WorkoutProject;
 			sourceTree = "<group>";
@@ -140,8 +151,8 @@
 				6F2499A82AEFDE810057E4F5 /* ControlsView.swift */,
 				6F2499A62AEFDBB70057E4F5 /* ElapsedTimeView.swift */,
 				6F2499942AEFD34C0057E4F5 /* Assets.xcassets */,
-				6F2499962AEFD34C0057E4F5 /* Preview Content */,
 				6F2499AE2AF00BB40057E4F5 /* WorkoutManager.swift */,
+				6F2499962AEFD34C0057E4F5 /* Preview Content */,
 			);
 			path = "WorkoutProject Watch App";
 			sourceTree = "<group>";
@@ -256,8 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F2499812AEFD34A0057E4F5 /* ContentView.swift in Sources */,
+				6F2499812AEFD34A0057E4F5 /* PlayListView.swift in Sources */,
 				6F24997F2AEFD34A0057E4F5 /* WorkoutProjectApp.swift in Sources */,
+				6F329E862AF0DD340084285B /* WorkoutManager.swift in Sources */,
+				6F948D392AF0E1870074DBCF /* ChartView.swift in Sources */,
+				6F329E882AF0DEF00084285B /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,13 +487,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WorkoutProject/WorkoutProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkoutProject/Preview Content\"";
 				DEVELOPMENT_TEAM = 37UUYN2CGZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorkoutProject/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WorkoutProject;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "너의 건강 데이터를 공유할거야";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "너의 건강 데이터를 갱신할꺼야";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -506,13 +524,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WorkoutProject/WorkoutProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkoutProject/Preview Content\"";
 				DEVELOPMENT_TEAM = 37UUYN2CGZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorkoutProject/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WorkoutProject;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "너의 건강 데이터를 공유할거야";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "너의 건강 데이터를 갱신할꺼야";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

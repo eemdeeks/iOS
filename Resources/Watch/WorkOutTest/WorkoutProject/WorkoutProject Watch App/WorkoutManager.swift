@@ -34,12 +34,14 @@ class WorkoutManager: NSObject, ObservableObject {
     func startWorkout(workoutType: HKWorkoutActivityType) {
         let configuration = HKWorkoutConfiguration()
         configuration.activityType = workoutType
+//        configuration.activityType = .soccer
         configuration.locationType = .outdoor
 
         // Create the session and obtain the workout builder.
         do {
             session = try HKWorkoutSession(healthStore: healthStore, configuration: configuration)
             builder = session?.associatedWorkoutBuilder()
+            print("session workout : \(workoutType.name)")
         } catch {
             // Handle any exceptions.
             return
@@ -159,12 +161,14 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
             self.running = toState == .running
         }
 
+        print("workoutSession - toState : \(toState)")
         // Wait for the session to transition states before ending the builder.
         if toState == .ended {
             builder?.endCollection(withEnd: date) { (success, error) in
                 self.builder?.finishWorkout { (workout, error) in
                     DispatchQueue.main.async {
                         self.workout = workout
+                        print("workout = \(workout?.description ?? "nil")")
                     }
                 }
             }
