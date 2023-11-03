@@ -22,6 +22,9 @@ struct CUAlarmView: View {
             VStack {
                 DatePicker("", selection: $date, displayedComponents: .hourAndMinute)
                     .datePickerStyle(.wheel)
+                    .frame(height: 150)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal)
 //                DatePicker("",selection: Bindable(alarmManager).etcAlarms[0].date, displayedComponents: .hourAndMinute)
 //                    .datePickerStyle(.wheel)
                 List {
@@ -41,6 +44,8 @@ struct CUAlarmView: View {
                         Toggle("다시 알림", isOn: $reAlarmBool)
                     }
                 }
+                .scrollDisabled(true)
+                Spacer()
             }
             .toolbar {
                 ToolbarItem(placement: .navigation) {
@@ -72,7 +77,3 @@ struct CUAlarmView: View {
         }
     }
 }
-//
-//#Preview {
-//    CUAlarmView()
-//}

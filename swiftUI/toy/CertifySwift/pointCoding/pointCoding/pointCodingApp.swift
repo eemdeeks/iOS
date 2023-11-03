@@ -18,9 +18,9 @@ struct pointCodingApp: App {
                     .sheet(isPresented: $alarmManager.createETCAlarmBool, content: {
                         CUAlarmView(alarm: Alarm(date: Date(), isOn: true))
 
+
                     })
             })
-            .environment(\.colorScheme, .dark)
             .environment(alarmManager)
         }
     }

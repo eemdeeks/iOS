@@ -57,7 +57,7 @@ struct AlarmView: View {
     @Environment(AlarmManager.self) var alarmManager: AlarmManager
 
     @State var editMode: EditMode = .inactive
-    @State var editETCAlarm: Bool = false
+    @State var editETCAlarmBool: Bool = false
 
     enum CellType {
         case noAlarm, alarm, etcAlarm
@@ -81,8 +81,13 @@ struct AlarmView: View {
                 if !alarmManager.etcAlarms.isEmpty {
                     Title(titleType: .etc)
                     ForEach(alarmManager.etcAlarms) { alarm in
-                        NavigationLink(destination: CUAlarmView(date: alarm.date, alarm: alarm)) {
+                        Button {
+                            editETCAlarmBool = true
+                        } label: {
                             Cell(cellType: .etcAlarm, alarmData: alarm)
+                                .sheet(isPresented: $editETCAlarmBool, content: {
+                                    CUAlarmView(date: alarm.date, alarm: alarm)
+                                })
                         }
                     }
                     .onDelete{
@@ -90,6 +95,7 @@ struct AlarmView: View {
                     }
                 }
             }
+
             .environment(\.editMode, $editMode)
             .listStyle(.inset)
             .toolbar {
@@ -193,6 +199,7 @@ struct AlarmView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                         Spacer()
                         Toggle("",isOn: $alarmData.isOn)
+                            .frame(maxWidth: 100)
                     }
                     HStack {
                         Text("알람")
