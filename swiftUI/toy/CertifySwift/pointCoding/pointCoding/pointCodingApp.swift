@@ -9,13 +9,19 @@ import SwiftUI
 
 @main
 struct pointCodingApp: App {
-    private let alarmManager = AlarmManager.shared
+    @State private var alarmManager = AlarmManager()
 
     var body: some Scene {
         WindowGroup {
-            AlarmTabView()
-                .environment(\.colorScheme, .dark)
-                .environmentObject(alarmManager)
+            NavigationView(content: {
+                AlarmTabView()
+                    .sheet(isPresented: $alarmManager.createETCAlarmBool, content: {
+                        CUAlarmView()
+
+                    })
+            })
+            .environment(\.colorScheme, .dark)
+            .environment(alarmManager)
         }
     }
 }

@@ -6,60 +6,143 @@
 //
 
 import SwiftUI
-struct Alarm {
+
+@Observable
+final class Alarm: Identifiable {
     var date: Date
     var isOn: Bool
+    init(date: Date, isOn: Bool) {
+        self.date = date
+        self.isOn = isOn
+    }
 }
 
-class AlarmManager: ObservableObject {
-    static let shared = AlarmManager()
+//class AlarmManager: ObservableObject {
+//    static let shared = AlarmManager()
+//
+//    @Published var alarms: [Alarm] = []
+//}
+@Observable
+class AlarmManager {
+    var mainAlarm: [Alarm]
+    var etcAlarms: [Alarm]
+    var createETCAlarmBool: Bool
+    init(mainAlarm: [Alarm] = [], etcAlarms: [Alarm] = [], createETCAlarmBool: Bool = false) {
+        self.mainAlarm = mainAlarm
+        self.etcAlarms = etcAlarms
+        self.createETCAlarmBool = createETCAlarmBool
+    }
 
-    @Published var alarms: [Alarm] = []
+    func createEtcAlarm(_ date: Date) {
+        etcAlarms.append(Alarm(date: date, isOn: true))
+    }
+
+    func removeEtcAlarm(_ alarm: Alarm) {
+        for index in 0 ..< etcAlarms.count {
+            if etcAlarms[index].id == alarm.id {
+                etcAlarms.remove(at: index)
+                break
+            }
+        }
+    }
 }
 
 struct AlarmView: View {
-
-    @EnvironmentObject var alarmManager: AlarmManager
+    @Environment(AlarmManager.self) var alarmManager: AlarmManager
 
     enum CellType {
-        case title, etcTitle, noAlarm, alarm, etcAlarm
+        case noAlarm, alarm, etcAlarm
+    }
+    enum TitleType {
+        case sleep, etc
     }
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                Cell(cellType: .title)
-                Cell(cellType: .noAlarm)
-                if !alarmManager.alarms.isEmpty {
-                    Cell(cellType: .etcTitle)
-                    Cell(cellType: .etcAlarm)
+            List {
+                Title(titleType: .sleep)
+                    .listSectionSeparator(.hidden)
+                if alarmManager.mainAlarm.isEmpty {
+                    Cell(cellType: .noAlarm, alarmData: Alarm(date: Date(), isOn: false))
+
+                } else {
+                    Cell(cellType: .alarm, alarmData: alarmManager.mainAlarm[0])
+
+                }
+                if !alarmManager.etcAlarms.isEmpty {
+                    Title(titleType: .etc)
+                    ForEach(alarmManager.etcAlarms) { alarm in
+                        Cell(cellType: .etcAlarm, alarmData: alarm)
+                            .swipeActions(edge: .trailing) {
+                                Button {
+                                    alarmManager.removeEtcAlarm(alarm)
+                                } label: {
+                                    Label("Trash", systemImage: "trash.circle")
+                                }
+                                .tint(.red)
+                            }
+                    }
+                }
+            }
+            .listStyle(.inset)
+            .toolbar {
+                ToolbarItem(placement: .navigation) {
+                    Button{
+
+                    } label: {
+                        Text("편집")
+                            .tint(.orange)
+                    }
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Button{
+                        alarmManager.createETCAlarmBool = true
+                    } label: {
+                        Image(systemName: "plus")
+                            .tint(.orange)
+                    }
                 }
             }
             .navigationTitle("알람")
         }
     }
-
-    struct Cell: View {
-        let cellType: CellType
-        var alarmData: Alarm? = nil
-        @State var toggleOn: Bool = true
+    struct Title: View {
+        let titleType: TitleType
 
         var body: some View {
             VStack {
+                Spacer()
                 HStack {
-                    switch cellType {
-                    case .title:
+                    switch titleType {
+                    case .sleep:
                         Image(systemName: "bed.double.fill")
                         Text("수면 | 기상")
                             .font(.title2)
                             .fontWeight(.bold)
                         Spacer()
-                    case .etcTitle:
+                    case .etc:
                         Text("기타")
                             .font(.title2)
                             .fontWeight(.bold)
                         Spacer()
-                    case .noAlarm:
+                    }
+                }
+                .frame(height: 30)
+                .padding(.bottom,5)
+            }
+        }
+
+    }
+
+    struct Cell: View {
+        let cellType: CellType
+        @Bindable var alarmData: Alarm
+
+        var body: some View {
+            VStack {
+                switch cellType {
+                case .noAlarm:
+                    HStack {
                         VStack {
                             Text("알람 없음")
                                 .font(.largeTitle)
@@ -70,14 +153,15 @@ struct AlarmView: View {
                         Button {
                         } label: {
                             Text("변경")
-                                .tint(.orange)
+                                .foregroundStyle(Color.orange)
                                 .padding(5)
                                 .padding(.horizontal,5)
                                 .background(.ultraThinMaterial)
                                 .cornerRadius(15)
                         }
-
-                    case .alarm:
+                    }
+                case .alarm:
+                    HStack {
                         Text("cell")
                         Spacer()
                         Button {
@@ -89,25 +173,47 @@ struct AlarmView: View {
                                 .background(.gray)
                                 .cornerRadius(15)
                         }
-                    case .etcAlarm:
-                        Text("11:42")
-                            .font(.largeTitle)
-                            .foregroundStyle(Color.secondary)
+                    }
+                    HStack {
+                        Text("내일만")
                         Spacer()
-                        Toggle("",isOn: $toggleOn)
-                            .onChange(of: toggleOn) { oldValue, newValue in
-
-                            }
+                    }
+                case .etcAlarm:
+                    HStack(alignment: .bottom){
+                        Text("\(alarmData.date, formatter: Date.dateFormatter)")
+                            .font(.title)
+                            .foregroundStyle(alarmData.isOn ? Color.white: Color.secondary)
+                        Text("\(alarmData.date, formatter: Date.timeFormatter)")
+                            .font(.system(size: 60))
+                            .fontWeight(.thin)
+                            .foregroundStyle(alarmData.isOn ? Color.white: Color.secondary)
+                        Spacer()
+                        Toggle("",isOn: $alarmData.isOn)
+                    }
+                    HStack {
+                        Text("알람")
+                            .foregroundStyle(alarmData.isOn ? Color.white: Color.secondary)
+                        Spacer()
                     }
                 }
-                Divider()
             }
-            .padding(.horizontal)
         }
     }
+
 }
 
-#Preview {
-    AlarmView()
-        .environmentObject(AlarmManager.shared)
+extension Date {
+    static let timeFormatter: DateFormatter = {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "h:mm"
+        dateFormat.locale = Locale(identifier: "ko_KR")
+        return dateFormat
+    }()
+
+    static let dateFormatter: DateFormatter = {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "a"
+        dateFormat.locale = Locale(identifier: "ko_KR")
+        return dateFormat
+    }()
 }

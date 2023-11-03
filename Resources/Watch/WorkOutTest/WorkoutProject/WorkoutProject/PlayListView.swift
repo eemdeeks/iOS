@@ -37,7 +37,7 @@ struct PlayListView: View {
             case .success:
                 Logger.shared.log("Successfully requested authorization.")
                 Task {
-                    workoutList = await workoutManager.fetchTodaysWorkouts(workoutType: .soccer)
+                    workoutList = await workoutManager.fetchTodaysWorkouts(workoutType: .soccer) // 여기 바꿔주기
                 }
             case .failure(let error):
                 Logger.shared.log("Failed to request authorization: \(error)")
@@ -93,7 +93,7 @@ struct PlayListView: View {
         ToolbarItem(placement: .automatic) {
             Button {
                 Task {
-                    workoutList = await workoutManager.fetchTodaysWorkouts(workoutType: .soccer)
+                    workoutList = await workoutManager.fetchTodaysWorkouts(workoutType: .soccer) // 여기도 바꿔주기
                 }
             } label: {
                 Label("Refesh", systemImage: "arrow.clockwise")

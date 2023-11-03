@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F51AA7D2AF49C4F009F4890 /* CUAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F51AA7C2AF49C4F009F4890 /* CUAlarmView.swift */; };
 		6FD90B4F2AF3409B008954E0 /* pointCodingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD90B4E2AF3409B008954E0 /* pointCodingApp.swift */; };
 		6FD90B512AF3409B008954E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD90B502AF3409B008954E0 /* ContentView.swift */; };
 		6FD90B532AF3409D008954E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD90B522AF3409D008954E0 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F51AA7C2AF49C4F009F4890 /* CUAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUAlarmView.swift; sourceTree = "<group>"; };
 		6FD90B4B2AF3409B008954E0 /* pointCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pointCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD90B4E2AF3409B008954E0 /* pointCodingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pointCodingApp.swift; sourceTree = "<group>"; };
 		6FD90B502AF3409B008954E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				6FD90B612AF3429B008954E0 /* AlarmView.swift */,
 				6FD90B632AF342A5008954E0 /* StopWatchView.swift */,
 				6FD90B652AF342B2008954E0 /* TimerView.swift */,
+				6F51AA7C2AF49C4F009F4890 /* CUAlarmView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,11 +130,12 @@
 			};
 			buildConfigurationList = 6FD90B462AF3409B008954E0 /* Build configuration list for PBXProject "pointCoding" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 6FD90B422AF3409B008954E0;
 			productRefGroup = 6FD90B4C2AF3409B008954E0 /* Products */;
@@ -160,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F51AA7D2AF49C4F009F4890 /* CUAlarmView.swift in Sources */,
 				6FD90B662AF342B2008954E0 /* TimerView.swift in Sources */,
 				6FD90B5D2AF340F3008954E0 /* AlarmTabView.swift in Sources */,
 				6FD90B512AF3409B008954E0 /* ContentView.swift in Sources */,
