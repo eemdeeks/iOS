@@ -45,6 +45,9 @@ class AlarmManager {
             }
         }
     }
+    func removeEtcAlarmUseIndex(_ offset: IndexSet) {
+        etcAlarms.remove(atOffsets: offset)
+    }
 }
 
 struct AlarmView: View {
@@ -82,17 +85,21 @@ struct AlarmView: View {
                                 .tint(.red)
                             }
                     }
+                    .onDelete{
+                        alarmManager.removeEtcAlarmUseIndex($0)
+                    }
                 }
             }
             .listStyle(.inset)
             .toolbar {
                 ToolbarItem(placement: .navigation) {
-                    Button{
-
-                    } label: {
-                        Text("편집")
-                            .tint(.orange)
-                    }
+//                    Button{
+//
+//                    } label: {
+//                        Text("편집")
+//                            .tint(.orange)
+//                    }
+                    EditButton()
                 }
                 ToolbarItem(placement: .primaryAction) {
                     Button{
