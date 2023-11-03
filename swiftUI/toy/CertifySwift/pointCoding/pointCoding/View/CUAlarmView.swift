@@ -15,6 +15,7 @@ struct CUAlarmView: View {
     @State var date: Date = Date()
     @State var reAlarmBool: Bool = true
 
+    @Bindable var alarm: Alarm
 
     var body: some View {
         NavigationStack {
@@ -55,7 +56,7 @@ struct CUAlarmView: View {
                         if alarmManager.createETCAlarmBool {
                             alarmManager.createEtcAlarm(date)
                         } else {
-                            //alarmManager.updateEtcAlarm(date)
+                            alarmManager.updateETCAlarm(date, alarm)
                         }
                         dismiss()
                     } label: {
@@ -64,7 +65,7 @@ struct CUAlarmView: View {
                     }
                 }
                 ToolbarItem(placement: .principal) {
-                    Text(alarmManager.createETCAlarmBool ? "알람추가": "알람수정")
+                    Text(alarmManager.createETCAlarmBool ? "알람추가": "알람편집")
                         .fontWeight(.semibold)
                 }
             }

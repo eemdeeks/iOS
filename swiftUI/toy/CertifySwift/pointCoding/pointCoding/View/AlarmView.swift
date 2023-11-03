@@ -36,6 +36,9 @@ class AlarmManager {
     func createEtcAlarm(_ date: Date) {
         etcAlarms.append(Alarm(date: date, isOn: true))
     }
+    func updateETCAlarm(_ date: Date,_ alarm: Alarm) {
+        alarm.date = date
+    }
 
     func removeEtcAlarm(_ alarm: Alarm) {
         for index in 0 ..< etcAlarms.count {
@@ -52,6 +55,9 @@ class AlarmManager {
 
 struct AlarmView: View {
     @Environment(AlarmManager.self) var alarmManager: AlarmManager
+
+    @State var editMode: EditMode = .inactive
+    @State var editETCAlarm: Bool = false
 
     enum CellType {
         case noAlarm, alarm, etcAlarm
@@ -75,30 +81,19 @@ struct AlarmView: View {
                 if !alarmManager.etcAlarms.isEmpty {
                     Title(titleType: .etc)
                     ForEach(alarmManager.etcAlarms) { alarm in
-                        Cell(cellType: .etcAlarm, alarmData: alarm)
-                            .swipeActions(edge: .trailing) {
-                                Button {
-                                    alarmManager.removeEtcAlarm(alarm)
-                                } label: {
-                                    Label("Trash", systemImage: "trash.circle")
-                                }
-                                .tint(.red)
-                            }
+                        NavigationLink(destination: CUAlarmView(date: alarm.date, alarm: alarm)) {
+                            Cell(cellType: .etcAlarm, alarmData: alarm)
+                        }
                     }
                     .onDelete{
                         alarmManager.removeEtcAlarmUseIndex($0)
                     }
                 }
             }
+            .environment(\.editMode, $editMode)
             .listStyle(.inset)
             .toolbar {
                 ToolbarItem(placement: .navigation) {
-//                    Button{
-//
-//                    } label: {
-//                        Text("편집")
-//                            .tint(.orange)
-//                    }
                     EditButton()
                 }
                 ToolbarItem(placement: .primaryAction) {
@@ -110,6 +105,7 @@ struct AlarmView: View {
                     }
                 }
             }
+            .environment(\.editMode, $editMode)
             .navigationTitle("알람")
         }
     }
@@ -194,6 +190,7 @@ struct AlarmView: View {
                             .font(.system(size: 60))
                             .fontWeight(.thin)
                             .foregroundStyle(alarmData.isOn ? Color.white: Color.secondary)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         Spacer()
                         Toggle("",isOn: $alarmData.isOn)
                     }

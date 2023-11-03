@@ -16,7 +16,7 @@ struct pointCodingApp: App {
             NavigationView(content: {
                 AlarmTabView()
                     .sheet(isPresented: $alarmManager.createETCAlarmBool, content: {
-                        CUAlarmView()
+                        CUAlarmView(alarm: Alarm(date: Date(), isOn: true))
 
                     })
             })
