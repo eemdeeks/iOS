@@ -75,7 +75,7 @@ struct AlarmView: View {
                     Cell(cellType: .noAlarm, alarmData: Alarm(date: Date(), isOn: false))
 
                 } else {
-                    Cell(cellType: .alarm, alarmData: alarmManager.mainAlarm[0])
+                    Cell(cellType: .alarm, alarmData: alarmManager.mainAlarm.first ?? Alarm(date: Date(), isOn: true))
 
                 }
                 if !alarmManager.etcAlarms.isEmpty {
