@@ -30,8 +30,10 @@ func solution1260() {
 func dfs1260(_ graph: [[Int]], start: Int) {
     var answer: [Int] = []
     var visitedNode: [Int] = [start]
+    var depth: Int = 0
     while !visitedNode.isEmpty {
         let node = visitedNode.removeLast()
+        depth += 1
         if !answer.contains(node) {
             answer.append(node)
             visitedNode += graph[node].sorted(by: >)
