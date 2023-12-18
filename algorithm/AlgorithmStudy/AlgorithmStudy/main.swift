@@ -217,4 +217,6 @@ import Foundation
 //
 //print(solution5(10,[0,0,0,0,0,0,0,0,0,0]))
 
-solution15486()
+//solution15486()
+
+solution11058()
