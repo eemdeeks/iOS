@@ -13,16 +13,17 @@ func solution10844() {
     let N: Int = Int(readLine()!)!
 
     if N > 1 {
-        for i in 2...N {
+        for _ in 2...N {
             var cache: [Int] = Array(repeating: 0, count: 10)
-            answer = answer * 2  - (dp[0]+dp[9])
+            answer = (answer * 2 + 40000000000 - (dp[0] + dp[9])) % 1000000000
+            print(answer)
             for j in 0...9 {
                 if j == 0 {
-                    cache[j] = dp[1]
+                    cache[j] = dp[1] % 1000000000
                 } else if j == 9 {
-                    cache[j] = dp[8]
+                    cache[j] = dp[8] % 1000000000
                 } else {
-                    cache[j] = dp[j-1] + dp[j+1]
+                    cache[j] = (dp[j-1] + dp[j+1]) % 1000000000
                 }
             }
             dp = cache
