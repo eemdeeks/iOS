@@ -227,4 +227,6 @@ import Foundation
 
 //solution11724()
 
-solution10451()
+//solution10451()
+
+print(targetNumber([1,1,1,1,1], 3))
