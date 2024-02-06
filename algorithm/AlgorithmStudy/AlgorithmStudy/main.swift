@@ -229,4 +229,6 @@ import Foundation
 
 //solution10451()
 
-print(targetNumber([1,1,1,1,1], 3))
+//print(targetNumber([1,1,1,1,1], 3))
+
+print(solution(5, 31168))
