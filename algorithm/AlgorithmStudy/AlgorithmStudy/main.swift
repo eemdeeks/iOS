@@ -231,4 +231,7 @@ import Foundation
 
 //print(targetNumber([1,1,1,1,1], 3))
 
-print(solution(5, 31168))
+//print(solution(5, 31168))
+
+print(solution("aab", "aba", ["abb", "aba"]))
+
