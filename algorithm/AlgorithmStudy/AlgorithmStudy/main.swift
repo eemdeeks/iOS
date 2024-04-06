@@ -233,5 +233,8 @@ import Foundation
 
 //print(solution(5, 31168))
 
-print(solution("aab", "aba", ["abb", "aba"]))
+//print(solution("aab", "aba", ["abb", "aba"]))
 
+//solutionE1(4, 5, 5, 10, [[1,1,2],[1,2,3],[2,4,3],[3,1,4],[5,3,3],[5,2,2],[7,4,4],[8,3,3],[10,4,3]])
+
+solutionE2(3, [25,30,15,20], [[13,21],[18,25],[26,30]])
