@@ -239,4 +239,10 @@ import Foundation
 
 //solutionE2(3, [25,30,15,20], [[13,21],[18,25],[26,30]])
 
-print(level1_1([1,2,3,4]))
+//print(level1_1([1,2,3,4]))
+
+//print(level2_1("cdcd"))
+
+print(level2_2(5, [[0,0],[0,-1],[2,-3],[3,-3]]))
+
+
