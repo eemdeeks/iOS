@@ -10,11 +10,44 @@ import Foundation
 func sosu(_ numbers:String) -> Int {
     var arr: [String] = numbers.map{ String($0) }
     var answer: Set<Int> = []
+    var primeArray: [Bool] = []
+    var sol: Int = 0
     for i in 1...numbers.count {
         answer = answer.union(permutation(arr, i))
     }
     print(answer)
-    return 0
+
+    primeArray = prime(answer.max()!)
+    for i in answer where primeArray[i] {
+        sol += 1
+    }
+    print(primeArray)
+    print(sol)
+    return sol
+}
+
+func prime(_ max: Int) -> [Bool] {
+    var prime: [Bool] = Array(repeating: true, count: max + 1)
+    prime[0] = false
+    prime[1] = false
+
+    for i in 2...Int(sqrt(Double(max))) {
+        if prime[i] == true {
+            for j in i...max {
+                if j == i {
+                    continue
+                }
+                if j % i == 0 {
+                    prime[j] = false
+                } else {
+                    continue
+                }
+            }
+        } else {
+            continue
+        }
+    }
+    return prime
 }
 
 func permutation(_ numbers: [String], _ count: Int) -> Set<Int> {
