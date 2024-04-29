@@ -10,44 +10,24 @@ import Foundation
 func sosu(_ numbers:String) -> Int {
     var arr: [String] = numbers.map{ String($0) }
     var answer: Set<Int> = []
-    var primeArray: [Bool] = []
-    var sol: Int = 0
+
     for i in 1...numbers.count {
         answer = answer.union(permutation(arr, i))
     }
-    print(answer)
-
-    primeArray = prime(answer.max()!)
-    for i in answer where primeArray[i] {
-        sol += 1
-    }
-    print(primeArray)
-    print(sol)
-    return sol
+    
+    print(answer.count)
+    return answer.count
 }
-
-func prime(_ max: Int) -> [Bool] {
-    var prime: [Bool] = Array(repeating: true, count: max + 1)
-    prime[0] = false
-    prime[1] = false
-
-    for i in 2...Int(sqrt(Double(max))) {
-        if prime[i] == true {
-            for j in i...max {
-                if j == i {
-                    continue
-                }
-                if j % i == 0 {
-                    prime[j] = false
-                } else {
-                    continue
-                }
-            }
-        } else {
-            continue
-        }
+func isPrime(_ num: Int) -> Bool {
+    if num <= 1 {
+        return false
     }
-    return prime
+    
+    for i in 2..<num {
+        if num % i == 0 { return false }
+    }
+
+    return true
 }
 
 func permutation(_ numbers: [String], _ count: Int) -> Set<Int> {
@@ -55,7 +35,7 @@ func permutation(_ numbers: [String], _ count: Int) -> Set<Int> {
     var visited = Array(repeating: false, count: numbers.count)
 
     func perm(_ str: String) {
-        if str.count == count {
+        if str.count == count && isPrime(Int(str)!) {
             sol.insert(Int(str)!)
             return
         }
@@ -67,7 +47,6 @@ func permutation(_ numbers: [String], _ count: Int) -> Set<Int> {
             visited[i] = false
         }
     }
-    
     perm("")
     return sol
 }
