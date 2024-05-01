@@ -257,4 +257,6 @@ import Foundation
 
 //print(modict("EIO"))
 
-print(network(3, [[1, 1, 0], [1, 1, 0], [0, 0, 1]]))
+//print(network(3, [[1, 1, 0], [1, 1, 0], [0, 0, 1]]))
+
+print(travelRoute([["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL","SFO"]]))
