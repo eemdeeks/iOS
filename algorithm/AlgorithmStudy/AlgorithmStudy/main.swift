@@ -255,4 +255,6 @@ import Foundation
 
 //electric(9, [[1,3],[2,3],[3,4],[4,5],[4,6],[4,7],[7,8],[7,9]])
 
-print(modict("EIO"))
+//print(modict("EIO"))
+
+print(network(3, [[1, 1, 0], [1, 1, 0], [0, 0, 1]]))
