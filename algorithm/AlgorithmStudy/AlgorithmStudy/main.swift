@@ -259,4 +259,8 @@ import Foundation
 
 //print(network(3, [[1, 1, 0], [1, 1, 0], [0, 0, 1]]))
 
-print(travelRoute([["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL","SFO"]]))
+//print(travelRoute([["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL","SFO"]]))
+
+//print(joystick("JEROEN"))
+
+print(clothes([["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]]))
