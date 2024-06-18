@@ -146,10 +146,10 @@
 
 
 ***
-<!---->
-<!---->
-<!---->
-<!--## 🕊️Swift-->
+
+
+
+## 🕊️Swift
 <!--### ⌨️Learn the Basics-->
 <!--<details>-->
 <!--    <summary></summary>-->
@@ -162,9 +162,6 @@
 <!--</details>-->
 <!--   -->
 <!--### 👩‍💻Data Presentaion-->
-<!--<details>-->
-<!--    <summary></summary>-->
-<!--    -->
 <!--- Primitive Types-->
 <!--    - Integer-->
 <!--    - Float and Double-->
@@ -211,9 +208,8 @@
 <!--            - Subclassing-->
 <!--            - Overriding-->
 <!--    -->
-<!--</details>-->
 <!---->
-<!--### 🧑‍💻Prodecural presentation-->
+### 🧑‍💻Prodecural presentation
 <!--<details>-->
 <!--    <summary></summary>-->
 <!--    -->
@@ -259,7 +255,7 @@
 <!--    - Nested Type-->
 <!--    - Subscript-->
 <!--    - Confirm Protocol (Protocol)-->
-<!--- Protocol-->
+- [Protocol](https://github.com/eemdeeks/iOS/blob/main/Swift/Prodecural%20presentation/Protocol.md)
 <!--    - Property Requirements-->
 <!--    - Protocols as Types-->
 <!--    - Composition-->
@@ -269,7 +265,7 @@
 <!--    - Initializer Requirements-->
 <!--    - Inheritance-->
 <!--    - Default Implementation-->
-<!--- Generics-->
+- [Generics](https://github.com/eemdeeks/iOS/blob/main/Swift/Prodecural%20presentation/Generic.md)
 <!--    - Assciated Types (Protocol)-->
 <!--    - Generic Functions-->
 <!--    - Generic Types-->
@@ -277,7 +273,7 @@
 <!--    - Type Parameters-->
 <!--    - Type constraints-->
 <!--    - Generic Where Clause-->
-<!--- Error Handling-->
+- [Error Handling](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/Swift%20Concurrency/How%20to%20use%20Do%2C%20Try%2C%20Catch%20and%20Throws%20in%20swift.md)
 <!--    - rethrows-->
 <!--    - throws-->
 <!--    - do-catch-->
