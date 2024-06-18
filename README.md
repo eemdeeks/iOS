@@ -434,6 +434,8 @@
     
 ### 🚂Data flow
     
+- [Swift Concurrency](https://github.com/eemdeeks/iOS/tree/main/swiftUI/Data%20flow/Swift%20Concurrency)
+    - [How to use Do, Try, Catch and Throws in swift](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Data%20flow/Swift%20Concurrency/How%20to%20use%20Do%2C%20Try%2C%20Catch%20and%20Throws%20in%20swift.md)
 <!--- combine Framework-->
 <!--    - Publishers-->
 <!--    - Subscribers-->
@@ -474,9 +476,6 @@
 <!--</details>-->
 
 ### 📱MVVM
-<details>
-    <summary></summary>
-    
 - View Model
     - [ObservableObject](https://github.com/eemdeeks/iOS/blob/main/swiftUI/MVVM/View%20Model/ObservableObject.md)
     - [@Published](https://github.com/eemdeeks/iOS/blob/main/swiftUI/MVVM/View%20Model/%40Published.md)
@@ -487,7 +486,7 @@
         
         - Codable Protocol
         - CRUD
-        - JSON
+        - [JSON](https://github.com/eemdeeks/iOS/blob/main/swiftUI/MVVM/Model/Data%20persistence/JSON.md)
         - Archiving
         
         - UserDefaults
@@ -502,7 +501,6 @@
                 - Realm
                     - frozen Objects
                 - Firebase
-</details>
 
 <!--### 🧑‍💻User interaction-->
 <!--<details>-->
