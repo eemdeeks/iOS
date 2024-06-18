@@ -11,6 +11,8 @@
 		6FE7696A2C2183F600D7F9B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE769692C2183F600D7F9B4 /* ContentView.swift */; };
 		6FE7696C2C2183F700D7F9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE7696B2C2183F700D7F9B4 /* Assets.xcassets */; };
 		6FE7696F2C2183F700D7F9B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE7696E2C2183F700D7F9B4 /* Preview Assets.xcassets */; };
+		6FE769782C21844800D7F9B4 /* BasicProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE769772C21844800D7F9B4 /* BasicProtocol.swift */; };
+		6FE7697A2C218D7E00D7F9B4 /* BasicGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE769792C218D7E00D7F9B4 /* BasicGeneric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		6FE769692C2183F600D7F9B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6FE7696B2C2183F700D7F9B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FE7696E2C2183F700D7F9B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6FE769772C21844800D7F9B4 /* BasicProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProtocol.swift; sourceTree = "<group>"; };
+		6FE769792C218D7E00D7F9B4 /* BasicGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGeneric.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				6FE769692C2183F600D7F9B4 /* ContentView.swift */,
 				6FE7696B2C2183F700D7F9B4 /* Assets.xcassets */,
 				6FE7696D2C2183F700D7F9B4 /* Preview Content */,
+				6FE769772C21844800D7F9B4 /* BasicProtocol.swift */,
+				6FE769792C218D7E00D7F9B4 /* BasicGeneric.swift */,
 			);
 			path = SwiftBasic;
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FE7697A2C218D7E00D7F9B4 /* BasicGeneric.swift in Sources */,
 				6FE7696A2C2183F600D7F9B4 /* ContentView.swift in Sources */,
 				6FE769682C2183F600D7F9B4 /* SwiftBasicApp.swift in Sources */,
+				6FE769782C21844800D7F9B4 /* BasicProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
