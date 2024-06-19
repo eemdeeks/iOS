@@ -19,7 +19,7 @@ layout 중립을 지킨다는 것은 하위 자식 뷰의 Bounds에 따라 결�
 2. 자식은 부모의 크기 제안을 고려해서 자신의 사이즈를 결정한다.(무시도 가능)
 3. 부모는 자식의 결정을 존중 후 자신의 좌표 공간 내에 자식을 위치한다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/2975a946-00e3-49ff-aabf-293e11e4666f/deb0de3e-8f09-4920-861a-d31d5f212c87/Untitled.png)
+<img width="92" alt="스크린샷 2024-06-19 오후 7 36 14" src="https://github.com/eemdeeks/iOS/assets/87136217/7704a181-5400-4b22-bc19-301ff1e95b38">
 
 ```swift
 struct ContentView: View {
@@ -39,7 +39,8 @@ Root View 하위에 Text를 감싸고있는 Content View가 있고 Background(Co
 
 이런 구조로 존재하고 있다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/2975a946-00e3-49ff-aabf-293e11e4666f/9c724c1b-0925-460a-bc0c-2275a192ad46/Untitled.png)
+<img width="183" alt="스크린샷 2024-06-19 오후 7 35 43" src="https://github.com/eemdeeks/iOS/assets/87136217/6b94dd68-11cc-4218-b503-3be603af286f">
+
 
 1. Root View가 Content View라고 볼 때 layout 중립이기에 화면 전체에서 safe area를 제외한 전체 영역을 하위에 제공을 제안
 2. Content View 또한 layout 중립이기에 크기를 결정하지 않고 하위에 결정권을 준다.
