@@ -332,19 +332,23 @@
     
 - What is a view?
     - [Text](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/what%20is%20a%20view/Text.md)
-<!--    - UI controls-->
     - [Image](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/what%20is%20a%20view/Image.md)
+<!--    - UI controls-->
 <!--    - Color view-->
 <!--- View lifecycle-->
 <!--    - OnAppear-->
 <!--    - onDisappear-->
 - Compose views
     - Navigation
+        - [TabView](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Navigation/TabView.md)
+    - Container views
+        - [VStack](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/VStack.md)
+        - [HStack](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/HStack.md)
+        - [Spacer](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/Spacer.md)
 <!--        - NavigationLink-->
 <!--        - NavigationbarItems-->
 <!--        - Split view-->
 <!--        - Page View-->
-        - [TabView](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Navigation/TabView.md)
 <!--        - TabItem-->
 <!--        - Alert-->
 <!--        - Sheet-->
@@ -352,9 +356,9 @@
 <!--        - Popover-->
 <!--        - Modal view-->
 <!--        - Context menu-->
-    - Container views
-        - [VStack](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/VStack.md)
-        - [HStack](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/HStack.md)
+<!--    - Container views-->
+<!--        - [VStack](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/VStack.md)-->
+<!--        - [HStack](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/HStack.md)-->
 <!--        - ZStack-->
 <!--        - Group-->
 <!--        - Scrollview-->
@@ -369,7 +373,7 @@
 <!--        - LazyHGrid-->
 <!--        - Padding-->
 <!--        - Divider-->
-        - [Spacer](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/Spacer.md)
+<!--        - [Spacer](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/Spacer.md)-->
 <!--        - .frame()-->
 <!--        - flexible frames-->
 <!--        - .inset-->
