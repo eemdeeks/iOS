@@ -313,11 +313,11 @@
 
 ## 🌠SwiftUI
 
-<!--### 💻Xcode-->
+### 💻Xcode
 <!--<details>-->
 <!--    <summary></summary>-->
 <!--    -->
-<!--- Create new project-->
+- Create new project
 <!--    - SceneDelegate-->
 <!--    - Window Group-->
 <!--- Xcode preview-->
@@ -331,20 +331,20 @@
 ### 🖥️View
     
 - What is a view?
-    - [Text](https://github.com/eemdeeks/iOS/blob/main/swiftUI/what%20is%20a%20view/Text.md)
+    - [Text](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/what%20is%20a%20view/Text.md)
 <!--    - UI controls-->
-<!--    - Image-->
+    - [Image](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/what%20is%20a%20view/Image.md)
 <!--    - Color view-->
 <!--- View lifecycle-->
 <!--    - OnAppear-->
 <!--    - onDisappear-->
-<!--- Compose views-->
-<!--    - Navigation-->
+- Compose views
+    - Navigation
 <!--        - NavigationLink-->
 <!--        - NavigationbarItems-->
 <!--        - Split view-->
 <!--        - Page View-->
-<!--        - TapView-->
+        - [TabView](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Navigation/TabView.md)
 <!--        - TabItem-->
 <!--        - Alert-->
 <!--        - Sheet-->
@@ -352,9 +352,9 @@
 <!--        - Popover-->
 <!--        - Modal view-->
 <!--        - Context menu-->
-<!--    - Container views-->
-<!--        - VStack-->
-<!--        - HStack-->
+    - Container views
+        - [VStack](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/VStack.md)
+        - [HStack](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/HStack.md)
 <!--        - ZStack-->
 <!--        - Group-->
 <!--        - Scrollview-->
@@ -367,10 +367,9 @@
 <!--        - Collection view-->
 <!--        - LazyVGrid-->
 <!--        - LazyHGrid-->
-- [Layout System](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Layout%20System.md)
 <!--        - Padding-->
 <!--        - Divider-->
-<!--        - Spacer-->
+        - [Spacer](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/Spacer.md)
 <!--        - .frame()-->
 <!--        - flexible frames-->
 <!--        - .inset-->
@@ -426,7 +425,7 @@
 <!--    - Icons-->
 <!--        - System icons-->
 <!--        -->
-
+- [Layout System](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Layout%20System.md)
     
 ### 🚂Data flow
     
@@ -498,12 +497,12 @@
                     - frozen Objects
                 - Firebase
 
-<!--### 🧑‍💻User interaction-->
+### 🧑‍💻User interaction
 <!--<details>-->
 <!--    <summary></summary>-->
 <!--    -->
-<!--- UI controls-->
-<!--    - Button-->
+- UI controls
+    - [Button](https://github.com/eemdeeks/iOS/blob/main/swiftUI/User%20interaction/UI%20controls/Button.md)
 <!--    - EditButton-->
 <!--    - Slider-->
 <!--    - Toggle-->

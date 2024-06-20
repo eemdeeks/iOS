@@ -1,4 +1,4 @@
-# HStack
+# VStack
 공식문서 :
      A view that arranges its subviews in a vertical line.
 
