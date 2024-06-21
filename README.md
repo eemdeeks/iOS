@@ -314,10 +314,7 @@
 ## 🌠SwiftUI
 
 ### 💻Xcode
-<!--<details>-->
-<!--    <summary></summary>-->
-<!--    -->
-- Create new project
+- [Create new project](https://github.com/eemdeeks/iOS/blob/main/swiftUI/Xcode/Create%20new%20project.md)
 <!--    - SceneDelegate-->
 <!--    - Window Group-->
 <!--- Xcode preview-->
