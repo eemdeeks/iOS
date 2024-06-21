@@ -337,6 +337,7 @@
 <!--    - onDisappear-->
 - Compose views
     - Navigation
+        - [NavigationStack](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Navigation/NavigationStack.md)
         - [TabView](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Navigation/TabView.md)
     - Container views
         - [VStack](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/VStack.md)

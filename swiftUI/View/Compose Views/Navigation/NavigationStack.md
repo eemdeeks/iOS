@@ -10,17 +10,15 @@ root뷰 를 표시하고 root뷰 위에 추가적인 뷰를 표시할 수 있도
 struct NavigationStack<Data, Root> where Root : View
 ```
 
-@MainActor가 붙어 있는 걸 보면 화면 전환은 메인 쓰레드에서 일어난다. 
-
-+
-
-기본적으로 iOS에서의 UI변경은 메인쓰레드에서 일어나고 일어나야 한다는 것은 기본 상식이라고 볼 수 있다.
-
 Data와 Root를 매개변수로 받는다.
 
 Data는 NavigationStack에 관련된 데이터를 나타내기 위해 사용한다. 각 뷰에 대한 매타데이터나 상태정보를 나타낸다.
 
 Root는 이 스택의 root뷰를 나타낸다. Root는 View프로토콜을 준수 해야 한다.
+
+@MainActor가 붙어 있는 걸 보면 화면 전환은 메인 쓰레드에서 일어난다는 것을 알 수 있다. 
+
+- 기본적으로 iOS에서의 UI변경은 메인쓰레드에서 일어나고 일어나야 한다는 것은 기본 상식이라고 볼 수 있다.
 
 ## Overview
 iOS 16버전부터 도입되기 시작했다. 기존에는 NavigationView를 사용했지만 NavigationStack을 통해 좀 더 편리하고 효율적으로 관리할 수 있다.
