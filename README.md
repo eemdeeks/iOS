@@ -249,11 +249,12 @@
 <!--    - First-Class Function-->
 <!--    - Immutable Values-->
 - Extensions
+    - [Subscript](https://github.com/eemdeeks/iOS/blob/main/Swift/Prodecural%20presentation/Extensions/Subscript.md)
 <!--    - Initializer-->
 <!--    - Methods-->
 <!--    - Properties-->
 <!--    - Nested Type-->
-    - [Subscript](https://github.com/eemdeeks/iOS/blob/main/Swift/Prodecural%20presentation/Extensions/Subscript.md)
+<!--    - [Subscript](https://github.com/eemdeeks/iOS/blob/main/Swift/Prodecural%20presentation/Extensions/Subscript.md)-->
 <!--    - Confirm Protocol (Protocol)-->
 - [Protocol](https://github.com/eemdeeks/iOS/blob/main/Swift/Prodecural%20presentation/Protocol.md)
 <!--    - Property Requirements-->
