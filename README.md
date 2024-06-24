@@ -248,12 +248,12 @@
 <!--    - High-order fuctions-->
 <!--    - First-Class Function-->
 <!--    - Immutable Values-->
-<!--- Extensions-->
+- Extensions
 <!--    - Initializer-->
 <!--    - Methods-->
 <!--    - Properties-->
 <!--    - Nested Type-->
-<!--    - Subscript-->
+    - [Subscript](https://github.com/eemdeeks/iOS/blob/main/Swift/Prodecural%20presentation/Extensions/Subscript.md)
 <!--    - Confirm Protocol (Protocol)-->
 - [Protocol](https://github.com/eemdeeks/iOS/blob/main/Swift/Prodecural%20presentation/Protocol.md)
 <!--    - Property Requirements-->
