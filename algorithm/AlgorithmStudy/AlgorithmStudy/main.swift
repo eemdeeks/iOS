@@ -267,4 +267,6 @@ import Foundation
 
 //print(bigNum([6,10,2]))
 
-bingo()
+//bingo()
+
+stroll()
