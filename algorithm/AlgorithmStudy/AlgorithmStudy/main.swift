@@ -265,4 +265,6 @@ import Foundation
 
 //print(clothes([["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]]))
 
-print(bigNum([6,10,2]))
+//print(bigNum([6,10,2]))
+
+bingo()
