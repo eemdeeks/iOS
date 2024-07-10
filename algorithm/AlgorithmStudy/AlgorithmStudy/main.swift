@@ -269,4 +269,6 @@ import Foundation
 
 //bingo()
 
-stroll()
+//stroll()
+
+friendPrice()
