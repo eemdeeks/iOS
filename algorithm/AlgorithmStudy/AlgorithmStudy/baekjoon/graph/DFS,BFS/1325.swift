@@ -5,38 +5,69 @@
 //  Created by 박승찬 on 2023/06/30.
 //
 
-import Foundation
-
 func solution1325() {
-    let nm: [Int] = readLine()!.components(separatedBy: " ").map{ Int(String($0))!
+    let nm: [Int] = readLine()!.split(separator: " ").map{ Int($0)!
     }
-    var graph: [[Int]] = Array(repeating: [Int](), count: nm[0]+1)
-    
-    for _ in 0..<nm[1] {
-        let nodes = readLine()!.components(separatedBy: " ").map{ Int(String($0))!
+    let n = nm[0]
+    let m = nm[1]
+
+    var graph: [[Int]] = Array(repeating: [], count: n+1)
+    for _ in 0..<m {
+        let input: [Int] = readLine()!.split(separator: " ").map { Int($0)! }
+        graph[input[1]].append(input[0])
+    }
+    var answer: [Int] = Array(repeating: 0, count: n+1)
+    for computerNumber in 1...n {
+        var stack: [Int] = [computerNumber]
+        var visited: [Bool] = Array(repeating: false, count: n+1)
+        while !stack.isEmpty {
+            let hack = stack.removeLast()
+            if !visited[hack] {
+                visited[hack] = true
+                stack.append(contentsOf: graph[hack])
+                answer[computerNumber] += 1
+            }
         }
-        graph[nodes[1]].append(nodes[0])
     }
-    var answer: [Int] = Array(repeating: 0, count: nm[0])
-    for i in 0..<nm[0] {
-        answer[i] = dfs1325(graph, start: i+1)
+
+    var output: [String] = []
+    guard let max = answer.max() else { return }
+    for i in 0...n {
+        if max == answer[i] { output.append(String(i)) }
     }
-    for i in 0..<nm[0] {
-        if answer[i] >= answer.max()!{
-            print(i+1, terminator: " ")
-        }
-    }
+    print(output.joined(separator: " "))
 }
-func dfs1325(_ graph: [[Int]], start: Int) -> Int {
+
+func dfs1325(_ graph: [Set<Int>], start: Int) -> Int {
     var stack: [Int] = [start]
-    var visitedNode:[Int] = []
-    
+    var visitedNode: [Int] = []
+
     while !stack.isEmpty {
         let node = stack.removeLast()
-        if !visitedNode.contains(node){
+        if !visitedNode.contains(node) {
             visitedNode.append(node)
-            stack += graph[node]
+            graph[node].forEach {
+                if !visitedNode.contains($0) { stack.append($0)}
+            }
         }
     }
+
+    return visitedNode.count
+}
+
+func bfs1325(_ graph: [Set<Int>], start: Int) -> Int {
+    var visitedNode: Set<Int> = []
+
+    func bfs(_ graph: [Set<Int>], node: Int) {
+        if !visitedNode.contains(node) {
+            visitedNode.insert(node)
+            graph[node].forEach {
+                if !visitedNode.contains($0) { bfs(graph, node: $0)}
+            }
+        }
+    }
+
+    bfs(graph, node: start)
+
     return visitedNode.count
 }

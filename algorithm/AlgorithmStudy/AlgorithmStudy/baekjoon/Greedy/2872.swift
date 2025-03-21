@@ -8,36 +8,18 @@
 import Foundation
 
 func solution2872() {
-    let n: Int = Int(readLine()!)!
+    var n: Int = Int(readLine()!)!
     var books: [Int] = []
+    var answer: Int = 0
     for _ in 0..<n {
         books.append(Int(readLine()!)!)
     }
-    var answer: [Int] = []
-    var booksMaxIndex: Int = books.firstIndex(of: books.max()!)!
-    
-    while booksMaxIndex == books.count-1 {
-        books.removeLast()
-        if books.isEmpty {
-            print(0)
-            return
-        }
-        booksMaxIndex = books.firstIndex(of: books.max()!)!
-    }
-    guard booksMaxIndex != 0 else {
-        print(books.count-1)
-        return
-    }
-    
-    for i in booksMaxIndex+1..<books.count {
-        answer.append(books[i])
-    }
-    let answerMax: Int = answer.max()!
-    for i in 0..<booksMaxIndex {
-        if books[i] < answerMax {
-            answer.append(books[i])
+    for index in (0..<n).reversed(){
+        if n == books[index] {
+            n -= 1
+        } else {
+            answer += 1
         }
     }
-    print(answer.count)
-    
+    print(answer)
 }
