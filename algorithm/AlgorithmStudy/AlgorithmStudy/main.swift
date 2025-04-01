@@ -315,4 +315,6 @@ import Foundation
 
 //solution15683()
 
-solution1918()
+//solution1918()
+
+solution17836()
