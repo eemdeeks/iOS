@@ -27,7 +27,7 @@ func solution10799(){
     print(answer)
 }
 
-extension String {
+private extension String {
     subscript(_ index: Int) -> Character {
         return self[self.index(self.startIndex, offsetBy: index)]
     }
