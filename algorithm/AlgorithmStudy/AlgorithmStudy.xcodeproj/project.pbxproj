@@ -371,6 +371,7 @@
 		6F2B660029BEB68C00D89CE2 /* dataStructure */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C37CF29C2B6570041BD40 /* 18258.swift */,
 				6FA0A3BF2D9FAE2D0073EF87 /* PriorityQueue */,
 				6F616A7E2D9ACF6A00400F13 /* Stack */,
 				6F4349FC29F545FF00C29485 /* 10799.swift */,
@@ -397,7 +398,6 @@
 				6F6B4DAB2D81929E0021B7BC /* 1194.swift */,
 				6F62685D29C0982E00595458 /* 1406.swift */,
 				6F39B1A72D5C798300888072 /* 16236.swift */,
-				6F8C37CF29C2B6570041BD40 /* 18258.swift */,
 			);
 			path = try;
 			sourceTree = "<group>";
