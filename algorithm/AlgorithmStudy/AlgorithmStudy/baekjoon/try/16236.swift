@@ -7,147 +7,110 @@
 import Foundation
 
 func solution16236() {
-    let n = Int(readLine()!)!
-    var graph: [[Int]] = []
-    var xPoint: Int = -1
-    var yPoint: Int = -1
-    var shark: Int = 2
-    var eatingCount: Int = 0
+    let fileIO = FileIO()
+
+    let n = fileIO.readInt()
+
+    var map: [[Int]] = []
+    let moveX: [Int] = [-1, 0, 1, 0]
+    let moveY: [Int] = [0, -1, 0, 1]
+    var babySharkPosition: (x: Int, y: Int) = (0, 0)
+    var babySharkSize = 2
+    var eatingCount = 0
+    var answer = 0
+    var visited: [[Int]] = Array(repeating: Array(repeating: -1, count: n), count: n)
+
     for x in 0..<n {
-        let input = readLine()!.split(separator: " ").map { Int(String($0))! }
-        if let index = input.firstIndex(of: 9) {
-            yPoint = index
-            xPoint = x
+        var fishes: [Int] = []
+        for y in 0..<n {
+            let fish = fileIO.readInt()
+            if fish == 9 { babySharkPosition = (x, y) }
+            fishes.append(fish)
         }
-        graph.append(input)
+        map.append(fishes)
     }
 
-    var sharkPosition = SharkPosition(x: xPoint, y: yPoint, time: 0)
-    var queue = Queue<SharkPosition>()
-    queue.append(sharkPosition)
-    var visited: Set<[Int]> = []
-    while !queue.isEmpty() {
-        guard var newPosition = queue.popFirst() else { break }
-        if graph[newPosition.x][newPosition.y] < shark && graph[newPosition.x][newPosition.y] != 0 {
-            for position in queue.queue {
-                if position < newPosition && graph[position.x][position.y] < shark && graph[position.x][position.y] != 0 {
-                    newPosition = position
+    while true {
+        visited = Array(repeating: Array(repeating: -1, count: n), count: n)
+        var queue = Queue(elements: [babySharkPosition])
+        visited[babySharkPosition.x][babySharkPosition.y] = 0
+        var eatable: [(x: Int, y: Int)] = []
+
+        while !queue.isEmpty {
+            guard let position = queue.removeFirst() else { return }
+            if let eatPosition = eatable.first {
+                if visited[position.x][position.y] >= visited[eatPosition.x][eatPosition.y] { continue }
+            }
+
+            for i in 0..<4 {
+                let newX = position.x + moveX[i]
+                let newY = position.y + moveY[i]
+
+                if newX < 0 || newX >= n || newY < 0 || newY >= n {
+                    continue
+                }
+
+                if visited[newX][newY] != -1 {
+                    continue
+                }
+
+                if map[newX][newY] == 0 {
+                    queue.append((newX, newY))
+                    visited[newX][newY] = visited[position.x][position.y] + 1
+                    continue
+                }
+
+                if map[newX][newY] == babySharkSize {
+                    queue.append((newX, newY))
+                    visited[newX][newY] = visited[position.x][position.y] + 1
+                    continue
+                }
+
+                if map[newX][newY] < babySharkSize {
+                    visited[newX][newY] = visited[position.x][position.y] + 1
+                    eatable.append((newX, newY))
+                    continue
                 }
             }
-            queue = Queue<SharkPosition>()
-            queue.append(newPosition)
-            graph[sharkPosition.x][sharkPosition.y] = 0
-            sharkPosition = newPosition
-            graph[sharkPosition.x][sharkPosition.y] = 9
-            visited = []
-            eatingCount += 1
-            if eatingCount == shark {
-                eatingCount = 0
-                shark += 1
-            }
-            continue
-        } else {
-            visited.insert([newPosition.x, newPosition.y])
-        }
-        if let top = newPosition.moveTop(shark: shark, graph: graph, visited: visited) {
-            queue.append(top)
         }
 
-        if let left = newPosition.moveLeft(shark: shark, graph: graph, visited: visited) {
-            queue.append(left)
-        }
-
-        if let right = newPosition.moveRight(shark: shark, graph: graph, visited: visited) {
-            queue.append(right)
-        }
-
-        if let bottom = newPosition.moveBottom(shark: shark, graph: graph, visited: visited) {
-            queue.append(bottom)
-        }
-    }
-
-    print(sharkPosition.time)
-}
-
-struct SharkPosition {
-    let x: Int
-    let y: Int
-    let time: Int
-
-    func moveTop(shark: Int, graph: [[Int]], visited: Set<[Int]>) -> SharkPosition? {
-        guard
-            x != 0,
-            !visited.contains([x-1,y]),
-            graph[x-1][y] <= shark
-        else { return nil }
-
-        return SharkPosition(x: x-1, y: y, time: time + 1)
-    }
-
-    func moveLeft(shark: Int, graph: [[Int]], visited: Set<[Int]>) -> SharkPosition? {
-        guard
-            y != 0,
-            !visited.contains([x,y-1]),
-            graph[x][y-1] <= shark
-        else { return nil }
-
-        return SharkPosition(x: x, y: y-1, time: time + 1)
-    }
-
-    func moveRight(shark: Int, graph: [[Int]], visited: Set<[Int]>) -> SharkPosition? {
-        guard
-            x != graph.count-1,
-            !visited.contains([x+1,y]),
-            graph[x+1][y] <= shark
-        else { return nil }
-
-        return SharkPosition(x: x+1, y: y, time: time + 1)
-    }
-
-    func moveBottom(shark: Int, graph: [[Int]], visited: Set<[Int]>) -> SharkPosition? {
-        guard
-            y != graph.count-1,
-            !visited.contains([x,y+1]),
-            graph[x][y+1] <= shark
-        else { return nil }
-
-        return SharkPosition(x: x, y: y+1, time: time + 1)
-    }
-}
-
-extension SharkPosition: Comparable {
-    static func < (lhs: SharkPosition, rhs: SharkPosition) -> Bool {
-        if lhs.time == rhs.time {
-            if lhs.x == rhs.x {
-                return lhs.y < rhs.y
+        eatable.sort {
+            if $0.x == $1.x {
+                return $0.y < $1.y
             } else {
-                return lhs.x < rhs.x
+                return $0.x < $1.x
             }
-        } else {
-            return lhs.time < rhs.time
+        }
+
+        guard let eatFishPosition = eatable.first else { break }
+        answer += visited[eatFishPosition.x][eatFishPosition.y]
+        map[eatFishPosition.x][eatFishPosition.y] = 9
+        map[babySharkPosition.x][babySharkPosition.y] = 0
+        babySharkPosition = eatFishPosition
+        eatingCount += 1
+        if babySharkSize == eatingCount {
+            babySharkSize += 1
+            eatingCount = 0
         }
     }
-}
 
-struct Queue<T: Comparable> {
-    var queue: [T] = []
-    private var head: Int = 0
+    print(answer)
 
-    func isEmpty() -> Bool {
-        queue.count <= head
-    }
+    struct Queue {
+        var elements: [(x: Int, y: Int)] = []
+        var head: Int = 0
+        var isEmpty: Bool { elements.count <= head }
 
-    mutating func append(_ element: T) {
-        queue.append(element)
-    }
+        mutating func append(_ element: (x: Int, y: Int)) {
+            elements.append(element)
+        }
 
-    mutating func popFirst() -> T? {
-        if isEmpty() { return nil }
-        head += 1
-        return queue[head-1]
-    }
+        mutating func removeFirst() -> (x: Int, y: Int)? {
+            guard !isEmpty else { return nil }
+            let value = elements[head]
+            head += 1
 
-    mutating func sort() {
-        queue.sort()
+            return value
+        }
     }
 }
