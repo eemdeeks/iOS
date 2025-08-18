@@ -37,7 +37,7 @@ func selectionSort(_ array: inout [Int]) {
 
 ## 공간 복잡도
 
-- **O(1)**
+- **O(n)**
     
     추가적인 메모리를 거의 사용하지 않기 때문
     

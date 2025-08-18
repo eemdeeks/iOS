@@ -12,15 +12,15 @@
 
 ```swift
 func insertionSort(_ array: inout [Int]) {
-        for index in 1..<array.count {
-                var insertionIndex = index
-                let value = array[index]
-                while insertionIndex > 0 && array[insertionIndex - 1] > value {
-                        array[insertionIndex] = array[insertionIndex - 1]
-                        insertionIndex -= 1
-                }
-                array[insertionIndex] = value
+    for index in 1..<array.count {
+        var insertionIndex = index
+        let value = array[index]
+        while insertionIndex > 0 && array[insertionIndex - 1] > value {
+                array[insertionIndex] = array[insertionIndex - 1]
+                insertionIndex -= 1
         }
+        array[insertionIndex] = value
+    }
 }
 ```
 
@@ -35,7 +35,7 @@ func insertionSort(_ array: inout [Int]) {
 
 ## 공간 복잡도
 
-- **O(1)**
+- **O(n)**
     
     추가적인 메모리를 거의 사용하지 않기 때문
     

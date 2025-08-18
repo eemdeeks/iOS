@@ -11,18 +11,18 @@
 4. 이 과정을 전체 배열에 대해 반복하면 정렬이 완료된다.
 
 ```swift
-func BubbleSort(_ array: inout [Int]) {
+func bubbleSort(_ array: inout [Int]) {
     for i in 0..<array.count {
-            var swapped: Bool = false
-            for j in 0..<array.count - i - 1 {
-                    if array[j] > array[j + 1] { 
-                            array.swapAt(j, j + 1)
-                            swapped = true
-                    }
+        var swapped: Bool = false
+        for j in 0..<array.count - i - 1 {
+            if array[j] > array[j + 1] { 
+                array.swapAt(j, j + 1)
+                swapped = true
             }
-               
-            if !swapped { break }
         }
+               
+        if !swapped { break }
+    }
 }
 ```
 
@@ -34,7 +34,7 @@ func BubbleSort(_ array: inout [Int]) {
 
 ## 공간 복잡도
 
-- **O(1)**
+- **O(n)**
     
     추가적인 메모리를 거의 사용하지 않기 때문
     
