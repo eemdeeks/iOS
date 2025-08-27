@@ -5,7 +5,7 @@
 ## 📌Any
 
 #### [Resources](https://github.com/eemdeeks/iOS/tree/main/Resources)  
-#### [Datastructures & Algorithms](https://github.com/eemdeeks/iOS/tree/main/algorithm/AlgorithmStudy/AlgorithmStudy)
+#### [Datastructures & Algorithms](https://github.com/eemdeeks/iOS/tree/main/algorithm)
 <!--### Basic Terminal Usage-->
 <!--### Git - Version Control-->
 <!--### SSH-->
@@ -348,6 +348,11 @@
         - [ZStack](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/ZStack.md)
         - [Scrollview](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/ScrollView.md)
         - [Divider](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Container%20views/Divider.md)
+    - Drawing
+        - Path
+            - [Rectangle](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Drawing/Path/Rectangle.md)
+            - Capsule
+            - Circle
 <!--        - NavigationLink-->
 <!--        - NavigationbarItems-->
 <!--        - Split view-->
@@ -420,12 +425,12 @@
 <!--        - clippedShape-->
 <!--        - mask-->
 <!--        - Clipped-->
-    - Drawing
+<!--    - Drawing-->
 <!--        - Shape-->
-        - Path
-            - [Rectangle](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Drawing/Path/Rectangle.md)
-            - Capsule
-            - Circle
+<!--        - Path-->
+<!--            - [Rectangle](https://github.com/eemdeeks/iOS/blob/main/swiftUI/View/Compose%20Views/Drawing/Path/Rectangle.md)-->
+<!--            - Capsule-->
+<!--            - Circle-->
 <!--                - Stroke-->
 <!--                - Fill-->
 <!--                - trim-->
