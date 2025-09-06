@@ -327,5 +327,329 @@ import Foundation
 
 //solution1927()
 
-solution1753()
+//solution1753()
 
+//solution5719()
+
+//solution1939()
+
+//solution1005()
+
+//solution1850()
+
+//solution11286()
+
+//solution1931()
+
+//solution7576()
+
+//solution14003()
+
+//solution11723()
+
+//solution1074()
+
+//solution14940()
+
+//solution1697()
+
+//solution15650()
+
+//solution11725()
+
+//solution9251()
+
+//solution9663()
+
+//solution11053()
+
+//solution15654()
+
+//solution13549()
+
+//solution11444()
+
+//solution10830()
+
+//solution15663()
+
+//solution2206()
+
+//solution1629()
+
+//solution1967()
+
+//solution1167()
+
+//solution11404()
+
+//solution11049()
+
+//solution11660()
+
+//solution1806()
+
+//solution18258()
+
+//solution9252()
+
+//solution12015()
+
+//solution2252()
+
+//solution2467()
+
+//solution2473()
+
+//solution10942()
+
+//solution2623()
+
+//solution7453()
+
+//solution9466()
+
+//solution1202()
+
+//solution1238()
+
+//solution1865()
+
+//solution9465()
+
+//solution1932()
+
+//solution1149()
+
+//solution13460()
+
+func solution13460() {
+    let fileIO = FileIO()
+
+    let n = fileIO.readInt()
+    let m = fileIO.readInt()
+
+    var map: [[String]] = []
+    var visitedRed: [[Int]] = Array(repeating: Array(repeating: -1, count: m), count: n)
+    var visitedBlue: [[Int]] = Array(repeating: Array(repeating: -1, count: m), count: n)
+    var visitedArray: [[String]] = Array(repeating: Array(repeating: "", count: m), count: n)
+
+    var blue: (x: Int, y: Int) = (0, 0)
+    var red: (x: Int, y: Int) = (0, 0)
+    var hole: (x: Int, y: Int) = (0, 0)
+
+    for x in 0..<n {
+        var array: [String] = []
+        for y in 0..<m {
+            let value = fileIO.readString()
+            array.append(value)
+            switch value {
+            case "B":
+                blue = (x, y)
+            case "R":
+                red = (x, y)
+            case "O":
+                hole = (x, y)
+            default:
+                continue
+            }
+        }
+        map.append(array)
+    }
+
+    var queue = Queue(elements: [[red, blue]])
+    visitedRed[red.x][red.y] = 0
+    visitedBlue[blue.x][blue.y] = 0
+
+    while !queue.isEmpty {
+        guard let element = queue.removeFirst() else { return }
+
+        var redBead = element[0]
+        var blueBead = element[1]
+
+        var tryCount = visitedRed[redBead.x][redBead.y] + 1
+
+        // 위로 기울이기
+        if redBead.y == blueBead.y {
+            // 같은 열에 있을 경우
+            if redBead.x < blueBead.x {
+                // 빨간 구슬이 위에 있을 경우
+                while true {
+                    redBead.x += 1
+
+                    if map[redBead.x][redBead.y] == "#" {
+                        break
+                    } else {
+                        visitedRed[redBead.x][redBead.y] = visitedRed[redBead.x][redBead.y] == -1 ? tryCount: min(visitedRed[redBead.x][redBead.y], tryCount)
+                    }
+                }
+                redBead.x -= 1
+                
+
+                if visitedRed[redBead.x][redBead.y] == tryCount {
+                    queue.append([redBead, blueBead])
+                }
+            }
+        }
+    }
+
+    struct Queue {
+        var elements: [[(Int, Int)]] = []
+        var head: Int = 0
+        var isEmpty: Bool { elements.count <= head }
+
+        mutating func append(_ element: [(Int, Int)]) {
+            elements.append(element)
+        }
+
+        mutating func removeFirst() -> [(x: Int, y: Int)]? {
+            guard !isEmpty else { return nil }
+            let value = elements[head]
+            head += 1
+
+            return value
+        }
+
+    }
+}
+
+//solution1106()
+
+//solution1916()
+
+//solution11779()
+
+//solution17070()
+
+//solution1647()
+
+//solution2143()
+
+//solution2342()
+//
+//func solution2342() {
+//    let fileIO = FileIO()
+//
+//    var dp: [[Position]] = [[Position(left: .중, right: .중, value: 0), Position(left: .중, right: .중, value: 0)]]
+//    var index: Int = 0
+//    while true {
+//        let num = fileIO.readInt()
+//        guard let newPoint = Point(rawValue: num) else { break }
+//        let newLeftPosition = min(dp[index][0].move(to: newPoint, by: .left),
+//                              dp[index][1].move(to: newPoint, by: .left))
+//        let newRightPosition = min(dp[index][0].move(to: newPoint, by: .right),
+//                              dp[index][1].move(to: newPoint, by: .right))
+//        dp.append([newLeftPosition, newRightPosition])
+//        index += 1
+//    }
+//
+//    print(min(dp[index][0], dp[index][1]).value)
+//
+//    struct Position {
+//        let left: Point
+//        let right: Point
+//        let value: Int
+//
+//        func move(to point: Point, by direction: Direction) -> Position {
+//            switch direction {
+//            case .left:
+//                return Position(left: point, right: right, value: value + left.move(to: point))
+//            case .right:
+//                return Position(left: left, right: point, value: value + right.move(to: point))
+//            }
+//        }
+//
+//        enum Direction {
+//            case left
+//            case right
+//        }
+//    }
+//    enum Point: Int {
+//        case 상 = 1
+//        case 좌
+//        case 하
+//        case 우
+//        case 중
+//
+//        func move(to point: Point) -> Int {
+//            switch self {
+//            case .중:
+//                return 2
+//            default:
+//                if self == point { return 1 }
+//                else { return abs(self.rawValue - point.rawValue) == 2 ? 4: 3 }
+//            }
+//        }
+//    }
+//
+//    func min(_ first: Position, _ second: Position) -> Position {
+//        return first.value > second.value ? second: first
+//    }
+//}
+
+//solution27172()
+
+//solution2568()
+
+//solution16724()
+
+//solution1766()
+
+//solution12100()
+
+//solution2239()
+
+//solution15686()
+
+//solution1644()
+
+//solution27924()
+
+//solution9084()
+
+//solution2655()
+
+//solution1799()
+
+//solution1717()
+
+//solution17835()
+
+//solution1520()
+
+//solution27945()
+
+//solution1600()
+
+//solution16926()
+//
+//func solution16926() {
+//    let fileIO = FileIO()
+//
+//    let n = fileIO.readInt()
+//    let m = fileIO.readInt()
+//    let r = fileIO.readInt()
+//
+//    var array: [[Int]] = []
+//
+//    for _ in 0..<n {
+//        var elements: [Int] = []
+//        for _ in 0..<m {
+//            elements.append(fileIO.readInt())
+//        }
+//        array.append(elements)
+//    }
+//
+//    let moveX = [1, 0, -1, 0]
+//    let moveY = [0, 1, 0, -1]
+//
+//    let visitedMock: [[Bool]] = Array(repeating: Array(repeating: false, count: m), count: n)
+//    for _ in 0..<r {
+//        var visited = visitedMock
+//
+//        
+//
+//    }
+//}
+
+solution18809()
