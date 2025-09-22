@@ -417,7 +417,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6F2B65FF29BEB64100D89CE2 /* math */ = {
+		6F2B65FF29BEB64100D89CE2 /* Math */ = {
 			isa = PBXGroup;
 			children = (
 				6F43BCE72E4B43E1008AA79C /* 1644.swift */,
@@ -433,10 +433,10 @@
 				6FE6DD0529C00BF400731621 /* 6588.swift */,
 				6F8C37CD29C2B1110041BD40 /* 17103.swift */,
 			);
-			path = math;
+			path = Math;
 			sourceTree = "<group>";
 		};
-		6F2B660029BEB68C00D89CE2 /* dataStructure */ = {
+		6F2B660029BEB68C00D89CE2 /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
 				6FA6723F2E1669630030A009 /* 2143.swift */,
@@ -457,7 +457,7 @@
 				6F8565BD2A12592500FD0A58 /* 1966.swift */,
 				6F8565BF2A125F9D00FD0A58 /* 11866.swift */,
 			);
-			path = dataStructure;
+			path = DataStructure;
 			sourceTree = "<group>";
 		};
 		6F2B660129BEB71300D89CE2 /* try */ = {
@@ -513,7 +513,7 @@
 			path = "완탐";
 			sourceTree = "<group>";
 		};
-		6F3D929A29EEB1320070CEDF /* recursive_sorting */ = {
+		6F3D929A29EEB1320070CEDF /* Recursive&Sorting */ = {
 			isa = PBXGroup;
 			children = (
 				6F3D929B29EEB16A0070CEDF /* 17478.swift */,
@@ -525,7 +525,7 @@
 				6F8B30312A0696500086B4D6 /* 10989.swift */,
 				6F1B21E72A275DFB007A268D /* Sorting.md */,
 			);
-			path = recursive_sorting;
+			path = "Recursive&Sorting";
 			sourceTree = "<group>";
 		};
 		6F4355C229F4E0E500F66672 /* programmers */ = {
@@ -570,7 +570,7 @@
 			path = "투포인터";
 			sourceTree = "<group>";
 		};
-		6F4A98312DA8F9B10057CD82 /* 백트래킹 */ = {
+		6F4A98312DA8F9B10057CD82 /* Backtracking */ = {
 			isa = PBXGroup;
 			children = (
 				6F3E07DA2E6D79BB00BF2323 /* 16938.swift */,
@@ -582,7 +582,7 @@
 				6FFB53C32DAD4724000BDC2C /* 15654.swift */,
 				6F4A98322DA8F9B70057CD82 /* 15650.swift */,
 			);
-			path = "백트래킹";
+			path = Backtracking;
 			sourceTree = "<group>";
 		};
 		6F616A7E2D9ACF6A00400F13 /* Stack */ = {
@@ -642,7 +642,7 @@
 			path = Bitmask;
 			sourceTree = "<group>";
 		};
-		6F7308EB2DA79D4400E793DF /* 분할정복 */ = {
+		6F7308EB2DA79D4400E793DF /* Divide&Conquer */ = {
 			isa = PBXGroup;
 			children = (
 				6F8F3D9B2DB2649F00E3CB58 /* 1629.swift */,
@@ -650,7 +650,7 @@
 				6F8C05D12DAFF4440069216E /* 11444.swift */,
 				6F7308EC2DA79D4700E793DF /* 1074.swift */,
 			);
-			path = "분할정복";
+			path = "Divide&Conquer";
 			sourceTree = "<group>";
 		};
 		6F7381762B5BE95C0004BD46 /* DFS,BFS */ = {
@@ -790,19 +790,19 @@
 			children = (
 				6F7308E62DA7887A00E793DF /* FileIOFast.swift */,
 				6F544C612DA6672C005F4915 /* FileIO.swift */,
-				6F4A98312DA8F9B10057CD82 /* 백트래킹 */,
-				6F7308EB2DA79D4400E793DF /* 분할정복 */,
+				6F4A98312DA8F9B10057CD82 /* Backtracking */,
+				6F7308EB2DA79D4400E793DF /* Divide&Conquer */,
 				6F7308E82DA790B000E793DF /* Bitmask */,
-				6FA882FD2D23EBEC0044C022 /* BF */,
+				6FA882FD2D23EBEC0044C022 /* BruteForce */,
 				6F78E2DC2A52798100A2CFD3 /* Greedy */,
 				6F7E334F2A41B6B500A6AB59 /* Binary Search */,
 				6FC983B42A1BAE91006BB62D /* graph */,
 				6F87497F2A18903400F9E745 /* Dynamic Programming */,
-				6FC959492A091A980096231E /* implement */,
-				6F3D929A29EEB1320070CEDF /* recursive_sorting */,
+				6FC959492A091A980096231E /* Implement */,
+				6F3D929A29EEB1320070CEDF /* Recursive&Sorting */,
 				6F2B660129BEB71300D89CE2 /* try */,
-				6F2B660029BEB68C00D89CE2 /* dataStructure */,
-				6F2B65FF29BEB64100D89CE2 /* math */,
+				6F2B660029BEB68C00D89CE2 /* DataStructure */,
+				6F2B65FF29BEB64100D89CE2 /* Math */,
 			);
 			path = baekjoon;
 			sourceTree = "<group>";
@@ -825,14 +825,14 @@
 			path = PriorityQueue;
 			sourceTree = "<group>";
 		};
-		6FA882FD2D23EBEC0044C022 /* BF */ = {
+		6FA882FD2D23EBEC0044C022 /* BruteForce */ = {
 			isa = PBXGroup;
 			children = (
 				6F8B83DB2E814F000052F514 /* 1107.swift */,
 				6F49B8C32E2E1AF400C1C00D /* 12100.swift */,
 				6FA8741229C15D180038056A /* 1182.swift */,
 			);
-			path = BF;
+			path = BruteForce;
 			sourceTree = "<group>";
 		};
 		6FC2697D2B72634F00E1FE69 /* DP */ = {
@@ -843,7 +843,7 @@
 			path = DP;
 			sourceTree = "<group>";
 		};
-		6FC959492A091A980096231E /* implement */ = {
+		6FC959492A091A980096231E /* Implement */ = {
 			isa = PBXGroup;
 			children = (
 				6FDB22542E6C388F007CA6EB /* 18809.swift */,
@@ -857,7 +857,7 @@
 				6F1A62D22A1A39D00088C749 /* 1913.swift */,
 				6F54FB6E2C3CFE9100E7325D /* 2578.swift */,
 			);
-			path = implement;
+			path = Implement;
 			sourceTree = "<group>";
 		};
 		6FC983B42A1BAE91006BB62D /* graph */ = {
