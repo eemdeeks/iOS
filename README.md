@@ -5,7 +5,7 @@
 ## 📌Any
 
 #### [Resources](https://github.com/eemdeeks/iOS/tree/main/Resources)  
-#### [Datastructures & Algorithms](https://github.com/eemdeeks/iOS/tree/main/algorithm)
+#### [Datastructures & Algorithms](https://github.com/eemdeeks/iOS/tree/main/ComputerScience/DataStructures&Algorithms)
 <!--### Basic Terminal Usage-->
 <!--### Git - Version Control-->
 <!--### SSH-->
