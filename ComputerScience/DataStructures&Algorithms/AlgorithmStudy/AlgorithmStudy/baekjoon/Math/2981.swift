@@ -35,6 +35,8 @@
 
  */
 
+import Foundation
+
 func solution2981() {
     let fileIO = FileIO()
 
