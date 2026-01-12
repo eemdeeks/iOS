@@ -688,47 +688,4 @@ func solution13460() {
 
 //solution2661()
 
-var array: [Int] = []
-
-(0...10).forEach { array.append(Int.random(in: $0...1000)) }
-
-print(array)
-
-print(mergeSort(array))
-
-func mergeSort(_ array: [Int]) -> [Int] {
-    if array.count <= 1 { return array }
-    let midIndex = array.count / 2
-    let left = Array(array[0..<midIndex])
-    let right = Array(array[midIndex..<array.count])
-
-    return merge(mergeSort(left), mergeSort(right))
-}
-
-func merge(_ left: [Int], _ right: [Int]) -> [Int] {
-    var result: [Int] = []
-    var i = 0
-    var j = 0
-
-    while i < left.count && j < right.count {
-        if left[i] <= right[j] {
-            result.append(left[i])
-            i += 1
-        } else {
-            result.append(right[j])
-            j += 1
-        }
-    }
-
-    while i < left.count {
-        result.append(left[i])
-        i += 1
-    }
-
-    while j < right.count {
-        result.append(right[j])
-        j += 1
-    }
-
-    return result
-}
+solution1630()
