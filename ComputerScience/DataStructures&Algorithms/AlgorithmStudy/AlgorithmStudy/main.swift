@@ -688,4 +688,6 @@ func solution13460() {
 
 //solution2661()
 
-solution1630()
+//solution1630()
+
+solution2831()
