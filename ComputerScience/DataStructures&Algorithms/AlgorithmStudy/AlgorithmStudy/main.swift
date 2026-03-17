@@ -423,96 +423,6 @@ import Foundation
 
 //solution13460()
 
-func solution13460() {
-    let fileIO = FileIO()
-
-    let n = fileIO.readInt()
-    let m = fileIO.readInt()
-
-    var map: [[String]] = []
-    var visitedRed: [[Int]] = Array(repeating: Array(repeating: -1, count: m), count: n)
-    var visitedBlue: [[Int]] = Array(repeating: Array(repeating: -1, count: m), count: n)
-    var visitedArray: [[String]] = Array(repeating: Array(repeating: "", count: m), count: n)
-
-    var blue: (x: Int, y: Int) = (0, 0)
-    var red: (x: Int, y: Int) = (0, 0)
-    var hole: (x: Int, y: Int) = (0, 0)
-
-    for x in 0..<n {
-        var array: [String] = []
-        for y in 0..<m {
-            let value = fileIO.readString()
-            array.append(value)
-            switch value {
-            case "B":
-                blue = (x, y)
-            case "R":
-                red = (x, y)
-            case "O":
-                hole = (x, y)
-            default:
-                continue
-            }
-        }
-        map.append(array)
-    }
-
-    var queue = Queue(elements: [[red, blue]])
-    visitedRed[red.x][red.y] = 0
-    visitedBlue[blue.x][blue.y] = 0
-
-    while !queue.isEmpty {
-        guard let element = queue.removeFirst() else { return }
-
-        var redBead = element[0]
-        var blueBead = element[1]
-
-        var tryCount = visitedRed[redBead.x][redBead.y] + 1
-
-        // 위로 기울이기
-        if redBead.y == blueBead.y {
-            // 같은 열에 있을 경우
-            if redBead.x < blueBead.x {
-                // 빨간 구슬이 위에 있을 경우
-                while true {
-                    redBead.x += 1
-
-                    if map[redBead.x][redBead.y] == "#" {
-                        break
-                    } else {
-                        visitedRed[redBead.x][redBead.y] = visitedRed[redBead.x][redBead.y] == -1 ? tryCount: min(visitedRed[redBead.x][redBead.y], tryCount)
-                    }
-                }
-                redBead.x -= 1
-                
-
-                if visitedRed[redBead.x][redBead.y] == tryCount {
-                    queue.append([redBead, blueBead])
-                }
-            }
-        }
-    }
-
-    struct Queue {
-        var elements: [[(Int, Int)]] = []
-        var head: Int = 0
-        var isEmpty: Bool { elements.count <= head }
-
-        mutating func append(_ element: [(Int, Int)]) {
-            elements.append(element)
-        }
-
-        mutating func removeFirst() -> [(x: Int, y: Int)]? {
-            guard !isEmpty else { return nil }
-            let value = elements[head]
-            head += 1
-
-            return value
-        }
-
-    }
-}
-
 //solution1106()
 
 //solution1916()
@@ -722,4 +632,4 @@ func solution13460() {
 
 //solution6987()
 
-solution14499()
+//solution14499()
